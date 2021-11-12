@@ -225,7 +225,7 @@ header .container .links a {
 
 #hero .layer1 {
   z-index: 4;
-  bottom: -1.5rem;
+  bottom: -2rem;
   opacity: 80%;
   -webkit-animation: waveAnimation1 20s linear 0s infinite;
           animation: waveAnimation1 20s linear 0s infinite;
@@ -233,7 +233,7 @@ header .container .links a {
 
 #hero .layer2 {
   z-index: 3;
-  bottom: -1.8rem;
+  bottom: -2rem;
   opacity: 60%;
   -webkit-animation: waveAnimation2 15s linear -5s infinite;
           animation: waveAnimation2 15s linear -5s infinite;
@@ -241,7 +241,7 @@ header .container .links a {
 
 #hero .layer3 {
   z-index: 2;
-  bottom: -1.5rem;
+  bottom: -2rem;
   opacity: 40%;
   -webkit-animation: waveAnimation1 10s linear -5s infinite;
           animation: waveAnimation1 10s linear -5s infinite;
@@ -249,7 +249,7 @@ header .container .links a {
 
 #hero .layer4 {
   z-index: 1;
-  bottom: -1.3rem;
+  bottom: -2rem;
   opacity: 20%;
   -webkit-animation: waveAnimation2 15s linear -2s infinite;
           animation: waveAnimation2 15s linear -2s infinite;
