@@ -496,7 +496,6 @@ header .container .links a {
 }
 
 #skills-wrapper {
-  border: 1px solid magenta;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -550,7 +549,8 @@ header .container .links a {
           align-items: center;
   width: auto;
   height: 3rem;
-  border: 1px solid #DAB55D;
+  border: 1px solid #dab55d44;
+  border-radius: 0.4rem;
   margin: 0 1rem;
 }
 
@@ -578,6 +578,64 @@ header .container .links a {
 @media screen and (min-width: 1200px) {
   html {
     font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #projects-wrapper {
+    height: 45rem;
+  }
+  #projects-wrapper .project {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 8rem;
+    margin: 3rem 0;
+  }
+  #skills-wrapper {
+    height: 20rem;
+  }
+  #skills-wrapper .skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #skills-wrapper .skills .skill-set {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin: 1rem 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
