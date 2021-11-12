@@ -133,7 +133,7 @@ header {
     .layer1 {
         // display: none;
         z-index: 4;
-        bottom: 0rem;
+        bottom: -1rem;
         opacity: 80%;
         animation: waveAnimation1 20s linear 0s infinite;
     }
@@ -141,7 +141,7 @@ header {
     .layer2 {
         // display: none;
         z-index: 3;
-        bottom: 0rem;
+        bottom: -1rem;
         opacity: 60%;
         animation: waveAnimation2 15s linear -5s infinite;
     }
@@ -149,7 +149,7 @@ header {
     .layer3 {
         // display: none;
         z-index: 2;
-        bottom: 0rem;
+        bottom: -1rem;
         opacity: 40%;
         animation: waveAnimation1 10s linear -5s infinite;
     }
@@ -157,7 +157,7 @@ header {
     .layer4 {
         // display: none;
         z-index: 1;
-        bottom: 0rem;
+        bottom: -1rem;
         opacity: 20%;
         animation: waveAnimation2 15s linear -2s infinite;
     }
