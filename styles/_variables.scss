@@ -1,0 +1,34 @@
+$primaryBackground: rgba(236, 236, 236, 0.70);
+$greyLight:         #858585;
+$greyNormal:        #656565;
+$greyMedium:        #454545;
+$greyHeavy:         #252525;
+
+$goldLight:         #DAB55D;
+$goldDark:          #B69037;
+
+
+@mixin flexCenter($direction, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: center;
+}
+
+@mixin fontPoppings {
+    font-family: 'Poppins', serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+@mixin fontRaleway {
+    font-family: 'Raleway', serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+@mixin fontMontserrat {
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: normal;
+}

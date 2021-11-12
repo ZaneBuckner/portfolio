@@ -7,59 +7,111 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500&display=swap" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;500&display=swap" rel="stylesheet">        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-rqn26AG5Pj86AF4SO72RK5fyefcQ/x32DNQfChxWvbXIyXFePlEktwD18fEz+kQU" crossorigin="anonymous">
-        <link rel="stylesheet" href="./style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;500;700&display=swap" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-rqn26AG5Pj86AF4SO72RK5fyefcQ/x32DNQfChxWvbXIyXFePlEktwD18fEz+kQU" crossorigin="anonymous"> -->
+        <!-- <link rel="stylesheet" href="./style.css"> -->
+        <link rel="stylesheet" href="./styles/style.css">
     </head>
     <body>
 
         <header>
-            <div class="header-wrapper">
-                <img class="site-logo" src="./resources/logo.png">
-                <div class="header-links">
+            <div class="container">
+                <img class="logo" src="./resources/img/logo.png">
+                <div class="links">
                     <a href="#">About</a>
                     <a href="#">Projects</a>
                     <a href="#">Resume</a>
-                    <a href="#" class="contact-btn">Contact</a>
-                    <!-- <button class="contact-btn" href="#">Contact</button> -->
+                    <a href="#">Contact</a>
                 </div>
             </div>
         </header>
-
-
-        <main>
-            <section class="main-hero">
-                <h2 class="title">Zane Buckner</h2>
-                <h3 class="sub-title">Web Developer <span>UI | UX Enthusiast</span></h3>
-            </section>
-
-            <section class="main-about">
-                <h2>About Me</h2>
-            </section>
-
-            <section class="main-technologies">
-                <h2>Skills</h2>
-            </section>
-
-            <section class="main-projects">
-                <h2>Projects</h2>
-            </section>
-        </main>
-
-
-        <footer>
-            <div class="footer-wrapper">
-                <a href="https://github.com/ZaneBuckner" target="_blank">
-                    <i title="GitHub" class="fab fa-github" alt="GitHub Profile"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/ZaneBuckner/" target="_blank">
-                    <i title="LinkedIn" class="fab fa-linkedin" alt="LinkedIn Profile"></i>
-                </a>
+        
+        <section id="hero">
+            <h2 class="title">Zane Buckner</h2>
+            <h2 class="subtitle">Web Developer <span>UI | UX Enthusiast</span></h2>
+            <div class="links">
+                <div><a>About</a></div>
+                <div><a>Projects</a></div>
             </div>
-        </footer>
+            <div class="wave layer1"></div>
+            <div class="wave layer2"></div>
+            <div class="wave layer3"></div>
+            <div class="wave layer4"></div>
+            <img class="static-wave" src="./resources/backgrounds/wave-14.svg">
+        </section>
+
+        <section id="about-wrapper">
+            <div class="about">
+                <h3>My Journey</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi maiores dolore natus modi magni minus, architecto accusantium veritatis nemo incidunt? Maiores velit numquam enim culpa eum, asperiores optio est molestias atque sunt totam cum. Placeat, possimus perspiciatis similique inventore nemo recusandae quibusdam adipisci magni nam suscipit doloribus nobis, ad quidem!</p>
+                <img src="./resources/img/ornate-frame.svg" style="top:0; left:0; transform:rotate(270deg)">
+                <img src="./resources/img/ornate-frame.svg" style="top:0; right:0">
+                <img src="./resources/img/ornate-frame.svg" style="bottom:0; left:0; transform:rotate(180deg)">
+                <img src="./resources/img/ornate-frame.svg" style="bottom:0; right:0; transform:rotate(90deg)">
+            </div>
+            <img class="static-wave" src="./resources/backgrounds/wave-9.svg">
+        </section>
+        
+        <section id="projects-wrapper">
+            <div class="project">
+                <img src="./resources/img/rgbeautiful-medium.png">
+                <div class="details">
+                    <h4>RGBeautiful</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus voluptate quasi ea doloribus fugiat asperiores.</p>
+                    <div class="project-links">
+                        <div><a href="https://rgbeautiful.netlify.app" target="_blank">Visit Site</a></div>
+                        <div><a href="https://github.com/ZaneBuckner/RGBeautiful" target="_blank">Explore Code</a></div>
+                    </div>
+                    <div class="tech-stack">
+                        <p>Technologies Used</p>
+                        <img src="./resources/icons/html-icon.svg">
+                        <img src="./resources/icons/css-icon.svg">
+                        <img src="./resources/icons/js-icon.svg">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="./resources/img/pokevm-medium.png">
+                <div class="details">
+                    <h4>PokéVM</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus voluptate quasi ea doloribus fugiat asperiores.</p>
+                    <div class="project-links">
+                        <div><a href="https://pokevm.netlify.app" target="_blank">Visit Site</a></div>
+                        <div><a href="https://github.com/ZaneBuckner/pokeVM" target="_blank">Explore Code</a></div>
+                    </div>
+                    <div class="tech-stack">
+                        <p>Technologies Used</p>
+                        <img src="./resources/icons/html-icon.svg">
+                        <img src="./resources/icons/css-icon.svg">
+                        <img src="./resources/icons/js-icon.svg">
+                    </div>
+                </div>
+            </div>
+            
+            <img class="static-wave" src="./resources/backgrounds/wave-4.svg">
+        </section>
+
+        <section id="skills-wrapper">
+            <div class="skills">
+                <div class="skill-set set1">
+                    <img src="./resources/icons/js-icon.svg">
+                    <img src="./resources/icons/html-icon.svg">
+                    <img src="./resources/icons/css-icon.svg">
+                    <img src="./resources/icons/sass-icon.svg">
+                </div>
+                <div class="skill-set development">
+                    <img src="./resources/icons/git-icon.svg">
+                    <img src="./resources/icons/figma-icon.svg">
+                </div>
+                <div class="skill-set familiar-with">
+                    <img src="./resources/icons/typescript-icon.svg">
+                    <img src="./resources/icons/sqlite-icon.svg">
+                </div>
+            </div>
+        </section>
         
         <script src="./js/main.js" async defer></script>
-        <script src="anime.min.js"></script>
     </body>
 </html>
