@@ -75,12 +75,6 @@ a {
   color: inherit;
 }
 
-.static-wave {
-  position: absolute;
-  bottom: -0.5rem;
-  width: 100%;
-}
-
 header {
   width: 100%;
   max-width: 1200px;
@@ -224,14 +218,14 @@ header .container .links a {
   width: 180%;
   bottom: 0;
   height: 5rem;
-  background: url("../resources/backgrounds/wave-14.svg");
+  background: url("../resources/backgrounds/wave-10.svg");
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
 #hero .layer1 {
   z-index: 4;
-  bottom: -1rem;
+  bottom: -1.5rem;
   opacity: 80%;
   -webkit-animation: waveAnimation1 20s linear 0s infinite;
           animation: waveAnimation1 20s linear 0s infinite;
@@ -239,7 +233,7 @@ header .container .links a {
 
 #hero .layer2 {
   z-index: 3;
-  bottom: -1rem;
+  bottom: -1.8rem;
   opacity: 60%;
   -webkit-animation: waveAnimation2 15s linear -5s infinite;
           animation: waveAnimation2 15s linear -5s infinite;
@@ -247,7 +241,7 @@ header .container .links a {
 
 #hero .layer3 {
   z-index: 2;
-  bottom: -1rem;
+  bottom: -1.5rem;
   opacity: 40%;
   -webkit-animation: waveAnimation1 10s linear -5s infinite;
           animation: waveAnimation1 10s linear -5s infinite;
@@ -255,14 +249,16 @@ header .container .links a {
 
 #hero .layer4 {
   z-index: 1;
-  bottom: -1rem;
+  bottom: -1.3rem;
   opacity: 20%;
   -webkit-animation: waveAnimation2 15s linear -2s infinite;
           animation: waveAnimation2 15s linear -2s infinite;
 }
 
-#hero img {
-  width: 150%;
+#hero .static-wave {
+  position: absolute;
+  bottom: -0.2rem;
+  width: 120%;
 }
 
 #about-wrapper {
@@ -279,16 +275,17 @@ header .container .links a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
-  width: 100%;
-  height: 20rem;
-  padding: 0 1rem;
-  padding-bottom: 3rem;
-  background: #252525;
   font-family: 'Poppins', serif;
   font-style: normal;
   font-weight: normal;
+  position: relative;
+  width: 100%;
+  height: 25rem;
+  padding: 0 1rem;
+  padding-bottom: 3rem;
+  background: #252525;
   color: rgba(236, 236, 236, 0.7);
+  overflow: hidden;
 }
 
 #about-wrapper .about {
@@ -322,7 +319,10 @@ header .container .links a {
   height: auto;
   margin: 0 auto;
   padding: 0 1rem;
-  background: #252525;
+  background: url("../resources/backgrounds/white-grunge.jpg"), #252525;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
   font-size: 1rem;
   font-weight: 100;
   text-transform: uppercase;
@@ -342,6 +342,12 @@ header .container .links a {
   margin: 0.2rem;
 }
 
+#about-wrapper .static-wave {
+  position: absolute;
+  bottom: -0.5rem;
+  width: 120%;
+}
+
 #projects-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -358,10 +364,11 @@ header .container .links a {
           align-items: center;
   position: relative;
   width: 100%;
-  height: 30rem;
+  height: 100%;
   padding: 0 1rem;
   padding-bottom: 2rem;
   background: #454545;
+  overflow: hidden;
 }
 
 #projects-wrapper .project {
@@ -380,6 +387,7 @@ header .container .links a {
           align-items: center;
   width: 100%;
   height: 10rem;
+  margin: 3rem 0;
 }
 
 #projects-wrapper .project img {
@@ -420,6 +428,7 @@ header .container .links a {
   font-weight: 500;
   text-align: justify;
   line-height: 1rem;
+  color: #AEAFB3;
 }
 
 #projects-wrapper .project .details .project-links {
@@ -491,7 +500,9 @@ header .container .links a {
   margin-left: auto;
 }
 
-#projects-wrapper img {
+#projects-wrapper .static-wave {
+  position: absolute;
+  bottom: -0.5rem;
   width: 120%;
 }
 
@@ -510,7 +521,7 @@ header .container .links a {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 10rem;
+  height: 100%;
   padding: 0 1rem;
   background: #252525;
 }
@@ -530,7 +541,7 @@ header .container .links a {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  max-width: 18rem;
+  height: 16rem;
 }
 
 #skills-wrapper .skills .skill-set {
@@ -551,13 +562,19 @@ header .container .links a {
   height: 3rem;
   border: 1px solid #dab55d44;
   border-radius: 0.4rem;
-  margin: 0 1rem;
 }
 
 #skills-wrapper .skills .skill-set img {
   width: auto;
   height: 2rem;
   margin: 0 0.5rem;
+}
+
+footer {
+  border: 1px solid magenta;
+  width: 100%;
+  height: 10rem;
+  background: lavender;
 }
 
 /* ========== FLUID TYPOGRAPHY ==========
