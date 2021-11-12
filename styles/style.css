@@ -319,10 +319,7 @@ header .container .links a {
   height: auto;
   margin: 0 auto;
   padding: 0 1rem;
-  background: url("../resources/backgrounds/white-grunge.jpg"), #252525;
-  background-blend-mode: multiply;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: #252525;
   font-size: 1rem;
   font-weight: 100;
   text-transform: uppercase;
@@ -356,9 +353,8 @@ header .container .links a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -570,13 +566,6 @@ header .container .links a {
   margin: 0 0.5rem;
 }
 
-footer {
-  border: 1px solid magenta;
-  width: 100%;
-  height: 10rem;
-  background: lavender;
-}
-
 /* ========== FLUID TYPOGRAPHY ==========
     RANGE   TARGET    VW (px)   HTML-FONT (px)
     MIN     MOBILE    >= 375    16.0
@@ -600,7 +589,7 @@ footer {
 
 @media screen and (max-width: 750px) {
   #projects-wrapper {
-    height: 45rem;
+    height: 60rem;
   }
   #projects-wrapper .project {
     display: -webkit-box;
@@ -610,14 +599,18 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     height: 8rem;
-    margin: 3rem 0;
+  }
+  #projects-wrapper .project img {
+    height: 12rem;
+  }
+  #projects-wrapper .project div {
+    margin-top: 1rem;
   }
   #skills-wrapper {
     height: 20rem;
@@ -651,7 +644,7 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 100%;
+    width: auto;
     margin: 1rem 0;
   }
 }

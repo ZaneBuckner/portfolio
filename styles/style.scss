@@ -153,20 +153,11 @@ header {
     @include flexCenter(row, center);
     @include fontPoppings();
     position: relative;
-    // z-index: 5;
-    // top: -4rem;
     width: 100%;
     height: 25rem;
     padding: 0 1rem;
     padding-bottom: 3rem;
-
-    // background: 
-    //     url('../resources/backgrounds/about-bg.svg');
-    // background-repeat: no-repeat;
-    // background-size: cover;
-
     background: $greyHeavy;
-    
     color: $primaryBackground;
     overflow: hidden;
 
@@ -189,12 +180,7 @@ header {
             height: auto;
             margin: 0 auto;
             padding: 0 1rem;
-            background: 
-                url('../resources/backgrounds/white-grunge.jpg'),
-                #252525;
-            background-blend-mode: multiply;
-            background-repeat: no-repeat;
-            background-size: cover;
+            background: $greyHeavy;
 
             font-size: 1rem;
             font-weight: 100;
@@ -226,7 +212,7 @@ header {
 
 #projects-wrapper {
     // border: 1px solid magenta;
-    @include flexCenter(column, space-evenly);
+    @include flexCenter(column, space-around);
     position: relative;
     width: 100%;
     height: 100%;
@@ -315,7 +301,6 @@ header {
 #skills-wrapper {
     // border: 1px solid magenta;
     @include flexCenter(row, center);
-    // position: relative;
     width: 100%;
     height: 100%;
     padding: 0 1rem;
@@ -345,22 +330,15 @@ header {
 }
 
 
-footer {
-    border: 1px solid magenta;
-    width: 100%;
-    height: 10rem;
+// footer {
+//     border: 1px solid magenta;
+//     width: 100%;
+//     height: 10rem;
 
-    background: lavender;
-
-    // background: 
-    //     url('../resources/backgrounds/projects-bg.svg');
-    // background-repeat: no-repeat;
-    // background-size: cover;
-
-    .footer-wrapper {
-        // border: 1px solid magenta;
-    }
-}
+//     .footer-wrapper {
+//         // border: 1px solid magenta;
+//     }
+// }
 
 
 
@@ -399,12 +377,20 @@ footer {
 
 @media screen and (max-width: 750px) {
     #projects-wrapper {
-        height: 45rem;
+        height: 60rem;
 
         .project {
-            @include flexCenter(column, center);
+            @include flexCenter(column, space-around);
             height: 8rem;
-            margin: 3rem 0;
+            // margin: 3rem 0;
+
+            img {
+                height: 12rem;
+            }
+
+            div {
+                margin-top: 1rem;
+            }
         }
     }
 
@@ -416,9 +402,8 @@ footer {
             
             .skill-set {
                 @include flexCenter(row, space-evenly);
-                width: 100%;
+                width: auto;
                 margin: 1rem 0;
-                
             }
         }
     }
