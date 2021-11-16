@@ -11,15 +11,15 @@
 }
 
 html {
-    background: $grey1;
     font: 16px;
+    background: $grey1;
+    touch-action: manipulation;
 }
 
 body {
     margin: 0;
     line-height: 1.5;
     @include fontRaleway();
-    touch-action: manipulation;
 }
 
 h1, h2, h3, h4, p {

@@ -145,8 +145,10 @@
 }
 
 html {
-  background: #ECECECB3;
   font: 16px;
+  background: #ECECECB3;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
 }
 
 body {
@@ -155,8 +157,6 @@ body {
   font-family: 'Raleway', serif;
   font-style: normal;
   font-weight: normal;
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
 }
 
 h1, h2, h3, h4, p {
