@@ -70,8 +70,12 @@ header {
                     height: 1.5rem;
                     opacity: 50%;
 
-                    &:hover {
+                    &:hover,
+                    &:active {
                         opacity: 100%;
+                        
+                        transform: scale(1.1);
+                        user-select: none;
                     }
                 }
             }
@@ -85,9 +89,11 @@ header {
         height: 20rem;
 
         .title {
-            font-weight: 500;
+            font-weight: 300;
             font-size: 1.2rem;
             color: $grey4;
+
+            letter-spacing: 2px;
         }
 
         .subtitle {
@@ -98,6 +104,8 @@ header {
             span {
                 font-weight: 100;
                 font-size: 0.8rem;
+
+                letter-spacing: 2px;
             }
         }
 
@@ -113,11 +121,14 @@ header {
                 border-radius: 3px;
                 cursor: pointer;
 
-                &:hover {
+                &:hover,
+                &:active {
                     border: none;
                     background: $grey4;
-                    transform: scale(1.1);
                     color: white;
+                    
+                    transform: scale(1.1);
+                    user-select: none;
                 }
     
                 a {

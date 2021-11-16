@@ -224,8 +224,14 @@ header #navbar .links .link img {
   opacity: 50%;
 }
 
-header #navbar .links .link img:hover {
+header #navbar .links .link img:hover, header #navbar .links .link img:active {
   opacity: 100%;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 header #hero {
@@ -248,9 +254,10 @@ header #hero {
 }
 
 header #hero .title {
-  font-weight: 500;
+  font-weight: 300;
   font-size: 1.2rem;
   color: #454545;
+  letter-spacing: 2px;
 }
 
 header #hero .subtitle {
@@ -262,6 +269,7 @@ header #hero .subtitle {
 header #hero .subtitle span {
   font-weight: 100;
   font-size: 0.8rem;
+  letter-spacing: 2px;
 }
 
 header #hero .links {
@@ -302,12 +310,16 @@ header #hero .links div {
   cursor: pointer;
 }
 
-header #hero .links div:hover {
+header #hero .links div:hover, header #hero .links div:active {
   border: none;
   background: #454545;
+  color: white;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 header #hero .links div a {
