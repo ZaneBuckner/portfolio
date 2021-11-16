@@ -3,57 +3,97 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Zane Buckner</title>
-        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Zane Buckner</title>
+
+        <!-- Favicon Data -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+        <link rel="manifest" href="./favicon/site.webmanifest">
+        <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#333333">
+        <meta name="msapplication-TileColor" content="#2b5797">
+        <meta name="theme-color" content="#333333">
+        
+        <!-- Fonts & Style Sheets -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500&display=swap" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;500;700&display=swap" rel="stylesheet">
-        <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-rqn26AG5Pj86AF4SO72RK5fyefcQ/x32DNQfChxWvbXIyXFePlEktwD18fEz+kQU" crossorigin="anonymous"> -->
-        <!-- <link rel="stylesheet" href="./style.css"> -->
         <link rel="stylesheet" href="./styles/style.css">
     </head>
     <body>
 
         <header>
             <div class="container">
-                <img class="logo" src="./resources/img/logo.png">
-                <div class="links">
-                    <a href="#">About</a>
-                    <a href="#">Projects</a>
-                    <a href="#">Resume</a>
-                    <a href="#">Contact</a>
+                <div id="navbar">
+                    <a class="logo" href="./index.html">
+                        <img src="./resources/img/logo.svg" alt="zaniac.io">
+                    </a>
+                    <div class="links">
+                        <a class="link" href="https://github.com/ZaneBuckner" title="GitHub" target="_blank">
+                            <img src="./resources/icons/github-icon.svg">
+                        </a>
+                        <a class="link" href="https://www.linkedin.com/in/ZaneBuckner" title="LinkedIn" target="_blank">
+                            <img src="./resources/icons/linkedin-icon.svg">
+                        </a>
+                    </div>
+                </div>
+    
+                <div id="hero">
+                    <h2 class="title">Zane Buckner</h2>
+                    <h2 class="subtitle">Web Developer <span>UI  UX Enthusiast</span></h2>
+                    <div class="links">
+                        <div><a>Projects</a></div>
+                        <div><a>Contact</a></div>
+                    </div>
                 </div>
             </div>
-        </header>
-        
-        <section id="hero">
-            <h2 class="title">Zane Buckner</h2>
-            <h2 class="subtitle">Web Developer <span>UI | UX Enthusiast</span></h2>
-            <div class="links">
-                <div><a>About</a></div>
-                <div><a>Projects</a></div>
-            </div>
-            <div class="wave layer1"></div>
-            <div class="wave layer2"></div>
-            <div class="wave layer3"></div>
-            <div class="wave layer4"></div>
-            <img class="static-wave" src="./resources/backgrounds/wave-14.svg">
-        </section>
 
-        <section id="about-wrapper">
-            <div class="about">
-                <h3>My Journey</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi maiores dolore natus modi magni minus, architecto accusantium veritatis nemo incidunt? Maiores velit numquam enim culpa eum, asperiores optio est molestias atque sunt totam cum. Placeat, possimus perspiciatis similique inventore nemo recusandae quibusdam adipisci magni nam suscipit doloribus nobis, ad quidem!</p>
-                <img src="./resources/img/ornate-frame.svg" style="top:0; left:0; transform:rotate(270deg)">
-                <img src="./resources/img/ornate-frame.svg" style="top:0; right:0">
-                <img src="./resources/img/ornate-frame.svg" style="bottom:0; left:0; transform:rotate(180deg)">
-                <img src="./resources/img/ornate-frame.svg" style="bottom:0; right:0; transform:rotate(90deg)">
-            </div>
-            <img class="static-wave" src="./resources/backgrounds/wave-9.svg">
-        </section>
+            <img class="wave layer1 waveLeft"   src="./resources/backgrounds/wave.svg">
+            <img class="wave layer2 waveRight"  src="./resources/backgrounds/wave.svg">
+            <img class="wave layer3 waveLeft"   src="./resources/backgrounds/wave.svg">
+            <img class="wave layer4 waveRight"  src="./resources/backgrounds/wave.svg">
+
+            <img class="inverse-wave inverse-layer1 waveRight"  src="./resources/backgrounds/inverse-wave.svg">
+            <img class="inverse-wave inverse-layer2 waveLeft"   src="./resources/backgrounds/inverse-wave.svg">
+            <img class="inverse-wave inverse-layer3 waveRight"  src="./resources/backgrounds/inverse-wave.svg">
+            <img class="inverse-wave inverse-layer4 waveLeft"   src="./resources/backgrounds/inverse-wave.svg">
+        </header>
+
+        <main>
+            <section id="about">
+                <div class="container">
+                    <h3>My Journey</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, libero beatae voluptas distinctio, praesentium rerum ipsam molestias voluptatum, provident magnam iure exercitationem debitis! Quaerat quas voluptates animi repellendus architecto quae corporis dolorem eveniet doloremque eligendi cumque ratione nesciunt quos temporibus, provident reprehenderit magni repudiandae. Unde praesentium consequatur illum dolor perferendis.</p>
+                    <img src="./resources/backgrounds/ornate-frame.svg" style="top:0; left:0; transform:rotate(270deg)">
+                    <img src="./resources/backgrounds/ornate-frame.svg" style="top:0; right:0">
+                    <img src="./resources/backgrounds/ornate-frame.svg" style="bottom:0; left:0; transform:rotate(180deg)">
+                    <img src="./resources/backgrounds/ornate-frame.svg" style="bottom:0; right:0; transform:rotate(90deg)">
+                </div>
+            </section>
+
+            <section id="projects">
+                <div class="container">
+                    
+                </div>
+            </section>
+
+            <section id="skills">
+                <!-- <div class="container">
+                    
+                </div> -->
+            </section>
+            
+        </main>
         
-        <section id="projects-wrapper">
+        
+        <footer>
+            <section id="contact">
+
+            </section>
+        </footer>
+        
+        <!-- <section id="projects-wrapper">
             <div class="project">
                 <img src="./resources/img/rgbeautiful-high.png">
                 <div class="details">
@@ -70,9 +110,9 @@
                         <img src="./resources/icons/js-icon.svg">
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="project">
+            <!-- <div class="project">
                 <img src="./resources/img/pokevm-high.png">
                 <div class="details">
                     <h4>PokéVM</h4>
@@ -89,10 +129,13 @@
                     </div>
                 </div>
             </div>
-            <img class="static-wave" src="./resources/backgrounds/wave-4.svg">
-        </section>
+            <img class="static-wave-shadow" src="./resources/backgrounds/wave-1.svg">
+            <svg id="static-wave-new" viewBox="0 0 1000 100" fill="none" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="none">
+                <path class="shadow" d="M0 58.0361V299.961H1000V58.0361C875 58.0361 859.345 0.807148 750 0.807148C639.964 0.807148 625 58.0361 500 58.0361C375 58.0361 348.77 0.806617 250 0.806641C140.655 0.806667 125 58.0361 0 58.0361Z" fill="#252525" stroke="none" stroke-width="3"/>
+            </svg>
+        </section> -->
 
-        <section id="skills-wrapper">
+        <!-- <section id="skills-wrapper">
             <div class="skills">
                 <div class="skill-set set1">
                     <img src="./resources/icons/js-icon.svg">
@@ -109,14 +152,8 @@
                     <img src="./resources/icons/sqlite-icon.svg">
                 </div>
             </div>
-        </section>
-
-        <!-- <footer>
-            <div class="footer-wrapper">
-
-            </div>
-        </footer> -->
+        </section> -->
         
-        <script src="./js/main.js" async defer></script>
+        <!-- <script src="./js/main.js" async defer></script> -->
     </body>
 </html>

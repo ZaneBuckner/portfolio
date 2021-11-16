@@ -1,272 +1,123 @@
 @import "./variables";
-@import "./animations";
+@import "./wave-animations";
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: 0;
+    box-sizing: border-box;
 }
 
 html {
-    background: $primaryBackground;
+    background: $grey1;
     font: 16px;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    // min-height: 100vh;
+    margin: 0;
+    line-height: 1.5;
+    @include fontRaleway();
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
 }
 
 a {
     text-decoration: none;
-    color: inherit;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 
 header {
+    position: relative;
     width: 100%;
-    max-width: 1200px;
-    height: 3rem;
-    padding: 0 1rem;
+    overflow: hidden;
 
-    .container {
-        @include flexCenter(row, flex-start);
+    #navbar {
+        position: absolute;
+        z-index: 1;
+        @include flex(row, center, baseline);
         width: 100%;
-        height: 100%;
+        height: 2rem;
+        margin: 0.5rem auto;
 
         .logo {
-            width: auto;
-            height: 1.5rem;
-            margin: auto 0;
+            height: 100%;
+            
+            img {
+                height: 100%;
+            }
         }
 
         .links {
-            @include flexCenter(row, center);
             margin-left: auto;
 
-            a {
-                @include fontPoppings();
-                margin-right: 1rem;
-                font-size: 0.7rem;
-                color: $greyHeavy;
-            }
-        }
-    }   
-}
+            .link {
+                margin-left: 0.5rem;
 
+                img {
+                    height: 1.5rem;
+                    opacity: 50%;
 
-#hero {
-    @include flexCenter(column, flex-start);
-    @include fontRaleway();
-    position: relative;
-    width: 100%;
-    height: 14rem;
-    overflow: hidden;
-
-    .title {
-        font-weight: 500;
-        font-size: 2rem;
-        color: $greyNormal;
-    }
-
-    .subtitle {
-        font-weight: 200;
-        font-size: 1.5rem;
-
-        span {
-            font-weight: 100;
-            font-size: 0.8rem;
-        }
-    }
-
-    .links {
-        @include flexCenter(row, center);
-
-        div {
-            @include flexCenter(row, center);
-            width: 4.2rem;
-            height: 1.4rem;
-            margin: 1rem 1rem;
-            border: 2px solid $greyNormal;
-            cursor: pointer;
-
-            a {
-                font-size: 0.6rem;
-                text-transform: uppercase;
+                    &:hover {
+                        opacity: 100%;
+                    }
+                }
             }
         }
     }
 
-    .wave {
-        position: absolute;
-        width: 180%;
-        bottom: 0;
-        height: 5rem;
-        background: url('../resources/backgrounds/wave-10.svg');
-        background-repeat: no-repeat;
-        background-size: 100%;
-    }
-
-    .layer1 {
-        z-index: 4;
-        bottom: -2rem;
-        opacity: 80%;
-        animation: waveAnimation1 20s linear 0s infinite;
-    }
-
-    .layer2 {
-        z-index: 3;
-        bottom: -2rem;
-        opacity: 60%;
-        animation: waveAnimation2 15s linear -5s infinite;
-    }
-
-    .layer3 {
-        z-index: 2;
-        bottom: -2rem;
-        opacity: 40%;
-        animation: waveAnimation1 10s linear -5s infinite;
-    }
-
-    .layer4 {
-        z-index: 1;
-        bottom: -2rem;
-        opacity: 20%;
-        animation: waveAnimation2 15s linear -2s infinite;
-    }
-
-    .static-wave {
-        position: absolute;
-        bottom: -0.2rem;
-        width: 120%;
-    }
-}
-
-
-#about-wrapper {
-    // border: 1px solid magenta;
-    @include flexCenter(row, center);
-    @include fontPoppings();
-    position: relative;
-    width: 100%;
-    height: 25rem;
-    padding: 0 1rem;
-    padding-bottom: 3rem;
-    background: $greyHeavy;
-    color: $primaryBackground;
-    overflow: hidden;
-
-    .about {
-        position: relative;
+    #hero {
+        @include flex(column, center, center);
         width: 100%;
-        height: auto;
-        padding: 1rem;
-        border: 1px solid $goldDark;
+        padding-top: 4rem;
+        height: 20rem;
 
-        h3 {
-            @include flexCenter(row, center);
-            position: absolute;
-            z-index: 10;
-            top: -0.8rem;
-            left: 0;
-            right: 0;
-            
-            width: 8rem;
-            height: auto;
-            margin: 0 auto;
-            padding: 0 1rem;
-            background: $greyHeavy;
-
-            font-size: 1rem;
-            font-weight: 100;
-            text-transform: uppercase;
+        .title {
+            font-weight: 500;
+            font-size: 1.2rem;
+            color: $grey4;
         }
 
-        p {
-            font-size: 0.7rem;
-            font-weight: 300;
-            text-align: justify;
-            line-height: 1.5rem;
-        }
+        .subtitle {
+            font-weight: 200;
+            font-size: 1.5rem;
+            color: $grey2;
 
-        img {
-            position: absolute;
-            width: auto;
-            height: 1.5rem;
-            margin: 0.2rem;
-        }
-    }
-
-    .static-wave {
-        position: absolute;
-        bottom: -0.5rem;
-        width: 120%;
-    }
-}
-
-
-#projects-wrapper {
-    // border: 1px solid magenta;
-    @include flexCenter(column, space-around);
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 0 1rem;
-    padding-bottom: 2rem;
-    background: $greyMedium;
-    overflow: hidden;
-
-    .project {
-        @include flexCenter(row, center);
-        // border: 1px solid lightblue;
-        width: 100%;
-        height: 10rem;
-        margin: 3rem 0;
-
-        img {
-            width: auto;
-            height: 100%;
-        }
-
-        .details {
-            @include flexCenter(column, space-between);
-            @include fontRaleway();
-            // border: 1px solid magenta;
-            width: 100%;
-            max-width: 18rem;
-            height: 100%;
-
-            h4 {
-                font-size: 1rem;
-                font-weight: 200;
-                color: $goldDark;
+            span {
+                font-weight: 100;
+                font-size: 0.8rem;
             }
+        }
 
-            p {
-                font-size: 0.7rem;
-                font-weight: 500;
-                text-align: justify;
-                line-height: 1rem;
-                color: #AEAFB3;
-            }
+        .links {
+            @include flex(row, center, baseline);
 
-            .project-links {
-                @include flexCenter(row, center);
+            div {
+                @include flex(row, center, center);
+                width: 4.2rem;
+                height: 1.4rem;
+                margin: 1rem 1rem;
+                border: 2px solid $grey4;
+                border-radius: 3px;
+                cursor: pointer;
 
-                div {
-                    @include flexCenter(row, center);
-                    cursor: pointer;
-                    width: 5.5rem;
-                    height: 1.4rem;
-                    margin: 1rem 1rem;
-                    border: 2px solid #000;
-                    font-weight: 700;
-                    color: #000;
+                &:hover {
+                    border: none;
+                    background: $grey4;
+                    transform: scale(1.1);
+                    color: white;
                 }
     
                 a {
@@ -274,69 +125,289 @@ header {
                     text-transform: uppercase;
                 }
             }
-
-            .tech-stack {
-                @include flexCenter(row, flex-start);
-                width: 100%;
-                height: 1.5rem;
-                padding: 0 1rem;
-
-                img {
-                    width: auto;
-                    height: 1rem;
-                    margin-left: auto;
-                }
-            }
         }
-    }
 
-    .static-wave {
-        position: absolute;
-        bottom: -0.5rem;
-        width: 120%;
     }
 }
 
 
-#skills-wrapper {
-    // border: 1px solid magenta;
-    @include flexCenter(row, center);
+main {
     width: 100%;
-    height: 100%;
-    padding: 0 1rem;
-    background: $greyHeavy;
+    overflow: hidden;
 
-    .skills {
-        @include flexCenter(row, space-evenly);
+    #about {
+        // border: 0.1px solid magenta;
+        @include flex(column, center, center);
+        @include fontPoppings();
         width: 100%;
-        height: 16rem;
-        
-        .skill-set {
-            // border: 1px solid lightblue;
-            @include flexCenter(row, space-between);
-            width: auto;
-            height: 3rem;
-            border: 1px solid #dab55d44;
-            border-radius: 0.4rem;
-            // margin: 0 1rem;
-    
-            img {
-                width: auto;
-                height: 2rem;
-                margin: 0 0.5rem;
-            }
+        height: 20rem;
+        background: $grey5;
+
+        h3 {
+            position: absolute;
+            top: -0.7rem;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+
+            width: 8rem;
+            background: $grey5;
+
+            font-size: 1rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: $grey1;
+            text-align: center;
         }
+
+        p {
+            padding: 1.4rem;
+            border: 1px solid $goldLight;
+
+            font-size: 0.7rem;
+            font-weight: 300;
+            text-align: justify;
+            color: $grey1;
+        }
+
+        img {
+            position: absolute;
+            height: 1.8rem;
+            margin: 0.3rem;
+        }
+    }
+
+    #project {
+        width: 100%;
+        height: 10rem;
+        background: lightcoral;
+    }
+
+    #skills {
+
+    }
+
+}
+
+
+footer {
+
+    #contact {
+        
     }
 }
 
 
-// footer {
-//     border: 1px solid magenta;
+// #about-wrapper {
+//     // border: 1px solid magenta;
+//     @include flexCenter(row, center);
+//     @include fontPoppings();
+//     position: relative;
 //     width: 100%;
-//     height: 10rem;
+//     height: 25rem;
+//     padding: 0 1rem;
+//     padding-bottom: 3rem;
+//     background: $grey5;
+//     color: $grey1;
+//     overflow: hidden;
 
-//     .footer-wrapper {
-//         // border: 1px solid magenta;
+//     .about {
+//         position: relative;
+//         width: 100%;
+//         height: auto;
+//         padding: 1rem;
+//         border: 1px solid $goldDark;
+
+//         h3 {
+//             @include flexCenter(row, center);
+//             position: absolute;
+//             z-index: 10;
+//             top: -0.8rem;
+//             left: 0;
+//             right: 0;
+            
+//             width: 8rem;
+//             height: auto;
+//             margin: 0 auto;
+//             padding: 0 1rem;
+//             background: $grey5;
+
+//             font-size: 1rem;
+//             font-weight: 100;
+//             text-transform: uppercase;
+//         }
+
+//         p {
+//             font-size: 0.7rem;
+//             font-weight: 300;
+//             text-align: justify;
+//             line-height: 1.5rem;
+//         }
+
+//         img {
+//             position: absolute;
+//             width: auto;
+//             height: 1.5rem;
+//             margin: 0.2rem;
+//         }
+//     }
+
+//     .static-wave {
+//         position: absolute;
+//         bottom: -0.5rem;
+//         width: 120%;
+//     }
+// }
+
+
+// #projects-wrapper {
+//     // border: 1px solid magenta;
+//     @include flexCenter(column, space-around);
+//     position: relative;
+//     width: 100%;
+//     height: 100%;
+//     padding: 0 1rem;
+//     padding-bottom: 2rem;
+//     // background: $grey4;
+//     background: rgb(53, 53, 53);
+//     // border: 2px solid #b6903780;
+//     // border-top: 0;
+//     // border-bottom: 0;
+//     // box-shadow: inset 3px -10px 10px 0 #b6903780;
+//     box-shadow: inset 7px 0px 10px -6px #b6903780;
+//     overflow: hidden;
+
+//     .project {
+//         @include flexCenter(row, center);
+//         // border: 1px solid lightblue;
+//         width: 100%;
+//         height: 10rem;
+//         margin: 3rem 0;
+
+//         img {
+//             width: auto;
+//             height: 100%;
+//         }
+
+//         .details {
+//             @include flexCenter(column, space-between);
+//             @include fontRaleway();
+//             // border: 1px solid magenta;
+//             width: 100%;
+//             max-width: 18rem;
+//             height: 100%;
+
+//             h4 {
+//                 font-size: 1rem;
+//                 font-weight: 200;
+//                 color: $goldDark;
+//             }
+
+//             p {
+//                 font-size: 0.7rem;
+//                 font-weight: 500;
+//                 text-align: justify;
+//                 line-height: 1rem;
+//                 color: #AEAFB3;
+//             }
+
+//             .project-links {
+//                 @include flexCenter(row, center);
+
+//                 div {
+//                     @include flexCenter(row, center);
+//                     cursor: pointer;
+//                     width: 5.5rem;
+//                     height: 1.4rem;
+//                     margin: 1rem 1rem;
+//                     border: 2px solid #000;
+//                     font-weight: 700;
+//                     color: #000;
+//                 }
+    
+//                 a {
+//                     font-size: 0.6rem;
+//                     text-transform: uppercase;
+//                 }
+//             }
+
+//             .tech-stack {
+//                 @include flexCenter(row, flex-start);
+//                 width: 100%;
+//                 height: 1.5rem;
+//                 padding: 0 1rem;
+
+//                 img {
+//                     width: auto;
+//                     height: 1rem;
+//                     margin-left: auto;
+//                 }
+//             }
+//         }
+//     }
+
+
+//     // .static-wave-new {
+//     //     position: absolute;
+//     //     z-index: 10;
+//     //     bottom: -7rem;
+//     //     width: 100%;
+
+//     //     .shadow {
+//     //         box-shadow: inset 3px 0px 10px 0 #b6903780;
+//     //     }
+//     // }
+// }
+
+// .static-wave-test {
+//     stroke: 1px solid #b6903780;
+// }
+
+
+// .static-wave-shadow {
+//     position: absolute;
+//     bottom: 0;
+//     width: 90%;
+
+//     .static-wave-shadow-path {
+//         fill: $grey5;
+//         // stroke: 1px solid #b6903780;
+//         // box-shadow: inset 3px -10px 10px 0 #b6903780;
+//     }
+// }
+
+
+
+// #skills-wrapper {
+//     // border: 1px solid magenta;
+//     @include flexCenter(row, center);
+//     width: 100%;
+//     height: 100%;
+//     padding: 0 1rem;
+//     background: $grey5;
+
+//     box-shadow: inset 7px -6px 10px -5px #b6903780;
+
+//     .skills {
+//         @include flexCenter(row, space-evenly);
+//         width: 100%;
+//         height: 16rem;
+        
+//         .skill-set {
+//             // border: 1px solid lightblue;
+//             @include flexCenter(row, space-between);
+//             width: auto;
+//             height: 3rem;
+//             border: 1px solid #dab55d44;
+//             border-radius: 0.4rem;
+//             // margin: 0 1rem;
+    
+//             img {
+//                 width: auto;
+//                 height: 2rem;
+//                 margin: 0 0.5rem;
+//             }
+//         }
 //     }
 // }
 
@@ -356,55 +427,21 @@ header {
 
 /* ========== FLUID TYPOGRAPHY ==========
     RANGE   TARGET    VW (px)   HTML-FONT (px)
-    MIN     MOBILE    >= 375    16.0
-    MEDIAN  TABLET    ~= 790    24.0
-    MAX     DESKTOP+  <= 1200   32.0
+    MIN     MOBILE    >= 320    16
+    MEDIAN  TABLET    ~= 780    23
+    MAX     DESKTOP+  <= 1100   28
 
     https://www.madebymike.com.au/writing/fluid-type-calc-examples/
     minFont + (maxFont - minFont) * [(100vw - minVPWidth) / (maxVPWidth - minVPWidth)]
    ====================================== */
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 320px) {
     html {
-        font-size: calc(16px + 16 * ((100vw - 375px) / 825));
+        font-size: calc(16px + 12 * ((100vw - 320px) / 780));
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1100px) {
     html {
-        font-size: 32px;
-    }
-}
-
-@media screen and (max-width: 750px) {
-    #projects-wrapper {
-        height: 60rem;
-
-        .project {
-            @include flexCenter(column, space-around);
-            height: 8rem;
-            // margin: 3rem 0;
-
-            img {
-                height: 12rem;
-            }
-
-            div {
-                margin-top: 1rem;
-            }
-        }
-    }
-
-    #skills-wrapper {
-        height: 20rem;
-
-        .skills {
-            @include flexCenter(column, center);
-            
-            .skill-set {
-                @include flexCenter(row, space-evenly);
-                width: auto;
-                margin: 1rem 0;
-            }
-        }
+        font-size: 28px;
     }
 }

@@ -1,18 +1,18 @@
-$primaryBackground: rgba(236, 236, 236, 0.70);
-$greyLight:         #858585;
-$greyNormal:        #656565;
-$greyMedium:        #454545;
-$greyHeavy:         #252525;
+$grey1: #ECECECB3;
+$grey2: #858585;
+$grey3: #656565;
+$grey4: #454545;
+$grey5: #252525;
+$grey6: #1B1B1B;
 
-$goldLight:         #DAB55D;
-$goldDark:          #B69037;
+$goldLight: #DAB55D;
+$goldDark:  #B69037;
 
-
-@mixin flexCenter($direction, $justify) {
+@mixin flex($direction, $justify, $align) {
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;
-    align-items: center;
+    align-items: $align;
 }
 
 @mixin fontPoppings {
