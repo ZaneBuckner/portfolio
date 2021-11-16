@@ -9,7 +9,6 @@
     position: absolute;
     top: -5px;
     width: 200%;
-    transform: rotate(180deg);
 }
 
 .waveLeft {
@@ -47,6 +46,7 @@
     animation-delay: -1.2s;
     animation-duration: 3.2s;
 }
+
 
 .inverse-layer1 {
     opacity: 100%;

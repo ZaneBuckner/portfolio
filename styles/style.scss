@@ -19,6 +19,7 @@ body {
     margin: 0;
     line-height: 1.5;
     @include fontRaleway();
+    touch-action: manipulation;
 }
 
 h1, h2, h3, h4, p {
@@ -105,7 +106,7 @@ header {
                 font-weight: 100;
                 font-size: 0.8rem;
 
-                letter-spacing: 2px;
+                letter-spacing: 1px;
             }
         }
 
@@ -164,8 +165,8 @@ main {
             width: 8rem;
             background: $grey5;
 
-            font-size: 1rem;
-            font-weight: 400;
+            font-size: 0.9rem;
+            font-weight: 300;
             text-transform: uppercase;
             color: $grey1;
             text-align: center;
@@ -173,7 +174,8 @@ main {
 
         p {
             padding: 1.4rem;
-            border: 1px solid $goldLight;
+            border: 1px solid $goldDark;
+            border-radius: 3px;
 
             font-size: 0.7rem;
             font-weight: 300;
