@@ -75,6 +75,14 @@
     animation-duration: 3.2s;
 }
 
+.stop {
+   animation-name: none;
+}
+
+// .start {
+//     animation-name: ;
+// }
+
 
 @keyframes moveWaveLeft {
     0%      { transform: translateX(0) }

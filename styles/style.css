@@ -90,6 +90,11 @@
           animation-duration: 3.2s;
 }
 
+.stop {
+  -webkit-animation-name: none;
+          animation-name: none;
+}
+
 @-webkit-keyframes moveWaveLeft {
   0% {
     -webkit-transform: translateX(0);
