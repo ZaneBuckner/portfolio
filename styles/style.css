@@ -375,7 +375,7 @@ main #about .frame {
 
 main #about .static-wave {
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   width: 100%;
 }
 
