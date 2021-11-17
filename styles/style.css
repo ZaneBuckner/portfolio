@@ -165,10 +165,12 @@ a {
 }
 
 .container {
+  border: 1px solid magenta;
   position: relative;
   width: 90%;
   max-width: 1100px;
   margin: 0 auto;
+  overflow-anchor: none;
 }
 
 header {
