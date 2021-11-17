@@ -33,7 +33,6 @@ a {
 }
 
 .container {
-    border: 1px solid magenta;
     position: relative;
     width: 90%;
     max-width: 1100px;
@@ -43,12 +42,12 @@ a {
 
 header {
     position: relative;
-    width: 100%;
     overflow: hidden;
 
     #navbar {
         position: absolute;
         z-index: 1;
+        
         @include flex(row, center, baseline);
         width: 100%;
         height: 2rem;
@@ -87,9 +86,6 @@ header {
     #hero {
         // border: 0.1px solid magenta;
         @include flex(column, center, center);
-        // width: 100%;
-        // padding-top: 4rem;
-        // height: 20rem;
         padding: 5.5rem 0;
 
         .title {
