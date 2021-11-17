@@ -15,20 +15,20 @@ $goldDark:  #B69037;
     align-items: $align;
 }
 
-@mixin fontPoppings {
-    font-family: 'Poppins', serif;
-    font-style: normal;
-    font-weight: normal;
-}
-
 @mixin fontRaleway {
     font-family: 'Raleway', serif;
     font-style: normal;
     font-weight: normal;
 }
 
-@mixin fontMontserrat {
-    font-family: 'Montserrat', serif;
+@mixin fontPoppings {
+    font-family: 'Poppins', serif;
     font-style: normal;
     font-weight: normal;
 }
+
+// @mixin fontMontserrat {
+//     font-family: 'Montserrat', serif;
+//     font-style: normal;
+//     font-weight: normal;
+// }
