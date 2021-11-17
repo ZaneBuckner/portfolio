@@ -1,17 +1,20 @@
 
+window.addEventListener('resize', refreshAnimation);
+window.addEventListener('orientationchange', refreshAnimation);
 
+//// REMOVE ANIMATIONS; REPAINT STYLES; ADD ANIMATIONS
+function refreshAnimation() {
+    const waveLeft = document.querySelectorAll('.waveLeft');
+    const waveRight = document.querySelectorAll('.waveRight');
+    const removeAnimations = (() => {
+        waveLeft.forEach(el => el.classList.remove('waveLeft'));
+        waveRight.forEach(el => el.classList.remove('waveRight'));
+    })();
 
-window.addEventListener('resize', e => {
-    let waveLeftAnimations = document.querySelectorAll('.waveLeft');
-    let waveRightAnimations = document.querySelectorAll('.waveRight');
-
-    waveLeftAnimations.forEach(element => {
-        element.classList.remove('waveLeft');
-        element.classList.add('waveLeft');
+    window.requestAnimationFrame(function (time) {
+        window.requestAnimationFrame(function (time) {
+            waveLeft.forEach(el => el.classList.add('waveLeft'));
+            waveRight.forEach(el => el.classList.add('waveRight'));
+        });
     });
-
-    waveRightAnimations.forEach(element => {
-        element.classList.remove('waveRight');
-        element.classList.add('waveRight');
-    });
-});
+};
