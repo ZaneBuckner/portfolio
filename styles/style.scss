@@ -84,10 +84,12 @@ header {
     }
 
     #hero {
+        // border: 0.1px solid magenta;
         @include flex(column, center, center);
-        width: 100%;
+        // width: 100%;
         // padding-top: 4rem;
-        height: 20rem;
+        // height: 20rem;
+        padding: 5.5rem 0;
 
         .title {
             font-weight: 300;
@@ -113,12 +115,12 @@ header {
 
         .links {
             @include flex(row, center, baseline);
-
+            
             .link {
                 @include flex(row, center, center);
                 width: 4rem;
                 height: 1.6rem;
-                margin: 1rem 1rem;
+                margin: 1rem;
 
                 border: 2px solid $grey4;
                 border-radius: 3px;
