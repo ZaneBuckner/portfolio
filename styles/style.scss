@@ -18,7 +18,7 @@ html {
 body {
     margin: 0;
     line-height: 1.5;
-    // @include fontRaleway();
+    @include fontRaleway();
 }
 
 h1, h2, h3, h4, p {
@@ -85,7 +85,10 @@ header {
 
     #hero {
         // border: 0.1px solid magenta;
-        @include flex(column, center, center);
+        // @include flex(column, center, center);
+        // display: flex;
+        text-align: center;
+        width: 100%;
         padding: 5.5rem 0;
 
         .title {
