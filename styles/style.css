@@ -252,6 +252,7 @@ header #hero .title {
   font-size: 1.2rem;
   color: #454545;
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 header #hero .subtitle {
