@@ -1,0 +1,421 @@
+@import "./variables";
+@import "./animations";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    background: $primaryBackground;
+    font: 16px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    // min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+// .static-wave {
+//     position: absolute;
+//     bottom: -0.5rem;
+//     width: 120%;
+// }
+
+
+header {
+    width: 100%;
+    max-width: 1200px;
+    height: 3rem;
+    padding: 0 1rem;
+
+    .container {
+        @include flexCenter(row, flex-start);
+        width: 100%;
+        height: 100%;
+
+        .logo {
+            width: auto;
+            height: 1.5rem;
+            margin: auto 0;
+        }
+
+        .links {
+            @include flexCenter(row, center);
+            margin-left: auto;
+
+            a {
+                @include fontPoppings();
+                margin-right: 1rem;
+                font-size: 0.7rem;
+                color: $greyHeavy;
+            }
+        }
+    }   
+}
+
+
+#hero {
+    @include flexCenter(column, flex-start);
+    @include fontRaleway();
+    position: relative;
+    width: 100%;
+    height: 14rem;
+    overflow: hidden;
+
+    .title {
+        font-weight: 500;
+        font-size: 2rem;
+        color: $greyNormal;
+    }
+
+    .subtitle {
+        font-weight: 200;
+        font-size: 1.5rem;
+
+        span {
+            font-weight: 100;
+            font-size: 0.8rem;
+        }
+    }
+
+    .links {
+        @include flexCenter(row, center);
+
+        div {
+            @include flexCenter(row, center);
+            width: 4.2rem;
+            height: 1.4rem;
+            margin: 1rem 1rem;
+            border: 2px solid $greyNormal;
+            cursor: pointer;
+
+            a {
+                font-size: 0.6rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .wave {
+        position: absolute;
+        width: 180%;
+        bottom: 0;
+        height: 5rem;
+        background: url('../resources/backgrounds/wave-10.svg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .layer1 {
+        z-index: 4;
+        bottom: -1.5rem;
+        opacity: 80%;
+        animation: waveAnimation1 20s linear 0s infinite;
+    }
+
+    .layer2 {
+        z-index: 3;
+        bottom: -1.8rem;
+        opacity: 60%;
+        animation: waveAnimation2 15s linear -5s infinite;
+    }
+
+    .layer3 {
+        z-index: 2;
+        bottom: -1.5rem;
+        opacity: 40%;
+        animation: waveAnimation1 10s linear -5s infinite;
+    }
+
+    .layer4 {
+        z-index: 1;
+        bottom: -1.3rem;
+        opacity: 20%;
+        animation: waveAnimation2 15s linear -2s infinite;
+    }
+
+    .static-wave {
+        position: absolute;
+        bottom: -0.2rem;
+        width: 120%;
+    }
+}
+
+
+#about-wrapper {
+    // border: 1px solid magenta;
+    @include flexCenter(row, center);
+    @include fontPoppings();
+    position: relative;
+    z-index: 5;
+    top: -4rem;
+    width: 100%;
+    height: 25rem;
+    padding: 0 1rem;
+    padding-bottom: 3rem;
+
+    background: 
+        url('../resources/backgrounds/about-bg-4.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    // background: $greyHeavy;
+    color: $primaryBackground;
+    overflow: hidden;
+
+    .about {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        border: 1px solid $goldDark;
+
+        h3 {
+            @include flexCenter(row, center);
+            position: absolute;
+            z-index: 10;
+            top: -0.8rem;
+            left: 0;
+            right: 0;
+            
+            width: 8rem;
+            height: auto;
+            margin: 0 auto;
+            padding: 0 1rem;
+            background: $greyHeavy;
+
+            font-size: 1rem;
+            font-weight: 100;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 0.7rem;
+            font-weight: 300;
+            text-align: justify;
+            line-height: 1.5rem;
+        }
+
+        img {
+            position: absolute;
+            width: auto;
+            height: 1.5rem;
+            margin: 0.2rem;
+        }
+    }
+
+    // .static-wave {
+    //     position: absolute;
+    //     bottom: -0.5rem;
+    //     width: 120%;
+    // }
+}
+
+
+#projects-wrapper {
+    // border: 1px solid magenta;
+    @include flexCenter(column, space-evenly);
+    position: relative;
+    z-index: 6;
+    top: -8rem;
+    width: 100%;
+    height: 30rem;
+    padding: 0 1rem;
+    padding-bottom: 2rem;
+    overflow: hidden;
+
+    background: 
+        url('../resources/backgrounds/projects-bg.svg');
+    // background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    // background: 
+    //     url('../resources/backgrounds/projects-bg.svg'),
+    //     url('../resources/backgrounds/white-grunge.jpg');
+    // background-blend-mode: multiply;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+
+    // background: $greyMedium;
+
+    .project {
+        @include flexCenter(row, center);
+        // border: 1px solid lightblue;
+        width: 100%;
+        height: 10rem;
+
+        img {
+            width: auto;
+            height: 100%;
+        }
+
+        .details {
+            @include flexCenter(column, space-between);
+            @include fontRaleway();
+            // border: 1px solid magenta;
+            width: 100%;
+            max-width: 18rem;
+            height: 100%;
+
+            h4 {
+                font-size: 1rem;
+                font-weight: 200;
+                color: $goldDark;
+            }
+
+            p {
+                font-size: 0.7rem;
+                font-weight: 500;
+                text-align: justify;
+                line-height: 1rem;
+                color: #AEAFB3;
+            }
+
+            .project-links {
+                @include flexCenter(row, center);
+
+                div {
+                    @include flexCenter(row, center);
+                    cursor: pointer;
+                    width: 5.5rem;
+                    height: 1.4rem;
+                    margin: 1rem 1rem;
+                    border: 2px solid #000;
+                    font-weight: 700;
+                    color: #000;
+                }
+    
+                a {
+                    font-size: 0.6rem;
+                    text-transform: uppercase;
+                }
+            }
+
+            .tech-stack {
+                @include flexCenter(row, flex-start);
+                width: 100%;
+                height: 1.5rem;
+                padding: 0 1rem;
+
+                img {
+                    width: auto;
+                    height: 1rem;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+
+    .static-wave {
+        position: absolute;
+        bottom: -0.5rem;
+        width: 120%;
+    }
+}
+
+
+#skills-wrapper {
+    // border: 1px solid magenta;
+    @include flexCenter(row, center);
+    width: 100%;
+    height: 10rem;
+    padding: 0 1rem;
+    background: $greyHeavy;
+
+    .skills {
+        @include flexCenter(row, space-evenly);
+        width: 100%;
+        max-width: 18rem;
+        
+        .skill-set {
+            // border: 1px solid lightblue;
+            @include flexCenter(row, space-between);
+            width: auto;
+            height: 3rem;
+            border: 1px solid #dab55d44;
+            border-radius: 0.4rem;
+            margin: 0 1rem;
+    
+            img {
+                width: auto;
+                height: 2rem;
+                margin: 0 0.5rem;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== FLUID TYPOGRAPHY ==========
+    RANGE   TARGET    VW (px)   HTML-FONT (px)
+    MIN     MOBILE    >= 375    16.0
+    MEDIAN  TABLET    ~= 790    24.0
+    MAX     DESKTOP+  <= 1200   32.0
+
+    https://www.madebymike.com.au/writing/fluid-type-calc-examples/
+    minFont + (maxFont - minFont) * [(100vw - minVPWidth) / (maxVPWidth - minVPWidth)]
+   ====================================== */
+@media screen and (min-width: 375px) {
+    html {
+        font-size: calc(16px + 16 * ((100vw - 375px) / 825));
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    html {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #projects-wrapper {
+        height: 45rem;
+
+        .project {
+            @include flexCenter(column, center);
+            height: 8rem;
+            margin: 3rem 0;
+        }
+    }
+
+    #skills-wrapper {
+        height: 20rem;
+
+        .skills {
+            @include flexCenter(column, center);
+            
+            .skill-set {
+                @include flexCenter(row, space-evenly);
+                width: 100%;
+                margin: 1rem 0;
+                
+            }
+        }
+    }
+}
