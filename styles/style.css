@@ -245,7 +245,6 @@ header #hero {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  padding-top: 4rem;
   height: 20rem;
 }
 
@@ -258,7 +257,7 @@ header #hero .title {
 
 header #hero .subtitle {
   font-weight: 200;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #858585;
 }
 
@@ -346,7 +345,7 @@ main #about {
   font-style: normal;
   font-weight: normal;
   width: 100%;
-  height: 20rem;
+  height: 18rem;
   background: #252525;
 }
 

@@ -86,7 +86,7 @@ header {
     #hero {
         @include flex(column, center, center);
         width: 100%;
-        padding-top: 4rem;
+        // padding-top: 4rem;
         height: 20rem;
 
         .title {
@@ -99,7 +99,7 @@ header {
 
         .subtitle {
             font-weight: 200;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: $grey2;
 
             span {
@@ -152,7 +152,7 @@ main {
         @include flex(column, center, center);
         @include fontPoppings();
         width: 100%;
-        height: 20rem;
+        height: 18rem;
         background: $grey5;
 
         h3 {
