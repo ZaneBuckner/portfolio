@@ -171,6 +171,12 @@ a {
   margin: 0 auto;
 }
 
+.static-wave {
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+}
+
 header {
   position: relative;
   overflow: hidden;
@@ -235,7 +241,6 @@ header #navbar .links .link img:hover, header #navbar .links .link img:active {
 header #hero {
   text-align: center;
   width: 100%;
-  padding: 5.5rem 0;
 }
 
 header #hero .title {
@@ -337,7 +342,7 @@ main #about {
   font-weight: normal;
   position: relative;
   width: 100%;
-  padding: 2rem 0 6rem 0;
+  padding: 1rem 0 8rem 0;
   background: #252525;
 }
 
@@ -357,7 +362,7 @@ main #about h3 {
 }
 
 main #about p {
-  padding: 1.4rem;
+  padding: 1.5rem;
   border: 1px solid #B69037;
   border-radius: 3px;
   font-size: 0.7rem;
@@ -373,12 +378,6 @@ main #about .frame {
   margin: 0.3rem;
 }
 
-main #about .static-wave {
-  position: absolute;
-  bottom: -5px;
-  width: 100%;
-}
-
 main #projects {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -387,18 +386,20 @@ main #projects {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   width: 100%;
+  padding: 2rem 0 8rem 0;
   background: #353535;
 }
 
-main #projects .project {
-  margin: 3rem 0;
+main #projects .project:nth-child(2) {
+  margin-top: 2rem;
 }
 
 main #projects .project .display {
@@ -429,7 +430,7 @@ main #projects .project .display h4 {
 }
 
 main #projects .project .display h4 span {
-  color: #c5c5c585;
+  color: #C5C5C56E;
 }
 
 main #projects .project .display img {
@@ -453,18 +454,23 @@ main #projects .project .description {
           align-items: center;
   width: 90%;
   margin: 0 auto;
-  font-family: 'Raleway', serif;
-  font-style: normal;
-  font-weight: normal;
   font-weight: 300;
   font-size: 0.8rem;
   color: #C5C5C5;
-  text-align: center;
+  text-align: justify;
 }
 
 main #projects .project .description p {
   width: 100%;
-  margin: 0.5rem 0;
+  margin-top: 0.5rem;
+  color: #C5C5C5;
+}
+
+main #projects .project .description .disclosure {
+  font-size: 0.6rem;
+  font-style: italic;
+  color: #C5C5C585;
+  text-align: center;
 }
 
 main #projects .project .description .links {
@@ -520,6 +526,11 @@ main #projects .project .description .links .link:hover, main #projects .project
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+main #skills {
+  background: #252525;
+  padding: 10rem 0;
 }
 
 /* ========== FLUID TYPOGRAPHY ==========

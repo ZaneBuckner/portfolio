@@ -39,6 +39,12 @@ a {
     margin: 0 auto;
 }
 
+.static-wave {
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+}
+
 
 header {
     position: relative;
@@ -86,7 +92,6 @@ header {
     #hero {
         text-align: center;
         width: 100%;
-        padding: 5.5rem 0;
         
         .title {
             font-weight: 300;
@@ -147,12 +152,11 @@ main {
     overflow: hidden;
 
     #about {
-        // border: 0.1px solid lightblue;
         @include flex(column, center, center);
         @include fontPoppings();
         position: relative;
         width: 100%;
-        padding: 2rem 0 6rem 0;
+        padding: 1rem 0 8rem 0;
         background: $grey5;
 
         h3 {
@@ -173,7 +177,7 @@ main {
         }
 
         p {
-            padding: 1.4rem;
+            padding: 1.5rem;
             border: 1px solid $goldDark;
             border-radius: 3px;
 
@@ -189,28 +193,22 @@ main {
             height: 1.8rem;
             margin: 0.3rem;
         }
-
-        .static-wave {
-            // border: 0.1px solid magenta;
-            position: absolute;
-            bottom: -5px;
-            width: 100%;
-
-            // opacity: 20%;
-        }
     }
 
 
     #projects {
         // border: 0.1px solid rgb(185, 185, 185);
-        @include flex(column, space-between, center);
+        @include flex(column, center, center);
+        position: relative;
         width: 100%;
-        // padding: 3rem 0;
+        padding: 2rem 0 8rem 0;
         background: #353535;
-
+        
 
         .project {
-            margin: 3rem 0;
+            &:nth-child(2) {
+                margin-top: 2rem;
+            }
 
             .display {
                 @include flex(column, center, center);
@@ -224,7 +222,7 @@ main {
                     margin-right: 2.2rem;
 
                     span {
-                        color: #c5c5c585;
+                        color: #C5C5C56E;
                     }
                 }
 
@@ -239,15 +237,22 @@ main {
                 width: 90%;
                 margin: 0 auto;
 
-                @include fontRaleway();
                 font-weight: 300;
                 font-size: 0.8rem;
                 color: #C5C5C5;
-                text-align: center;
+                text-align: justify;
 
                 p {
                     width: 100%;
-                    margin: 0.5rem 0;
+                    margin-top: 0.5rem;
+                    color: #C5C5C5;
+                }
+
+                .disclosure {
+                    font-size: 0.6rem;
+                    font-style: italic;
+                    color: #C5C5C585;
+                    text-align: center;
                 }
 
                 .links {
@@ -276,7 +281,6 @@ main {
                             user-select: none;
                         }
                     }
-
                 }
             }
         }
@@ -284,7 +288,8 @@ main {
 
 
     #skills {
-
+        background: #252525;
+        padding: 10rem 0;
     }
 
 }
@@ -296,185 +301,6 @@ footer {
         
     }
 }
-
-
-// #about-wrapper {
-//     // border: 1px solid magenta;
-//     @include flexCenter(row, center);
-//     @include fontPoppings();
-//     position: relative;
-//     width: 100%;
-//     height: 25rem;
-//     padding: 0 1rem;
-//     padding-bottom: 3rem;
-//     background: $grey5;
-//     color: $grey1;
-//     overflow: hidden;
-
-//     .about {
-//         position: relative;
-//         width: 100%;
-//         height: auto;
-//         padding: 1rem;
-//         border: 1px solid $goldDark;
-
-//         h3 {
-//             @include flexCenter(row, center);
-//             position: absolute;
-//             z-index: 10;
-//             top: -0.8rem;
-//             left: 0;
-//             right: 0;
-            
-//             width: 8rem;
-//             height: auto;
-//             margin: 0 auto;
-//             padding: 0 1rem;
-//             background: $grey5;
-
-//             font-size: 1rem;
-//             font-weight: 100;
-//             text-transform: uppercase;
-//         }
-
-//         p {
-//             font-size: 0.7rem;
-//             font-weight: 300;
-//             text-align: justify;
-//             line-height: 1.5rem;
-//         }
-
-//         img {
-//             position: absolute;
-//             width: auto;
-//             height: 1.5rem;
-//             margin: 0.2rem;
-//         }
-//     }
-
-//     .static-wave {
-//         position: absolute;
-//         bottom: -0.5rem;
-//         width: 120%;
-//     }
-// }
-
-
-// #projects-wrapper {
-//     // border: 1px solid magenta;
-//     @include flexCenter(column, space-around);
-//     position: relative;
-//     width: 100%;
-//     height: 100%;
-//     padding: 0 1rem;
-//     padding-bottom: 2rem;
-//     // background: $grey4;
-//     background: rgb(53, 53, 53);
-//     // border: 2px solid #b6903780;
-//     // border-top: 0;
-//     // border-bottom: 0;
-//     // box-shadow: inset 3px -10px 10px 0 #b6903780;
-//     box-shadow: inset 7px 0px 10px -6px #b6903780;
-//     overflow: hidden;
-
-//     .project {
-//         @include flexCenter(row, center);
-//         // border: 1px solid lightblue;
-//         width: 100%;
-//         height: 10rem;
-//         margin: 3rem 0;
-
-//         img {
-//             width: auto;
-//             height: 100%;
-//         }
-
-//         .details {
-//             @include flexCenter(column, space-between);
-//             @include fontRaleway();
-//             // border: 1px solid magenta;
-//             width: 100%;
-//             max-width: 18rem;
-//             height: 100%;
-
-//             h4 {
-//                 font-size: 1rem;
-//                 font-weight: 200;
-//                 color: $goldDark;
-//             }
-
-//             p {
-//                 font-size: 0.7rem;
-//                 font-weight: 500;
-//                 text-align: justify;
-//                 line-height: 1rem;
-//                 color: #AEAFB3;
-//             }
-
-//             .project-links {
-//                 @include flexCenter(row, center);
-
-//                 div {
-//                     @include flexCenter(row, center);
-//                     cursor: pointer;
-//                     width: 5.5rem;
-//                     height: 1.4rem;
-//                     margin: 1rem 1rem;
-//                     border: 2px solid #000;
-//                     font-weight: 700;
-//                     color: #000;
-//                 }
-    
-//                 a {
-//                     font-size: 0.6rem;
-//                     text-transform: uppercase;
-//                 }
-//             }
-
-//             .tech-stack {
-//                 @include flexCenter(row, flex-start);
-//                 width: 100%;
-//                 height: 1.5rem;
-//                 padding: 0 1rem;
-
-//                 img {
-//                     width: auto;
-//                     height: 1rem;
-//                     margin-left: auto;
-//                 }
-//             }
-//         }
-//     }
-
-
-//     // .static-wave-new {
-//     //     position: absolute;
-//     //     z-index: 10;
-//     //     bottom: -7rem;
-//     //     width: 100%;
-
-//     //     .shadow {
-//     //         box-shadow: inset 3px 0px 10px 0 #b6903780;
-//     //     }
-//     // }
-// }
-
-// .static-wave-test {
-//     stroke: 1px solid #b6903780;
-// }
-
-
-// .static-wave-shadow {
-//     position: absolute;
-//     bottom: 0;
-//     width: 90%;
-
-//     .static-wave-shadow-path {
-//         fill: $grey5;
-//         // stroke: 1px solid #b6903780;
-//         // box-shadow: inset 3px -10px 10px 0 #b6903780;
-//     }
-// }
 
 
 
