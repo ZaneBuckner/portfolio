@@ -530,8 +530,51 @@ main #projects .project .description .links .link:hover, main #projects .project
 }
 
 main #skills {
+  position: relative;
   background: #252525;
-  padding: 10rem 0;
+  padding: 2rem 0 8rem 0;
+}
+
+main #skills .skillset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin: 2.5rem auto;
+  padding: 0.5rem;
+  border: 2px solid #B69037;
+  border-radius: 2px;
+}
+
+main #skills .skillset h3 {
+  position: absolute;
+  top: -1.4rem;
+  font-size: 0.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #ECECECB3;
+  text-align: center;
+}
+
+main #skills .skillset img {
+  width: auto;
+  height: 2rem;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  padding: 2rem 0 8rem 0;
+  background-color: #353535;
 }
 
 /* ========== FLUID TYPOGRAPHY ==========
@@ -562,6 +605,9 @@ main #skills {
   main #projects {
     padding-bottom: 10rem;
   }
+  main #skills {
+    padding-bottom: 10rem;
+  }
 }
 
 @media (min-width: 1300px) {
@@ -571,6 +617,9 @@ main #skills {
   main #projects {
     padding-bottom: 12rem;
   }
+  main #skills {
+    padding-bottom: 12rem;
+  }
 }
 
 @media (min-width: 1600px) {
@@ -578,6 +627,9 @@ main #skills {
     padding-bottom: 15rem;
   }
   main #projects {
+    padding-bottom: 15rem;
+  }
+  main #skills {
     padding-bottom: 15rem;
   }
 }

@@ -285,16 +285,45 @@ main {
     }
 
     #skills {
+        position: relative;
         background: #252525;
-        padding: 10rem 0;
+        padding: 2rem 0 8rem 0;
 
+        .skillset {
+            @include flex(row, space-around, center);
+            position: relative;
+            // width: auto;
+            margin: 2.5rem auto;
+            padding: 0.5rem;
+            border: 2px solid $goldDark;
+            border-radius: 2px;
 
+            h3 {
+                position: absolute;
+                top: -1.4rem;
+
+                font-size: 0.8rem;
+                font-weight: 300;
+                text-transform: uppercase;
+                color: $grey1;
+                text-align: center;
+
+            }
+
+            img {
+                width: auto;
+                height: 2rem;
+            }
+        }
     }
-
 }
 
 
 footer {
+    position: relative;
+    width: 100%;
+    padding: 2rem 0 8rem 0;
+    background-color: #353535;
 
     #contact {
         
@@ -380,6 +409,10 @@ footer {
         #projects {
             padding-bottom: 10rem;
         }
+
+        #skills {
+            padding-bottom: 10rem;
+        }
     }
 }
 
@@ -392,6 +425,10 @@ footer {
         #projects {
             padding-bottom: 12rem;
         }
+
+        #skills {
+            padding-bottom: 12rem;
+        }
     }
 }
 
@@ -402,6 +439,10 @@ footer {
         }
 
         #projects {
+            padding-bottom: 15rem;
+        }
+
+        #skills {
             padding-bottom: 15rem;
         }
     }
