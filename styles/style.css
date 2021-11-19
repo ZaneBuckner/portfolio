@@ -552,7 +552,7 @@ main #skills .skillset {
   margin: 2.5rem auto;
   padding: 0.5rem;
   border: 1px solid #B69037;
-  border-radius: 3px;
+  border-radius: 1px;
 }
 
 main #skills .skillset h3 {
