@@ -13,6 +13,7 @@
 html {
     font: 16px;
     background: $grey1;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -195,16 +196,13 @@ main {
         }
     }
 
-
     #projects {
-        // border: 0.1px solid rgb(185, 185, 185);
         @include flex(column, center, center);
         position: relative;
         width: 100%;
         padding: 2rem 0 8rem 0;
-        background: #353535;
+        background-color: #353535;
         
-
         .project {
             &:nth-child(2) {
                 margin-top: 2rem;
@@ -286,10 +284,11 @@ main {
         }
     }
 
-
     #skills {
         background: #252525;
         padding: 10rem 0;
+
+
     }
 
 }
