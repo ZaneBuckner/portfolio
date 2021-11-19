@@ -370,3 +370,39 @@ footer {
         font-size: 28px;
     }
 }
+
+@media (min-width: 900px) {
+    main {
+        #about {
+            padding-bottom: 10rem;
+        }
+
+        #projects {
+            padding-bottom: 10rem;
+        }
+    }
+}
+
+@media (min-width: 1300px) {
+    main {
+        #about {
+            padding-bottom: 12rem;
+        }
+
+        #projects {
+            padding-bottom: 12rem;
+        }
+    }
+}
+
+@media (min-width: 1600px) {
+    main {
+        #about {
+            padding-bottom: 15rem;
+        }
+
+        #projects {
+            padding-bottom: 15rem;
+        }
+    }
+}

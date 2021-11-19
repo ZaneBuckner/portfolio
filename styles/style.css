@@ -554,4 +554,31 @@ main #skills {
     font-size: 28px;
   }
 }
+
+@media (min-width: 900px) {
+  main #about {
+    padding-bottom: 10rem;
+  }
+  main #projects {
+    padding-bottom: 10rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  main #about {
+    padding-bottom: 12rem;
+  }
+  main #projects {
+    padding-bottom: 12rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  main #about {
+    padding-bottom: 15rem;
+  }
+  main #projects {
+    padding-bottom: 15rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */
