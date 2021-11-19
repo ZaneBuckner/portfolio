@@ -551,8 +551,8 @@ main #skills .skillset {
   position: relative;
   margin: 2.5rem auto;
   padding: 0.5rem;
-  border: 2px solid #B69037;
-  border-radius: 2px;
+  border: 1px solid #B69037;
+  border-radius: 3px;
 }
 
 main #skills .skillset h3 {
