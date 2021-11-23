@@ -1,0 +1,422 @@
+@import "./variables";
+@import "./global-styles";
+@import "./wave-animations";
+
+header {
+    position: relative;
+    @include flex(column, center, flex-start);
+    height: 100vh;
+    overflow: hidden;
+
+    background: url(../resources/backgrounds/pattern-rockywall.png) center / cover no-repeat $grey-200;
+    background-blend-mode: overlay;
+
+    #navbar {
+        @include absolute(0, 0, null, 0);
+        z-index: 1;
+        
+        @include flex(row, center, baseline);
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 0.8rem;
+
+        #logo {
+            height: 2rem;
+        }
+
+        nav {
+            margin-left: auto;
+
+            .nav-link {
+                margin-left: 0.5rem;
+
+                .nav-icon {
+                    height: 1.5rem;
+                    opacity: 40%;
+                    transition: transform 0.2s ease-in-out;
+
+                    &:hover,
+                    &:active {
+                        opacity: 100%;
+                        transform: scale(1.2);
+                        user-select: none;
+                    }
+                }
+            }
+        }
+    }
+
+    #hero {
+        @include flex(column, center, center);
+        
+        .header {
+            @include font-properties(1.2rem, 300, #6A6A6A);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .subheader {
+            @include font-properties(1.4rem, 200, $grey-500);
+
+            span {
+                @include font-properties(0.8rem, 300, $grey-500);
+                letter-spacing: 1px;
+            }
+        }
+
+        nav {
+            @include flex(row, center, center);
+
+            .hero-button {
+                @include flex(row, center, center);
+                color: $grey-100;
+                background: $grey-600;
+
+                &:hover, &:active {
+                    color: $grey-600;
+                    background: transparent;
+                    border: 2px solid $grey-600;
+                }
+            }
+        }
+
+    }
+}
+
+
+main {
+    width: 100%;
+    overflow: hidden;
+
+    #about {
+        position: relative;
+
+        @include flex(column, center, center);
+        width: 100%;
+        padding-top: 1rem;
+        padding-bottom: 8rem;
+        // padding: 1rem 0 8rem 0;
+        background: $grey-600;
+
+        .about-header {
+            @include absolute(-0.7rem, 0, null, 0);
+            width: 8rem;
+            margin: 0 auto;
+            background: $grey-600;
+
+            @include font-properties(0.9rem, 300, $grey-200);
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .about-body {
+            padding: 1.5rem;
+            border: 1px solid $gold-dark;
+            border-radius: 3px;
+
+            @include font-properties(0.7rem, 300, $grey-200);
+            text-align: justify;
+            line-height: 2;
+        }
+
+        .ornate-frame {
+            position: absolute;
+            height: 1.8rem;
+            margin: 0.2rem;
+        }
+    }
+
+    #projects {
+        @include flex(column, center, center);
+        position: relative;
+        width: 100%;
+        padding: 2rem 0 8rem 0;
+        background-color: $grey-500;
+        
+        .project {
+            &:nth-child(2) {
+                margin-top: 3rem;
+            }
+
+            .display {
+                @include flex(column, center, center);
+                margin-bottom: 1rem;
+
+                .project-title {
+                    @include fontRaleway(1.5rem, 300, $grey-200);
+                    margin-right: 2.2rem;
+
+                    span {
+                        // color: $grey-400;
+                        color: #9E9E9E;  // AA
+                    }
+                }
+
+                img {
+                    width: auto;
+                    height: 9rem;
+                }
+            }
+
+            .description {
+                @include flex(column, center, center);
+                width: 90%;
+                margin: 0 auto;
+
+                font-weight: 300;
+                font-size: 0.8rem;
+                color: #C5C5C5;
+                text-align: justify;
+
+                p {
+                    width: 100%;
+                    margin-top: 0.5rem;
+                    color: #C5C5C5;
+                }
+
+                .disclosure {
+                    @include font-properties(0.55rem, 100, #C5C5C5);
+                    text-align: center;
+                    letter-spacing: 1px;
+                }
+
+                .links {
+                    @include flex(row, center, center);
+
+                    .link {
+                        @include flex(row, center, center);
+                        border: 1px solid #C5C5C5;
+
+                        &:hover, &:active {
+                            background: #FFF;
+                            color: $grey5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #skills {
+        position: relative;
+        // padding: 2rem 0 8rem 0;
+        padding: 10rem 0;
+        background: $grey-600;
+
+        .skillset {
+            @include flex(row, space-around, center);
+            position: relative;
+            margin: 2.5rem auto;
+            padding: 0.5rem;
+            // border: 1px solid $gold-dark;
+            // border-radius: 1px;
+
+            h3 {
+                @include absolute(-1.4rem, null, null, null);
+
+                font-size: 0.8rem;
+                font-weight: 300;
+                text-transform: uppercase;
+                color: $grey1;
+                text-align: center;
+            }
+
+            img {
+                width: auto;
+                height: 2rem;
+            }
+        }
+    }
+}
+
+
+footer {
+    width: 100%;
+    overflow: hidden;
+
+    #contact {
+        // border: 0.1px solid magenta;
+        position: relative;
+        // padding: 2rem 0 2rem 0;
+        padding: 2rem 0;
+        background: $grey-500;
+
+        @include flex(column, center, center);
+
+        .logo-animated {
+            display: block;
+            width: auto;
+            height: 4rem;
+            margin: auto;
+
+            // opacity: 70%;
+        }
+
+        .form-wrapper {
+            // border: 0.1px solid magenta;
+            width: 100%;
+            margin: 2rem 0;
+
+            .form-title {
+                @include font-properties(1rem, 500, $grey-200);
+                text-transform: uppercase;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            form {
+                // @include border();
+                @include flex(column, space-between, center);
+                
+                width: 90%;
+                height: 20rem;
+                margin: 0 auto;
+
+                .group {
+                    // @include border(yellow);
+                    @include flex(row, flex-start, baseline);
+                    // height: 1rem;
+                    // border-bottom: 1px solid $grey-200;
+                    padding-bottom: 0.3rem;
+                    border-bottom: 1px solid #CCCCCC47;
+
+                    width: 100%;
+
+                    .group-icon {
+                        width: 0.8rem;
+                        margin-right: 1rem;
+                    }
+
+                    input {
+                        // @include border(lightblue);
+                        @include fontRaleway(1rem, 400, $grey-100);
+                        background: none;
+                        height: 100%;
+                        
+                    }
+
+                    textarea {
+                        // @include border(lightblue);
+                        background: none;
+                        resize: none;
+                        
+                        width: 100%;
+                        height: 100%;
+                        
+                        // @include fontRaleway(1rem, 300, blue);
+
+                    }
+                }
+
+                .form-button {
+                    width: 6rem;
+
+                    &:hover,
+                    &action {
+                        color: $grey-200;
+                        background: transparent;
+                        border: 2px solid $grey-200;
+                    }
+                }
+
+                // input,
+                // textarea {
+                //     background: none;
+                //     border: 1px solid $grey1;
+                //     border-radius: 2px;
+                // }
+
+                input:focus,
+                textarea:focus,
+                select:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== FLUID TYPOGRAPHY ==========
+    RANGE   TARGET    VW (px)   HTML-FONT (px)
+    MIN     MOBILE    >= 320    16
+    MEDIAN  TABLET    ~= 780    23
+    MAX     DESKTOP+  <= 1100   28
+
+    https://www.madebymike.com.au/writing/fluid-type-calc-examples/
+    minFont + (maxFont - minFont) * [(100vw - minVPWidth) / (maxVPWidth - minVPWidth)]
+   ====================================== */
+// @media screen and (min-width: 320px) {
+//     html {
+//         font-size: calc(16px + 12 * ((100vw - 320px) / 780));
+//     }
+// }
+
+// @media screen and (min-width: 1100px) {
+//     html {
+//         font-size: 28px;
+//     }
+// }
+
+// @media (min-width: 900px) {
+//     main {
+//         #about {
+//             padding-bottom: 10rem;
+//         }
+
+//         #projects {
+//             padding-bottom: 10rem;
+//         }
+
+//         #skills {
+//             padding-bottom: 10rem;
+//         }
+//     }
+// }
+
+// @media (min-width: 1300px) {
+//     main {
+//         #about {
+//             padding-bottom: 12rem;
+//         }
+
+//         #projects {
+//             padding-bottom: 12rem;
+//         }
+
+//         #skills {
+//             padding-bottom: 12rem;
+//         }
+//     }
+// }
+
+// @media (min-width: 1600px) {
+//     main {
+//         #about {
+//             padding-bottom: 15rem;
+//         }
+
+//         #projects {
+//             padding-bottom: 15rem;
+//         }
+
+//         #skills {
+//             padding-bottom: 15rem;
+//         }
+//     }
+// }

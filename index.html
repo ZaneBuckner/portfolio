@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="html">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,102 +16,103 @@
         <meta name="theme-color" content="#333333">
         
         <!-- Fonts & Style Sheets -->
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/main.css">
     </head>
     <body>
 
         <header>
-            <div class="container">
-                <div id="navbar">
-                    <a class="logo" href="./index.html">
-                        <img src="./resources/img/logo.svg" alt="zaniac.io">
+            <section id="navbar">
+                <a href="./index.html"><img id="logo" src="./resources/img/logo.svg"></a>
+                <nav>
+                    <a class="nav-link" title="GitHub" href="https://github.com/ZaneBuckner" target="_blank">
+                        <img class="nav-icon" src="./resources/icons/github-icon.svg">
                     </a>
-                    <div class="links">
-                        <a class="link" href="https://github.com/ZaneBuckner" title="GitHub" target="_blank">
-                            <img src="./resources/icons/github-icon.svg">
-                        </a>
-                        <a class="link" href="https://www.linkedin.com/in/ZaneBuckner" title="LinkedIn" target="_blank">
-                            <img src="./resources/icons/linkedin-icon.svg">
-                        </a>
-                    </div>
-                </div>
-    
-                <div id="hero">
-                    <h1 class="title">Zane Buckner</h1>
-                    <h2 class="subtitle">Web Developer &nbsp;<span>UI UX Enthusiast</span></h2>
-                    <div class="links">
-                        <a class="link" href="#projects">Projects</a>
-                        <a class="link" href="#contact">Contact</a>
-                    </div>
-                </div>
+                    <a class="nav-link" title="LinkedIn" href="https://www.linkedin.com/in/ZaneBuckner" target="_blank">
+                        <img class="nav-icon" src="./resources/icons/linkedin-icon.svg">
+                    </a>
+                </nav>
+            </section>
+
+            <div class="container">
+                <section id="hero">
+                    <h1 class="header">Zane Buckner</h1>
+                    <h2 class="subheader">Web Developer &nbsp;<span>UI UX Enthusiast</span></h2>
+                    <nav>
+                        <a class="hero-button button" href="#projects">Projects</a>
+                        <a class="hero-button button" href="#contact">Contact</a>
+                    </nav>
+                </section>
             </div>
 
-            <img class="wave layer1 waveLeft"   src="./resources/backgrounds/wave.svg">
-            <img class="wave layer2 waveRight"  src="./resources/backgrounds/wave.svg">
-            <img class="wave layer3 waveLeft"   src="./resources/backgrounds/wave.svg">
-            <img class="wave layer4 waveRight"  src="./resources/backgrounds/wave.svg">
+            <img class="wave layer1 waveLeft"   src="./resources/backgrounds/wave-1000x80.svg">
+            <img class="wave layer2 waveRight"  src="./resources/backgrounds/wave-1000x80.svg">
+            <img class="wave layer3 waveLeft"   src="./resources/backgrounds/wave-1000x80.svg">
+            <img class="wave layer4 waveRight"  src="./resources/backgrounds/wave-1000x80.svg">
 
-            <img class="inverse-wave inverse-layer1 waveRight"  src="./resources/backgrounds/inverse-wave.svg">
-            <img class="inverse-wave inverse-layer2 waveLeft"   src="./resources/backgrounds/inverse-wave.svg">
-            <img class="inverse-wave inverse-layer3 waveRight"  src="./resources/backgrounds/inverse-wave.svg">
-            <img class="inverse-wave inverse-layer4 waveLeft"   src="./resources/backgrounds/inverse-wave.svg">
+            <img class="inverse-wave inverse-layer1 waveRight"  src="./resources/backgrounds/inverse-wave-1000x80.svg">
+            <img class="inverse-wave inverse-layer2 waveLeft"   src="./resources/backgrounds/inverse-wave-1000x80.svg">
+            <img class="inverse-wave inverse-layer3 waveRight"  src="./resources/backgrounds/inverse-wave-1000x80.svg">
+            <img class="inverse-wave inverse-layer4 waveLeft"   src="./resources/backgrounds/inverse-wave-1000x80.svg">
         </header>
 
         <main>
             <section id="about">
                 <div class="container">
-                    <h3>My Journey</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, libero beatae voluptas distinctio, praesentium rerum ipsam molestias voluptatum, provident magnam iure exercitationem debitis! Quaerat quas voluptates animi repellendus architecto quae corporis dolorem eveniet doloremque eligendi cumque ratione nesciunt quos temporibus, provident reprehenderit magni repudiandae. Unde praesentium consequatur illum dolor perferendis.</p>
-                    <img class="frame" src="./resources/backgrounds/ornate-frame.svg" style="top:0; left:0; transform:rotate(270deg)">
-                    <img class="frame" src="./resources/backgrounds/ornate-frame.svg" style="top:0; right:0">
-                    <img class="frame" src="./resources/backgrounds/ornate-frame.svg" style="bottom:0; left:0; transform:rotate(180deg)">
-                    <img class="frame" src="./resources/backgrounds/ornate-frame.svg" style="bottom:0; right:0; transform:rotate(90deg)">
+                    <h3 class="about-header">My Journey</h3>
+                    <p class="about-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, libero beatae voluptas distinctio, praesentium rerum ipsam molestias voluptatum, provident magnam iure exercitationem debitis! Quaerat quas voluptates animi repellendus architecto quae corporis dolorem eveniet doloremque eligendi cumque ratione nesciunt quos temporibus, provident reprehenderit magni repudiandae. Unde praesentium consequatur illum dolor perferendis.</p>
+                    <img class="ornate-frame" src="./resources/backgrounds/ornate-frame.svg" style="top:0; left:0; transform:rotate(270deg)">
+                    <img class="ornate-frame" src="./resources/backgrounds/ornate-frame.svg" style="top:0; right:0">
+                    <img class="ornate-frame" src="./resources/backgrounds/ornate-frame.svg" style="bottom:0; left:0; transform:rotate(180deg)">
+                    <img class="ornate-frame" src="./resources/backgrounds/ornate-frame.svg" style="bottom:0; right:0; transform:rotate(90deg)">
                 </div>
-
                 <img class="static-wave" src="./resources/backgrounds/static-wave-about.svg">
             </section>
 
             <section id="projects">
                 <div class="container">
-
                     <article class="project">
                         <div class="display">
-                            <h4>RGB<span>eautiful</span></h4>
+                            <h4 class="project-title">RGB<span>eautiful</span></h4>
                             <img src="./resources/img/rgbeautiful-showcase.png">
                         </div>
                         <div class="description">
                             <p>Color theory and its application influences the way in which we perceive design quality. The process of creating cohesive color combinations for aesthetic design is streamlined with RGBeautiful - a light weight utility featuring seven traditional color schemes.</p>
                             <div class="links">
-                                <a class="link" href="https://rgbeautiful.netlify.app" target="_blank">Visit Site</a>
-                                <a class="link" href="https://github.com/ZaneBuckner/RGBeautiful" target="_blank">View Code</a>
+                                <a class="link button" href="https://rgbeautiful.netlify.app" target="_blank">Visit Site</a>
+                                <a class="link button" href="https://github.com/ZaneBuckner/RGBeautiful" target="_blank">View Code</a>
                             </div>
                         </div>
                     </article>
 
                     <article class="project">
                         <div class="display">
-                            <h4>Poké<span>VM</span></h4>
+                            <h4 class="project-title">Poké<span>VM</span></h4>
                             <img src="./resources/img/pokevm-showcase.png">
                         </div>
                         <div class="description">
                             <p>PokéVM, Pokémon Virtual Machine, takes pokémon exploration in a unique direction. Inspired by the original 1999 base set and the updated 2016 reprint series - all 898 pokémon await their discovery.</p>
                             <p class="disclosure">For optimal experience: Desktop Chrome or Safari</p>
                             <div class="links">
-                                <a class="link" href="https://pokevm.netlify.app" target="_blank">Visit Site</a>
-                                <a class="link" href="https://github.com/ZaneBuckner/pokeVM" target="_blank">View Code</a>
+                                <a class="link button" href="https://pokevm.netlify.app" target="_blank">Visit Site</a>
+                                <a class="link button" href="https://github.com/ZaneBuckner/pokeVM" target="_blank">View Code</a>
                             </div>
                         </div>
                     </article>
                 </div>
 
-                <img class="static-wave" src="./resources/backgrounds/static-wave--projects.svg">
+                <img class="static-wave" src="./resources/backgrounds/static-wave-projects.svg">
             </section>
 
             <section id="skills">
                 <div class="container">
-                    <div class="skillset">
+                    <div class="hexagon-wrapper">
+                        <div class="hexagon"></div>
+                        <div class="hexagon"></div>
+                        <div class="hexagon"></div>
+                    </div>
+                    <!-- <div class="skillset">
                         <h3>Experience</h3>
                         <img src="./resources/icons/js-icon.svg">
                         <img src="./resources/icons/html-icon.svg">
@@ -130,40 +131,56 @@
                     </div>
                     <div class="skillset">
                         <h3>Currently Studying</h3>
-                    </div>
+                    </div> -->
                 </div>
-
-                <img class="static-wave" src="./resources/backgrounds/static-wave-skills-1.svg">
+                <img class="static-wave" src="./resources/backgrounds/static-wave-skills.svg">
             </section>
-            
         </main>
-        
         
         <footer>
             <section id="contact">
+                <div class="container">
+                    <img class="logo-animated" src="./resources/gif/logoLight-4s-4sFade-1sDelay.svg">
 
+                    <div class="form-wrapper">
+                        <h3 class="form-title">Contact</h3>
+
+                        <form name="contact" netlify autocomplete="off">
+                            <div class="group">
+                                <img class="group-icon" src="./resources/icons/footer/name-icon.svg">
+                                <label for="name"></label>
+                                <input type="text" name="name" placeholder="Name">
+                            </div>
+
+                            <div class="group">
+                                <img class="group-icon" src="./resources/icons/footer/company-icon.svg">
+                                <label for="company"></label>
+                                <input type="text" name="company" placeholder="Company">
+                            </div>
+
+                            <div class="group">
+                                <img class="group-icon" src="./resources/icons/footer/email-icon.svg">
+                                <label for="email"></label>
+                                <input type="text" name="email" placeholder="Email">
+                            </div>
+
+                            <div class="group">
+                                <img class="group-icon" src="./resources/icons/footer/comment-icon.svg">
+                                <label for="comment"></label>
+                                <textarea type="text" name="comment" placeholder="Comment" contenteditable></textarea>
+                            </div>
+
+                            <input class="form-button button" type="submit" name="submit" value="Get In Touch">
+                            <!-- <div class="group form-button">
+                            </div> -->
+
+                          </form>
+                    </div>
+
+                </div>
             </section>
         </footer>
-
-        <!-- <section id="skills-wrapper">
-            <div class="skills">
-                <div class="skill-set set1">
-                    <img src="./resources/icons/js-icon.svg">
-                    <img src="./resources/icons/html-icon.svg">
-                    <img src="./resources/icons/css-icon.svg">
-                    <img src="./resources/icons/sass-icon.svg">
-                </div>
-                <div class="skill-set development">
-                    <img src="./resources/icons/git-icon.svg">
-                    <img src="./resources/icons/figma-icon.svg">
-                </div>
-                <div class="skill-set familiar-with">
-                    <img src="./resources/icons/typescript-icon.svg">
-                    <img src="./resources/icons/sqlite-icon.svg">
-                </div>
-            </div>
-        </section> -->
         
-        <script src="./js/main.js" async defer></script>
+        <script src="./js/main.js" async></script>
     </body>
 </html>

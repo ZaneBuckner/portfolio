@@ -12,3 +12,4 @@ Site logo and animated wave SVG designed and exported using [Figma](https://www.
 
 #### UTILITY SITES
 [Favicon Generator](https://realfavicongenerator.net/)<br>
+[Vivus Instant - SVG Animation](https://maxwellito.github.io/vivus-instant/)<br>

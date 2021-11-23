@@ -2,8 +2,8 @@
 window.addEventListener('resize', refreshAnimation);
 window.addEventListener('orientationchange', refreshAnimation);
 
-window.addEventListener('load', setHeroPadding);
-window.addEventListener('resize', setHeroPadding);
+// window.addEventListener('load', setHeroPadding);
+// window.addEventListener('resize', setHeroPadding);
 
 
 //// REMOVE ANIMATION; REPAINT STYLE; ADD ANIMATION
@@ -31,6 +31,23 @@ function setHeroPadding() {
     
     const waveHeight = waveElement.offsetHeight;
 
-    heroSection.style.paddingTop = `${waveHeight + 40}px`;
-    heroSection.style.paddingBottom = `${waveHeight + 40}px`;
+    // heroSection.style.paddingTop = `${waveHeight + 40}px`;
+    // heroSection.style.paddingBottom = `${waveHeight + 40}px`;
+
+    // const heroSectionHeight = heroSection.offsetHeight;
+    // const viewportHeight = window.innerHeight;
+
+
+    // const availableSpace = window.innerHeight - heroSection.offsetHeight;
+    // heroSection.style.paddingTop = `${availableSpace / 2}px`;
+    // heroSection.style.paddingBottom = `${availableSpace / 2}px`;
 };
+
+
+window.addEventListener('resize', (e) => {
+    console.clear();
+    const fontSizeHTML = window.getComputedStyle(document.getElementById('html')).fontSize;
+    console.log('Font Size', fontSizeHTML);
+    console.log('Height', `${window.innerHeight} px`);
+    console.log('Width', `${window.innerWidth} px`);
+})

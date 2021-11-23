@@ -1,3 +1,119 @@
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 12 * ((100vw - 320px) / 780));
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  html {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 900px) {
+  main #about {
+    padding-bottom: 10rem;
+  }
+  main #projects {
+    padding-bottom: 10rem;
+  }
+  main #skills {
+    padding-bottom: 10rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  main #about {
+    padding-bottom: 12rem;
+  }
+  main #projects {
+    padding-bottom: 12rem;
+  }
+  main #skills {
+    padding-bottom: 12rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  main #about {
+    padding-bottom: 15rem;
+  }
+  main #projects {
+    padding-bottom: 15rem;
+  }
+  main #skills {
+    padding-bottom: 15rem;
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+  font-family: 'Raleway', serif;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+}
+
+.container {
+  position: relative;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.button {
+  width: 4rem;
+  height: 1.6rem;
+  margin: 1rem;
+  border-radius: 3px;
+  font-size: 0.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+.button:hover, .button:active {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.static-wave {
+  position: absolute;
+  bottom: -3px;
+  width: 100%;
+}
+
 .wave {
   position: absolute;
   bottom: -5px;
@@ -37,12 +153,12 @@
 }
 
 .layer3 {
-  bottom: 10px;
+  bottom: 5px;
   opacity: 40%;
-  -webkit-animation-delay: -0.8s;
-          animation-delay: -0.8s;
-  -webkit-animation-duration: 3.2s;
-          animation-duration: 3.2s;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
 }
 
 .layer4 {
@@ -69,12 +185,12 @@
 }
 
 .inverse-layer3 {
-  top: 10px;
+  top: 5px;
   opacity: 40%;
-  -webkit-animation-delay: -0.8s;
-          animation-delay: -0.8s;
-  -webkit-animation-duration: 3.4s;
-          animation-duration: 3.4s;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
 }
 
 .inverse-layer4 {
@@ -130,60 +246,33 @@
   }
 }
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-html {
-  font: 16px;
-  background: #ECECECB3;
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  line-height: 1.5;
-  font-family: 'Raleway', serif;
-  font-style: normal;
-  font-weight: normal;
-}
-
-h1, h2, h3, h4, p {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  display: inline-block;
-  color: inherit;
-  cursor: pointer;
-}
-
-.container {
-  position: relative;
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.static-wave {
-  position: absolute;
-  bottom: -3px;
-  width: 100%;
-}
-
 header {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 100vh;
   overflow: hidden;
+  background: url(../resources/backgrounds/pattern-rockywall.png) center/cover no-repeat #CCCCCC;
+  background-blend-mode: overlay;
 }
 
 header #navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -197,39 +286,33 @@ header #navbar {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  position: absolute;
-  z-index: 1;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 0.8rem;
+}
+
+header #navbar #logo {
   height: 2rem;
-  margin-top: 0.8rem;
 }
 
-header #navbar .logo {
-  height: 100%;
-}
-
-header #navbar .logo img {
-  height: 100%;
-}
-
-header #navbar .links {
+header #navbar nav {
   margin-left: auto;
 }
 
-header #navbar .links .link {
+header #navbar nav .nav-link {
   margin-left: 0.5rem;
 }
 
-header #navbar .links .link img {
+header #navbar nav .nav-link .nav-icon {
   height: 1.5rem;
-  opacity: 50%;
+  opacity: 40%;
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 
-header #navbar .links .link img:hover, header #navbar .links .link img:active {
+header #navbar nav .nav-link .nav-icon:hover, header #navbar nav .nav-link .nav-icon:active {
   opacity: 100%;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
@@ -240,91 +323,6 @@ header #navbar .links .link img:hover, header #navbar .links .link img:active {
 }
 
 header #hero {
-  text-align: center;
-  width: 100%;
-}
-
-header #hero .title {
-  font-weight: 300;
-  font-size: 1.2rem;
-  color: #454545;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-header #hero .subtitle {
-  font-weight: 200;
-  font-size: 1.4rem;
-  color: #858585;
-}
-
-header #hero .subtitle span {
-  font-weight: 100;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-}
-
-header #hero .links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-header #hero .links .link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 4rem;
-  height: 1.6rem;
-  margin: 1rem;
-  border: 2px solid #454545;
-  border-radius: 3px;
-  font-size: 0.6rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  -webkit-transition: -webkit-transform 0.2s ease-in-out;
-  transition: -webkit-transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
-}
-
-header #hero .links .link:hover, header #hero .links .link:active {
-  background: #454545;
-  color: white;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-main {
-  width: 100%;
-  overflow: hidden;
-}
-
-main #about {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -338,45 +336,125 @@ main #about {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: 'Poppins', serif;
-  font-style: normal;
-  font-weight: normal;
-  position: relative;
-  width: 100%;
-  padding: 1rem 0 8rem 0;
-  background: #252525;
 }
 
-main #about h3 {
+header #hero .header {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #6A6A6A;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+header #hero .subheader {
+  font-size: 1.4rem;
+  font-weight: 200;
+  color: #333333;
+}
+
+header #hero .subheader span {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #333333;
+  letter-spacing: 1px;
+}
+
+header #hero nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header #hero nav .hero-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #EEEEEE;
+  background: #222222;
+}
+
+header #hero nav .hero-button:hover, header #hero nav .hero-button:active {
+  color: #222222;
+  background: transparent;
+  border: 2px solid #222222;
+}
+
+main {
+  width: 100%;
+  overflow: hidden;
+}
+
+main #about {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 8rem;
+  background: #222222;
+}
+
+main #about .about-header {
   position: absolute;
   top: -0.7rem;
-  left: 0;
   right: 0;
-  margin: 0 auto;
+  left: 0;
   width: 8rem;
-  background: #252525;
+  margin: 0 auto;
+  background: #222222;
   font-size: 0.9rem;
   font-weight: 300;
-  text-transform: uppercase;
-  color: #ECECECB3;
+  color: #CCCCCC;
   text-align: center;
+  text-transform: uppercase;
 }
 
-main #about p {
+main #about .about-body {
   padding: 1.5rem;
   border: 1px solid #B69037;
   border-radius: 3px;
   font-size: 0.7rem;
   font-weight: 300;
+  color: #CCCCCC;
   text-align: justify;
-  line-height: 1.8;
-  color: #ECECECB3;
+  line-height: 2;
 }
 
-main #about .frame {
+main #about .ornate-frame {
   position: absolute;
   height: 1.8rem;
-  margin: 0.3rem;
+  margin: 0.2rem;
 }
 
 main #projects {
@@ -396,11 +474,11 @@ main #projects {
   position: relative;
   width: 100%;
   padding: 2rem 0 8rem 0;
-  background-color: #353535;
+  background-color: #333333;
 }
 
 main #projects .project:nth-child(2) {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 main #projects .project .display {
@@ -420,18 +498,16 @@ main #projects .project .display {
   margin-bottom: 1rem;
 }
 
-main #projects .project .display h4 {
+main #projects .project .display .project-title {
   font-family: 'Raleway', serif;
-  font-style: normal;
-  font-weight: normal;
-  font-weight: 300;
   font-size: 1.5rem;
-  color: #C5C5C5;
+  font-weight: 300;
+  color: #CCCCCC;
   margin-right: 2.2rem;
 }
 
-main #projects .project .display h4 span {
-  color: #C5C5C56E;
+main #projects .project .display .project-title span {
+  color: #9E9E9E;
 }
 
 main #projects .project .display img {
@@ -468,10 +544,11 @@ main #projects .project .description p {
 }
 
 main #projects .project .description .disclosure {
-  font-size: 0.6rem;
-  font-style: italic;
-  color: #C5C5C585;
+  font-size: 0.55rem;
+  font-weight: 100;
+  color: #C5C5C5;
   text-align: center;
+  letter-spacing: 1px;
 }
 
 main #projects .project .description .links {
@@ -504,35 +581,18 @@ main #projects .project .description .links .link {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 4rem;
-  height: 1.6rem;
-  margin: 1rem;
-  border: 1px solid #FFF;
-  border-radius: 2px;
-  font-size: 0.6rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  -webkit-transition: -webkit-transform 0.2s ease-in-out;
-  transition: -webkit-transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  border: 1px solid #C5C5C5;
 }
 
 main #projects .project .description .links .link:hover, main #projects .project .description .links .link:active {
   background: #FFF;
   color: #252525;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 main #skills {
   position: relative;
-  background: #252525;
-  padding: 2rem 0 8rem 0;
+  padding: 10rem 0;
+  background: #222222;
 }
 
 main #skills .skillset {
@@ -551,8 +611,6 @@ main #skills .skillset {
   position: relative;
   margin: 2.5rem auto;
   padding: 0.5rem;
-  border: 1px solid #B69037;
-  border-radius: 1px;
 }
 
 main #skills .skillset h3 {
@@ -571,10 +629,123 @@ main #skills .skillset img {
 }
 
 footer {
-  position: relative;
   width: 100%;
-  padding: 2rem 0 8rem 0;
-  background-color: #353535;
+  overflow: hidden;
+}
+
+footer #contact {
+  position: relative;
+  padding: 2rem 0;
+  background: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer #contact .logo-animated {
+  display: block;
+  width: auto;
+  height: 4rem;
+  margin: auto;
+}
+
+footer #contact .form-wrapper {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+footer #contact .form-wrapper .form-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #CCCCCC;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+footer #contact .form-wrapper form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  height: 20rem;
+  margin: 0 auto;
+}
+
+footer #contact .form-wrapper form .group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #CCCCCC47;
+  width: 100%;
+}
+
+footer #contact .form-wrapper form .group .group-icon {
+  width: 0.8rem;
+  margin-right: 1rem;
+}
+
+footer #contact .form-wrapper form .group input {
+  font-family: 'Raleway', serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #EEEEEE;
+  background: none;
+  height: 100%;
+}
+
+footer #contact .form-wrapper form .group textarea {
+  background: none;
+  resize: none;
+  width: 100%;
+  height: 100%;
+}
+
+footer #contact .form-wrapper form .form-button {
+  width: 6rem;
+}
+
+footer #contact .form-wrapper form .form-button:hover, footer #contact .form-wrapper form .form-buttonaction {
+  color: #CCCCCC;
+  background: transparent;
+  border: 2px solid #CCCCCC;
+}
+
+footer #contact .form-wrapper form input:focus,
+footer #contact .form-wrapper form textarea:focus,
+footer #contact .form-wrapper form select:focus {
+  outline: none;
 }
 
 /* ========== FLUID TYPOGRAPHY ==========
@@ -586,51 +757,4 @@ footer {
     https://www.madebymike.com.au/writing/fluid-type-calc-examples/
     minFont + (maxFont - minFont) * [(100vw - minVPWidth) / (maxVPWidth - minVPWidth)]
    ====================================== */
-@media screen and (min-width: 320px) {
-  html {
-    font-size: calc(16px + 12 * ((100vw - 320px) / 780));
-  }
-}
-
-@media screen and (min-width: 1100px) {
-  html {
-    font-size: 28px;
-  }
-}
-
-@media (min-width: 900px) {
-  main #about {
-    padding-bottom: 10rem;
-  }
-  main #projects {
-    padding-bottom: 10rem;
-  }
-  main #skills {
-    padding-bottom: 10rem;
-  }
-}
-
-@media (min-width: 1300px) {
-  main #about {
-    padding-bottom: 12rem;
-  }
-  main #projects {
-    padding-bottom: 12rem;
-  }
-  main #skills {
-    padding-bottom: 12rem;
-  }
-}
-
-@media (min-width: 1600px) {
-  main #about {
-    padding-bottom: 15rem;
-  }
-  main #projects {
-    padding-bottom: 15rem;
-  }
-  main #skills {
-    padding-bottom: 15rem;
-  }
-}
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */
