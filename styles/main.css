@@ -735,6 +735,9 @@ footer #contact .form-wrapper form .group textarea {
 
 footer #contact .form-wrapper form .form-button {
   width: 6rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 footer #contact .form-wrapper form .form-button:hover, footer #contact .form-wrapper form .form-buttonaction {

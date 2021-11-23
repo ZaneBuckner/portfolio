@@ -306,6 +306,7 @@ footer {
 
                 .form-button {
                     width: 6rem;
+                    appearance: none;
 
                     &:hover,
                     &action {
@@ -314,13 +315,6 @@ footer {
                         border: 2px solid $grey-200;
                     }
                 }
-
-                // input,
-                // textarea {
-                //     background: none;
-                //     border: 1px solid $grey1;
-                //     border-radius: 2px;
-                // }
 
                 input:focus,
                 textarea:focus,
