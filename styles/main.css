@@ -339,7 +339,7 @@ header #hero {
 }
 
 header #hero .header {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 300;
   color: #6A6A6A;
   letter-spacing: 2px;
@@ -347,7 +347,7 @@ header #hero .header {
 }
 
 header #hero .subheader {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 200;
   color: #333333;
 }
@@ -702,13 +702,12 @@ footer #contact .form-wrapper form .group {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  height: 1.5rem;
-  padding-bottom: 0.3rem;
+  -webkit-box-align: c;
+      -ms-flex-align: c;
+          align-items: c;
   border-bottom: 1px solid #CCCCCC47;
   width: 100%;
+  height: 1.5rem;
 }
 
 footer #contact .form-wrapper form .group .group-icon {
@@ -722,14 +721,16 @@ footer #contact .form-wrapper form .group input {
   font-weight: 400;
   color: #EEEEEE;
   background: none;
-  height: 100%;
 }
 
 footer #contact .form-wrapper form .group textarea {
+  font-family: 'Raleway', serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #EEEEEE;
   background: none;
   resize: none;
   width: 100%;
-  height: 100%;
 }
 
 footer #contact .form-wrapper form .form-button {
