@@ -263,7 +263,7 @@ header {
           align-items: flex-start;
   height: 100vh;
   overflow: hidden;
-  background: url(../resources/backgrounds/pattern-rockywall.png) center/cover no-repeat #CCCCCC;
+  background: url(../resources/backgrounds/white-wall.jpg) center/cover no-repeat #CCCCCC;
   background-blend-mode: overlay;
 }
 
@@ -705,6 +705,7 @@ footer #contact .form-wrapper form .group {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
+  height: 1.5rem;
   padding-bottom: 0.3rem;
   border-bottom: 1px solid #CCCCCC47;
   width: 100%;

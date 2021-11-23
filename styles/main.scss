@@ -8,7 +8,7 @@ header {
     height: 100vh;
     overflow: hidden;
 
-    background: url(../resources/backgrounds/pattern-rockywall.png) center / cover no-repeat $grey-200;
+    background: url(../resources/backgrounds/white-wall.jpg) center / cover no-repeat $grey-200;
     background-blend-mode: overlay;
 
     #navbar {
@@ -275,7 +275,7 @@ footer {
                 .group {
                     // @include border(yellow);
                     @include flex(row, flex-start, baseline);
-                    // height: 1rem;
+                    height: 1.5rem;
                     // border-bottom: 1px solid $grey-200;
                     padding-bottom: 0.3rem;
                     border-bottom: 1px solid #CCCCCC47;
@@ -283,7 +283,9 @@ footer {
                     width: 100%;
 
                     .group-icon {
+                        // @include border();
                         width: 0.8rem;
+                        // height: 100%;
                         margin-right: 1rem;
                     }
 
