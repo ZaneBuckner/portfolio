@@ -1,6 +1,6 @@
 
 window.addEventListener('resize', refreshAnimation);
-window.addEventListener('orientationchange', refreshAnimation);
+// window.addEventListener('orientationchange', refreshAnimation);
 
 // window.addEventListener('load', setHeroPadding);
 // window.addEventListener('resize', setHeroPadding);
@@ -10,6 +10,7 @@ window.addEventListener('orientationchange', refreshAnimation);
 function refreshAnimation() {
     const waveLeft = document.querySelectorAll('.trans-left');
     const waveRight = document.querySelectorAll('.trans-right');
+    console.log(waveRight)
     const removeAnimations = (() => {
         waveLeft.forEach(el => el.classList.remove('trans-left'));
         waveRight.forEach(el => el.classList.remove('trans-right'));
