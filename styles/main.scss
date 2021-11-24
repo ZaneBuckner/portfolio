@@ -32,7 +32,7 @@ header {
                 margin-left: 0.5rem;
 
                 .nav-icon {
-                    height: 1.5rem;
+                    height: 1.8rem;
                     opacity: 40%;
                     transition: transform 0.2s ease-in-out;
 
@@ -270,7 +270,7 @@ footer {
                     @include flex(row, flex-start, center);
                     padding: 0.3rem;
                     border-bottom: 1px solid #CCCCCC46;
-                    margin-bottom: 1rem;
+                    margin-bottom: 2rem;
 
                     width: 100%;
                     min-height: 1.5rem;
