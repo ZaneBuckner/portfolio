@@ -1,4 +1,4 @@
-# Zaniac.io <img src="./resources/img/logo.png" alt="pokeball-img" height="50" align="left">
+# Zaniac.io <img src="./assets/icons/header/logo.png" alt="pokeball-img" height="50" align="left">
 [![Badge](https://loua6f3zohq8.runkit.sh)](https://zaniac.io/)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fccb1121-9dcd-427d-9711-ab9f64e7dba2/deploy-status)](https://app.netlify.com/sites/zaniacportfolio/deploys)
 

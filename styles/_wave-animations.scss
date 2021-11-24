@@ -1,28 +1,20 @@
 
 .wave {
     position: absolute;
-    bottom: -5px;
     width: 200%;
 }
 
-.inverse-wave {
-    position: absolute;
-    top: -5px;
-    width: 200%;
-}
-
-.waveLeft {
-    left: 0;
+.trans-left {
     animation: moveWaveLeft linear infinite;
 }
 
-.waveRight {
-    right: 0;
+.trans-right {
     animation: moveWaveRight linear infinite;
 }
 
 .layer1 {
-    animation-duration: 4s;
+    bottom: -5px;
+    animation-duration: 5s;
 }
 
 .layer2 {
@@ -40,32 +32,33 @@
 }
 
 .layer4 {
-    bottom: 20px;
+    bottom: 15px;
     opacity: 10%;
     animation-delay: -1.2s;
     animation-duration: 2.8s;
 }
 
 
-.inverse-layer1 {
+.layer1-inverse {
+    top: -5px;
     animation-duration: 4s;
 }
 
-.inverse-layer2 {
+.layer2-inverse {
     top: 2px;
     opacity: 70%;
     animation-delay: -0.4s;
     animation-duration: 3.6s;
 }
 
-.inverse-layer3 {
+.layer3-inverse {
     top: 5px;
     opacity: 40%;
     animation-delay: -1s;
     animation-duration: 2.5s;
 }
 
-.inverse-layer4 {
+.layer4-inverse {
     top: 20px;
     opacity: 10%;
     animation-delay: -1.2s;
@@ -79,6 +72,6 @@
 }
 
 @keyframes moveWaveRight {
-    0%      { transform: translateX(0) }
-    100%    { transform: translateX(50%) }
+    0%      { transform: translateX(-50%) }
+    100%    { transform: translateX(0) }
 }

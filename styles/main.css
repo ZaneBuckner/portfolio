@@ -1,51 +1,3 @@
-@media screen and (min-width: 320px) {
-  html {
-    font-size: calc(16px + 12 * ((100vw - 320px) / 780));
-  }
-}
-
-@media screen and (min-width: 1100px) {
-  html {
-    font-size: 28px;
-  }
-}
-
-@media (min-width: 900px) {
-  main #about {
-    padding-bottom: 10rem;
-  }
-  main #projects {
-    padding-bottom: 10rem;
-  }
-  main #skills {
-    padding-bottom: 10rem;
-  }
-}
-
-@media (min-width: 1300px) {
-  main #about {
-    padding-bottom: 12rem;
-  }
-  main #projects {
-    padding-bottom: 12rem;
-  }
-  main #skills {
-    padding-bottom: 12rem;
-  }
-}
-
-@media (min-width: 1600px) {
-  main #about {
-    padding-bottom: 15rem;
-  }
-  main #projects {
-    padding-bottom: 15rem;
-  }
-  main #skills {
-    padding-bottom: 15rem;
-  }
-}
-
 *,
 *::before,
 *::after {
@@ -85,12 +37,11 @@ a {
 }
 
 .button {
-  width: 4rem;
-  height: 1.6rem;
-  margin: 1rem;
-  border-radius: 3px;
-  font-size: 0.6rem;
-  font-weight: 500;
+  margin: 1.5rem 1rem;
+  border-radius: 5px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.7rem;
+  font-weight: 600;
   text-transform: uppercase;
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out;
@@ -110,37 +61,29 @@ a {
 
 .static-wave {
   position: absolute;
-  bottom: -5px;
+  bottom: -10px;
   width: 100%;
 }
 
 .wave {
   position: absolute;
-  bottom: -5px;
   width: 200%;
 }
 
-.inverse-wave {
-  position: absolute;
-  top: -5px;
-  width: 200%;
-}
-
-.waveLeft {
-  left: 0;
+.trans-left {
   -webkit-animation: moveWaveLeft linear infinite;
           animation: moveWaveLeft linear infinite;
 }
 
-.waveRight {
-  right: 0;
+.trans-right {
   -webkit-animation: moveWaveRight linear infinite;
           animation: moveWaveRight linear infinite;
 }
 
 .layer1 {
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
+  bottom: -5px;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
 }
 
 .layer2 {
@@ -162,7 +105,7 @@ a {
 }
 
 .layer4 {
-  bottom: 20px;
+  bottom: 15px;
   opacity: 10%;
   -webkit-animation-delay: -1.2s;
           animation-delay: -1.2s;
@@ -170,12 +113,13 @@ a {
           animation-duration: 2.8s;
 }
 
-.inverse-layer1 {
+.layer1-inverse {
+  top: -5px;
   -webkit-animation-duration: 4s;
           animation-duration: 4s;
 }
 
-.inverse-layer2 {
+.layer2-inverse {
   top: 2px;
   opacity: 70%;
   -webkit-animation-delay: -0.4s;
@@ -184,7 +128,7 @@ a {
           animation-duration: 3.6s;
 }
 
-.inverse-layer3 {
+.layer3-inverse {
   top: 5px;
   opacity: 40%;
   -webkit-animation-delay: -1s;
@@ -193,7 +137,7 @@ a {
           animation-duration: 2.5s;
 }
 
-.inverse-layer4 {
+.layer4-inverse {
   top: 20px;
   opacity: 10%;
   -webkit-animation-delay: -1.2s;
@@ -226,23 +170,23 @@ a {
 
 @-webkit-keyframes moveWaveRight {
   0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   100% {
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
 @keyframes moveWaveRight {
   0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   100% {
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
@@ -261,9 +205,8 @@ header {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  height: 100vh;
   overflow: hidden;
-  background: url(../resources/backgrounds/white-wall.jpg) center/cover no-repeat #CCCCCC;
+  background: url(../assets/images/backgrounds/rockywall.png) center/contain repeat #CCCCCC;
   background-blend-mode: overlay;
 }
 
@@ -287,6 +230,7 @@ header #navbar {
       -ms-flex-align: baseline;
           align-items: baseline;
   width: 90%;
+  max-width: 1100px;
   margin: 0 auto;
   padding-top: 0.8rem;
 }
@@ -336,23 +280,25 @@ header #hero {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
 }
 
-header #hero .header {
-  font-size: 1.4rem;
-  font-weight: 300;
+header #hero .title {
+  font-size: 1.5rem;
+  font-weight: 200;
   color: #6A6A6A;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-header #hero .subheader {
-  font-size: 1.6rem;
+header #hero .subtitle {
+  font-size: 1.4rem;
   font-weight: 200;
   color: #333333;
 }
 
-header #hero .subheader span {
+header #hero .subtitle span {
   font-size: 0.8rem;
   font-weight: 300;
   color: #333333;
@@ -389,14 +335,14 @@ header #hero nav .hero-button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #EEEEEE;
-  background: #222222;
+  color: #222222;
+  background: transparent;
+  border: 2px solid #333333;
 }
 
 header #hero nav .hero-button:hover, header #hero nav .hero-button:active {
-  color: #222222;
-  background: transparent;
-  border: 2px solid #222222;
+  color: #EEEEEE;
+  background: #222222;
 }
 
 main {
@@ -420,7 +366,7 @@ main #about {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  padding-top: 1rem;
+  padding-top: 4rem;
   padding-bottom: 8rem;
   background: #222222;
 }
@@ -586,7 +532,8 @@ main #projects .project .description .links .link {
 
 main #projects .project .description .links .link:hover, main #projects .project .description .links .link:active {
   background: #FFF;
-  color: #252525;
+  color: #222222;
+  border: none;
 }
 
 main #skills {
@@ -633,9 +580,18 @@ footer {
 }
 
 footer #contact {
-  position: relative;
   padding: 2rem 0;
   background: #333333;
+}
+
+footer #contact .logo-animated {
+  display: block;
+  width: auto;
+  height: 4rem;
+  margin: auto;
+}
+
+footer #contact .form-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -649,45 +605,12 @@ footer #contact {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-footer #contact .logo-animated {
-  display: block;
-  width: auto;
-  height: 4rem;
-  margin: auto;
-}
-
-footer #contact .form-wrapper {
   width: 100%;
   margin: 2rem 0;
 }
 
-footer #contact .form-wrapper .form-title {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #CCCCCC;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
 footer #contact .form-wrapper form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 90%;
-  height: 20rem;
   margin: 0 auto;
 }
 
@@ -702,12 +625,14 @@ footer #contact .form-wrapper form .group {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: c;
-      -ms-flex-align: c;
-          align-items: c;
-  border-bottom: 1px solid #CCCCCC47;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.3rem;
+  border-bottom: 1px solid #CCCCCC46;
+  margin-bottom: 1rem;
   width: 100%;
-  height: 1.5rem;
+  min-height: 1.5rem;
 }
 
 footer #contact .form-wrapper form .group .group-icon {
@@ -721,6 +646,7 @@ footer #contact .form-wrapper form .group input {
   font-weight: 400;
   color: #EEEEEE;
   background: none;
+  width: 100%;
 }
 
 footer #contact .form-wrapper form .group textarea {
@@ -731,25 +657,75 @@ footer #contact .form-wrapper form .group textarea {
   background: none;
   resize: none;
   width: 100%;
-}
-
-footer #contact .form-wrapper form .form-button {
-  width: 6rem;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-
-footer #contact .form-wrapper form .form-button:hover, footer #contact .form-wrapper form .form-buttonaction {
-  color: #CCCCCC;
-  background: transparent;
-  border: 2px solid #CCCCCC;
+  height: 1.2rem;
 }
 
 footer #contact .form-wrapper form input:focus,
 footer #contact .form-wrapper form textarea:focus,
 footer #contact .form-wrapper form select:focus {
   outline: none;
+}
+
+footer #contact .form-wrapper .form-button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: #CCCCCC;
+  background: transparent;
+  border: 1px solid #CCCCCC;
+}
+
+footer #contact .form-wrapper .form-button:hover, footer #contact .form-wrapper .form-buttonactive {
+  color: #222222;
+  background: #FFF;
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 12 * ((100vw - 320px) / 780));
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  html {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 900px) {
+  main #about {
+    padding-bottom: 10rem;
+  }
+  main #projects {
+    padding-bottom: 10rem;
+  }
+  main #skills {
+    padding-bottom: 10rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  main #about {
+    padding-bottom: 12rem;
+  }
+  main #projects {
+    padding-bottom: 12rem;
+  }
+  main #skills {
+    padding-bottom: 12rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  main #about {
+    padding-bottom: 15rem;
+  }
+  main #projects {
+    padding-bottom: 15rem;
+  }
+  main #skills {
+    padding-bottom: 15rem;
+  }
 }
 
 /* ========== FLUID TYPOGRAPHY ==========

@@ -42,12 +42,3 @@ function setHeroPadding() {
     // heroSection.style.paddingTop = `${availableSpace / 2}px`;
     // heroSection.style.paddingBottom = `${availableSpace / 2}px`;
 };
-
-
-window.addEventListener('resize', (e) => {
-    console.clear();
-    const fontSizeHTML = window.getComputedStyle(document.getElementById('html')).fontSize;
-    console.log('Font Size', fontSizeHTML);
-    console.log('Height', `${window.innerHeight} px`);
-    console.log('Width', `${window.innerWidth} px`);
-})

@@ -5,10 +5,10 @@
 header {
     position: relative;
     @include flex(column, center, flex-start);
-    height: 100vh;
+    // height: 100vh;
     overflow: hidden;
 
-    background: url(../resources/backgrounds/white-wall.jpg) center / cover no-repeat $grey-200;
+    background: url(../assets/images/backgrounds/rockywall.png) center / contain repeat $grey-200;
     background-blend-mode: overlay;
 
     #navbar {
@@ -17,6 +17,7 @@ header {
         
         @include flex(row, center, baseline);
         width: 90%;
+        max-width: 1100px;
         margin: 0 auto;
         padding-top: 0.8rem;
 
@@ -47,16 +48,19 @@ header {
     }
 
     #hero {
+        // @include border();
         @include flex(column, center, center);
+        padding-top: 7rem;
+        padding-bottom: 7rem;
         
-        .header {
-            @include font-properties(1.4rem, 300, #6A6A6A);
+        .title {
+            @include font-properties(1.5rem, 200, #6A6A6A);
             letter-spacing: 2px;
             text-transform: uppercase;
         }
 
-        .subheader {
-            @include font-properties(1.6rem, 200, $grey-500);
+        .subtitle {
+            @include font-properties(1.4rem, 200, $grey-500);
 
             span {
                 @include font-properties(0.8rem, 300, $grey-500);
@@ -69,17 +73,17 @@ header {
 
             .hero-button {
                 @include flex(row, center, center);
-                color: $grey-100;
-                background: $grey-600;
+                color: $grey-600;
+                background: transparent;
+                border: 2px solid $grey-500;
 
                 &:hover, &:active {
-                    color: $grey-600;
-                    background: transparent;
-                    border: 2px solid $grey-600;
+                    color: $grey-100;
+                    background: $grey-600;
+                    // border: 2px solid $grey-600;
                 }
             }
         }
-
     }
 }
 
@@ -93,9 +97,8 @@ main {
 
         @include flex(column, center, center);
         width: 100%;
-        padding-top: 1rem;
+        padding-top: 4rem;
         padding-bottom: 8rem;
-        // padding: 1rem 0 8rem 0;
         background: $grey-600;
 
         .about-header {
@@ -189,7 +192,8 @@ main {
 
                         &:hover, &:active {
                             background: #FFF;
-                            color: $grey5;
+                            color: $grey-600;
+                            border: none;
                         }
                     }
                 }
@@ -235,12 +239,8 @@ footer {
     // overflow: hidden;
 
     #contact {
-        // border: 0.1px solid magenta;
-        position: relative;
         padding: 2rem 0;
         background: $grey-500;
-
-        @include flex(column, center, center);
 
         .logo-animated {
             display: block;
@@ -250,69 +250,49 @@ footer {
         }
 
         .form-wrapper {
-            // @include border();
+            @include flex(column, center, center);
             width: 100%;
             margin: 2rem 0;
 
-            .form-title {
-                // @include border();
-                @include font-properties(1rem, 500, $grey-200);
-                text-transform: uppercase;
-                text-align: center;
-                margin-bottom: 1rem;
-            }
+            // .form-title {
+            //     // @include border();
+            //     @include font-properties(1rem, 500, $grey-200);
+            //     text-transform: uppercase;
+            //     text-align: center;
+            //     margin-bottom: 1rem;
+            // }
 
             form {
-                // @include border();
-                @include flex(column, space-between, center);
-                
                 width: 90%;
-                height: 20rem;
                 margin: 0 auto;
 
                 .group {
-                    // @include border(#CCCCCC47);
-                    @include flex(row, flex-start, c);
-                    // padding-bottom: 0.3rem;
-                    border-bottom: 1px solid #CCCCCC47;
+                    @include flex(row, flex-start, center);
+                    padding: 0.3rem;
+                    border-bottom: 1px solid #CCCCCC46;
+                    margin-bottom: 1rem;
 
                     width: 100%;
-                    height: 1.5rem;
+                    min-height: 1.5rem;
 
                     .group-icon {
-                        // @include border();
                         width: 0.8rem;
                         margin-right: 1rem;
                     }
 
                     input {
-                        // @include border(lightblue);
                         @include fontRaleway(1rem, 400, $grey-100);
                         background: none;
+                        width: 100%;
                     }
 
                     textarea {
-                        // @include border(lightblue);
                         @include fontRaleway(1rem, 400, $grey-100);
                         background: none;
                         resize: none;
                         
                         width: 100%;
-                        // height: 100%;
-                        
-
-                    }
-                }
-
-                .form-button {
-                    width: 6rem;
-                    appearance: none;
-
-                    &:hover,
-                    &action {
-                        color: $grey-200;
-                        background: transparent;
-                        border: 2px solid $grey-200;
+                        height: 1.2rem;
                     }
                 }
 
@@ -320,6 +300,20 @@ footer {
                 textarea:focus,
                 select:focus {
                     outline: none;
+                }
+
+            }
+
+            .form-button {
+                appearance: none;
+                color: $grey-200;
+                background: transparent;
+                border: 1px solid $grey-200;
+    
+                &:hover,
+                &active {
+                    color: $grey-600;
+                    background: #FFF;
                 }
             }
         }
@@ -332,7 +326,65 @@ footer {
 
 
 
+@media screen and (min-width: 320px) {
+    html {
+        font-size: calc(16px + 12 * ((100vw - 320px) / 780));
+    }
+}
 
+@media screen and (min-width: 1100px) {
+    html {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 900px) {
+    main {
+        #about {
+            padding-bottom: 10rem;
+        }
+
+        #projects {
+            padding-bottom: 10rem;
+        }
+
+        #skills {
+            padding-bottom: 10rem;
+        }
+    }
+}
+
+@media (min-width: 1300px) {
+    main {
+        #about {
+            padding-bottom: 12rem;
+        }
+
+        #projects {
+            padding-bottom: 12rem;
+        }
+
+        #skills {
+            padding-bottom: 12rem;
+        }
+    }
+}
+
+@media (min-width: 1600px) {
+    main {
+        #about {
+            padding-bottom: 15rem;
+        }
+
+        #projects {
+            padding-bottom: 15rem;
+        }
+
+        #skills {
+            padding-bottom: 15rem;
+        }
+    }
+}
 
 
 
