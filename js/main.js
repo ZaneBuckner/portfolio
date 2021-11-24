@@ -8,17 +8,17 @@ window.addEventListener('orientationchange', refreshAnimation);
 
 //// REMOVE ANIMATION; REPAINT STYLE; ADD ANIMATION
 function refreshAnimation() {
-    const waveLeft = document.querySelectorAll('.waveLeft');
-    const waveRight = document.querySelectorAll('.waveRight');
+    const waveLeft = document.querySelectorAll('.trans-left');
+    const waveRight = document.querySelectorAll('.trans-right');
     const removeAnimations = (() => {
-        waveLeft.forEach(el => el.classList.remove('waveLeft'));
-        waveRight.forEach(el => el.classList.remove('waveRight'));
+        waveLeft.forEach(el => el.classList.remove('trans-left'));
+        waveRight.forEach(el => el.classList.remove('trans-right'));
     })();
 
     window.requestAnimationFrame(() => {
         window.requestAnimationFrame(() => {
-            waveLeft.forEach(el => el.classList.add('waveLeft'));
-            waveRight.forEach(el => el.classList.add('waveRight'));
+            waveLeft.forEach(el => el.classList.add('trans-left'));
+            waveRight.forEach(el => el.classList.add('trans-right'));
         });
     });
 };
