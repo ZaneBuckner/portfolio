@@ -5,10 +5,12 @@
 }
 
 .trans-left {
+    left: 0;
     animation: moveWaveLeft linear infinite;
 }
 
 .trans-right {
+    right: 0;
     animation: moveWaveRight linear infinite;
 }
 
@@ -72,6 +74,6 @@
 }
 
 @keyframes moveWaveRight {
-    0%      { transform: translateX(-50%) }
-    100%    { transform: translateX(0) }
+    0%      { transform: translateX(0) }
+    100%    { transform: translateX(50%) }
 }
