@@ -30,30 +30,43 @@ a {
 }
 
 .container {
-    // @include border();
     position: relative;
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
 }
 
-.button {
-    margin: 1.5rem 1rem;
+.btn {
+    @include font-properties(0.6rem, 600, null);
+    padding: 0.3rem 1rem;
     border-radius: 5px;
-    
-    padding: 0.4rem 0.8rem;
-    font-size: 0.7rem;
-    font-weight: 600;
     text-transform: uppercase;
+
+    appearance: none;
+    cursor: pointer;
     transition: transform 0.2s ease-in-out;
 
-    &:hover,
-    &:active {
-        transform: scale(1.15);
+    &:hover {
         user-select: none;
-        cursor: pointer;
+        transform: scale(1.15);
     }
 }
+
+.btn-light {
+    border: 2px solid $grey-100;
+}
+
+.btn-dark {
+    border: 2px solid $grey-600;
+    background: #FFF;
+}
+
+// .button {
+//     margin: 1.5rem 1rem;
+//     border-radius: 5px;
+    
+//     padding: 0.4rem 0.8rem;
+// }
 
 .static-wave {
     position: absolute;

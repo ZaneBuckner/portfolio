@@ -163,27 +163,38 @@ a {
   margin: 0 auto;
 }
 
-.button {
-  margin: 1.5rem 1rem;
-  border-radius: 5px;
-  padding: 0.4rem 0.8rem;
-  font-size: 0.7rem;
+.btn {
+  font-size: 0.6rem;
   font-weight: 600;
+  padding: 0.3rem 1rem;
+  border-radius: 5px;
   text-transform: uppercase;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 
-.button:hover, .button:active {
-  -webkit-transform: scale(1.15);
-          transform: scale(1.15);
+.btn:hover {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  cursor: pointer;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.btn-light {
+  border: 2px solid #EEEEEE;
+}
+
+.btn-dark {
+  border: 2px solid #222222;
+  background: #FFF;
 }
 
 .static-wave {
@@ -307,44 +318,16 @@ header #hero .subtitle span {
   letter-spacing: 1px;
 }
 
-header #hero nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+header #hero div .btn {
+  margin: 1rem 1rem;
+  border: 2px solid #222222;
+  background: #FFF;
 }
 
-header #hero nav .hero-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #222222;
-  background: transparent;
-  border: 2px solid #333333;
-}
-
-header #hero nav .hero-button:hover, header #hero nav .hero-button:active {
-  color: #EEEEEE;
+header #hero div .btn:hover {
+  border: 2px solid #222222;
   background: #222222;
+  color: #FFF;
 }
 
 main {
@@ -354,28 +337,13 @@ main {
 
 main #about {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  padding-top: 4rem;
-  padding-bottom: 8rem;
+  padding: 3rem 0 8rem 0;
   background: #222222;
 }
 
-main #about .about-header {
+main #about .title {
   position: absolute;
-  top: -0.7rem;
+  top: -0.6rem;
   right: 0;
   left: 0;
   width: 8rem;
@@ -388,10 +356,10 @@ main #about .about-header {
   text-transform: uppercase;
 }
 
-main #about .about-body {
+main #about .body {
   padding: 1.5rem;
-  border: 1px solid #B69037;
-  border-radius: 3px;
+  border: 1px solid #DAB55D;
+  border-radius: 5px;
   font-size: 0.7rem;
   font-weight: 300;
   color: #CCCCCC;
@@ -401,11 +369,18 @@ main #about .about-body {
 
 main #about .ornate-frame {
   position: absolute;
-  height: 1.8rem;
+  height: 2rem;
   margin: 0.2rem;
+  opacity: 70%;
 }
 
 main #projects {
+  position: relative;
+  padding: 3rem 0 8rem 0;
+  background-color: #333333;
+}
+
+main #projects .project {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -419,87 +394,38 @@ main #projects {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
-  width: 100%;
-  padding: 2rem 0 8rem 0;
-  background-color: #333333;
 }
 
 main #projects .project:nth-child(2) {
   margin-top: 3rem;
 }
 
-main #projects .project .display {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 1rem;
-}
-
-main #projects .project .display .project-title {
+main #projects .project .title {
   font-family: 'Raleway', serif;
   font-size: 1.5rem;
   font-weight: 300;
-  color: #CCCCCC;
-  margin-right: 2.2rem;
+  color: #EEEEEE;
+  margin-right: 2.4rem;
 }
 
-main #projects .project .display .project-title span {
-  color: #9E9E9E;
+main #projects .project .title span {
+  color: #999999;
 }
 
-main #projects .project .display img {
-  width: auto;
-  height: 9rem;
+main #projects .project .showcase {
+  width: 14rem;
+  height: auto;
 }
 
 main #projects .project .description {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 90%;
-  margin: 0 auto;
-  font-weight: 300;
+  margin-top: 1rem;
   font-size: 0.8rem;
+  font-weight: 300;
   color: #C5C5C5;
   text-align: justify;
 }
 
-main #projects .project .description p {
-  width: 100%;
-  margin-top: 0.5rem;
-  color: #C5C5C5;
-}
-
-main #projects .project .description .disclosure {
-  font-size: 0.55rem;
-  font-weight: 100;
-  color: #C5C5C5;
-  text-align: center;
-  letter-spacing: 1px;
-}
-
-main #projects .project .description .links {
+main #projects .project div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -515,31 +441,22 @@ main #projects .project .description .links {
           align-items: center;
 }
 
-main #projects .project .description .links .link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 1px solid #C5C5C5;
+main #projects .project div .btn {
+  margin: 1rem 1rem;
+  border: 2px solid #CCCCCC;
+  background: transparent;
+  color: #CCCCCC;
 }
 
-main #projects .project .description .links .link:hover, main #projects .project .description .links .link:active {
+main #projects .project div .btn:hover {
+  border: 2px solid #FFF;
   background: #FFF;
   color: #222222;
-  border: none;
 }
 
 main #skills {
   position: relative;
+  padding: 2rem 0 8rem 0;
   padding: 10rem 0;
   background: #222222;
 }
@@ -579,21 +496,77 @@ main #skills .skillset img {
 
 footer {
   width: 100%;
-}
-
-footer #contact {
-  padding: 2rem 0;
   background: #333333;
+  padding: 2rem 0;
 }
 
-footer #contact .logo-animated {
+footer #contact-info .logo-animated {
   display: block;
-  width: auto;
-  height: 4rem;
-  margin: auto;
+  width: 7rem;
+  height: auto;
+  margin: 0 auto;
 }
 
-footer #contact .form-wrapper {
+footer #contact-info .info-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 10rem;
+  margin: 2rem auto 0 auto;
+}
+
+footer #contact-info .info-wrapper .info-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+}
+
+footer #contact-info .info-wrapper .info-group .contact-icon {
+  font-size: 1.2rem;
+  color: #EEEEEE;
+}
+
+footer #contact-info .info-wrapper .info-group h4, footer #contact-info .info-wrapper .info-group a {
+  font-family: 'Raleway', serif;
+  font-size: 0.9rem;
+  font-weight: 200;
+  color: #CCCCCC;
+  margin-left: 1.5rem;
+  letter-spacing: 1px;
+}
+
+footer #contact-info .info-wrapper .info-group h4:hover, footer #contact-info .info-wrapper .info-group a:hover {
+  color: #B69037;
+  font-weight: 300;
+}
+
+footer #contact-form {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+footer #contact-form form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -607,16 +580,11 @@ footer #contact .form-wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  margin: 2rem 0;
-}
-
-footer #contact .form-wrapper form {
   width: 90%;
   margin: 0 auto;
 }
 
-footer #contact .form-wrapper form .group {
+footer #contact-form form .form-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -630,19 +598,19 @@ footer #contact .form-wrapper form .group {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.3rem;
+  width: 100%;
+  height: 1.5rem;
   border-bottom: 1px solid #CCCCCC46;
   margin-bottom: 2rem;
-  width: 100%;
-  min-height: 1.5rem;
 }
 
-footer #contact .form-wrapper form .group .group-icon {
-  width: 0.8rem;
+footer #contact-form form .form-group .form-icon {
   margin-right: 1rem;
+  font-size: 0.8rem;
+  color: #EEEEEE;
 }
 
-footer #contact .form-wrapper form .group input {
+footer #contact-form form .form-group input {
   font-family: 'Raleway', serif;
   font-size: 1rem;
   font-weight: 400;
@@ -651,7 +619,7 @@ footer #contact .form-wrapper form .group input {
   width: 100%;
 }
 
-footer #contact .form-wrapper form .group textarea {
+footer #contact-form form .form-group textarea {
   font-family: 'Raleway', serif;
   font-size: 1rem;
   font-weight: 400;
@@ -662,24 +630,25 @@ footer #contact .form-wrapper form .group textarea {
   height: 1.2rem;
 }
 
-footer #contact .form-wrapper form input:focus,
-footer #contact .form-wrapper form textarea:focus,
-footer #contact .form-wrapper form select:focus {
+footer #contact-form form .form-group input:focus,
+footer #contact-form form .form-group textarea:focus,
+footer #contact-form form .form-group select:focus {
   outline: none;
 }
 
-footer #contact .form-wrapper .form-button {
+footer #contact-form form .btn {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   color: #CCCCCC;
   background: transparent;
-  border: 1px solid #CCCCCC;
+  border: 2px solid #CCCCCC;
 }
 
-footer #contact .form-wrapper .form-button:hover, footer #contact .form-wrapper .form-buttonactive {
+footer #contact-form form .btn:hover {
   color: #222222;
   background: #FFF;
+  border: 2px solid #FFF;
 }
 
 @media screen and (min-width: 320px) {

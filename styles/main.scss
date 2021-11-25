@@ -68,19 +68,16 @@ header {
             }
         }
 
-        nav {
-            @include flex(row, center, center);
+        div {
+            .btn {
+                margin: 1rem 1rem;
+                border: 2px solid $grey-600;
+                background: #FFF;
 
-            .hero-button {
-                @include flex(row, center, center);
-                color: $grey-600;
-                background: transparent;
-                border: 2px solid $grey-500;
-
-                &:hover, &:active {
-                    color: $grey-100;
+                &:hover {
+                    border: 2px solid $grey-600;
                     background: $grey-600;
-                    // border: 2px solid $grey-600;
+                    color: #FFF;
                 }
             }
         }
@@ -94,15 +91,11 @@ main {
 
     #about {
         position: relative;
-
-        @include flex(column, center, center);
-        width: 100%;
-        padding-top: 4rem;
-        padding-bottom: 8rem;
+        padding: 3rem 0 8rem 0;
         background: $grey-600;
 
-        .about-header {
-            @include absolute(-0.7rem, 0, null, 0);
+        .title {
+            @include absolute(-0.6rem, 0, null, 0);
             width: 8rem;
             margin: 0 auto;
             background: $grey-600;
@@ -112,10 +105,10 @@ main {
             text-transform: uppercase;
         }
 
-        .about-body {
+        .body {
             padding: 1.5rem;
-            border: 1px solid $gold-dark;
-            border-radius: 3px;
+            border: 1px solid $gold-light;
+            border-radius: 5px;
 
             @include font-properties(0.7rem, 300, $grey-200);
             text-align: justify;
@@ -124,77 +117,59 @@ main {
 
         .ornate-frame {
             position: absolute;
-            height: 1.8rem;
+            height: 2rem;
             margin: 0.2rem;
+            opacity: 70%;
         }
     }
 
     #projects {
-        @include flex(column, center, center);
         position: relative;
-        width: 100%;
-        padding: 2rem 0 8rem 0;
+        padding: 3rem 0 8rem 0;
         background-color: $grey-500;
         
         .project {
+            @include flex(column, center, center);
+            
             &:nth-child(2) {
                 margin-top: 3rem;
             }
 
-            .display {
-                @include flex(column, center, center);
-                margin-bottom: 1rem;
+            .title {
+                @include fontRaleway(1.5rem, 300, $grey-100);
+                margin-right: 2.4rem;
 
-                .project-title {
-                    @include fontRaleway(1.5rem, 300, $grey-200);
-                    margin-right: 2.2rem;
-
-                    span {
-                        // color: $grey-400;
-                        color: #9E9E9E;  // AA
-                    }
-                }
-
-                img {
-                    width: auto;
-                    height: 9rem;
+                span {
+                    color: $grey-300;
+                    // color: #9E9E9E;
                 }
             }
 
+            .showcase {
+                width: 14rem;
+                height: auto;
+            }
+
             .description {
-                @include flex(column, center, center);
-                width: 90%;
-                margin: 0 auto;
+                margin-top: 1rem;
 
-                font-weight: 300;
-                font-size: 0.8rem;
-                color: #C5C5C5;
+                @include font-properties(0.8rem, 300, #C5C5C5);
                 text-align: justify;
+            }
 
-                p {
-                    width: 100%;
-                    margin-top: 0.5rem;
-                    color: #C5C5C5;
-                }
+            div {
+                @include flex(row, center, center);
 
-                .disclosure {
-                    @include font-properties(0.55rem, 100, #C5C5C5);
-                    text-align: center;
-                    letter-spacing: 1px;
-                }
-
-                .links {
-                    @include flex(row, center, center);
-
-                    .link {
-                        @include flex(row, center, center);
-                        border: 1px solid #C5C5C5;
-
-                        &:hover, &:active {
-                            background: #FFF;
-                            color: $grey-600;
-                            border: none;
-                        }
+                .btn {
+                    margin: 1rem 1rem;
+                    border: 2px solid $grey-200;
+                    background: transparent;
+                    color: $grey-200;
+    
+                    &:hover {
+                        border: 2px solid #FFF;
+                        background: #FFF;
+                        color: $grey-600;
                     }
                 }
             }
@@ -203,7 +178,7 @@ main {
 
     #skills {
         position: relative;
-        // padding: 2rem 0 8rem 0;
+        padding: 2rem 0 8rem 0;
         padding: 10rem 0;
         background: $grey-600;
 
@@ -236,87 +211,117 @@ main {
 
 footer {
     width: 100%;
-    // overflow: hidden;
+    background: $grey-500;
+    padding: 2rem 0;
 
-    #contact {
-        padding: 2rem 0;
-        background: $grey-500;
-
+    #contact-info {
+        
         .logo-animated {
             display: block;
-            width: auto;
-            height: 4rem;
-            margin: auto;
+            width: 7rem;
+            height: auto;
+            margin: 0 auto;
         }
 
-        .form-wrapper {
-            @include flex(column, center, center);
+        .info-wrapper {
+            @include flex(column, space-around, center);
             width: 100%;
-            margin: 2rem 0;
+            height: 10rem;
+            margin: 2rem auto 0 auto;
 
-            // .form-title {
-            //     // @include border();
-            //     @include font-properties(1rem, 500, $grey-200);
-            //     text-transform: uppercase;
-            //     text-align: center;
-            //     margin-bottom: 1rem;
-            // }
+            .info-group {
+                @include flex(row, space-between, center);
+                width: 80%;
 
-            form {
-                width: 90%;
-                margin: 0 auto;
-
-                .group {
-                    @include flex(row, flex-start, center);
-                    padding: 0.3rem;
-                    border-bottom: 1px solid #CCCCCC46;
-                    margin-bottom: 2rem;
-
-                    width: 100%;
-                    min-height: 1.5rem;
-
-                    .group-icon {
-                        width: 0.8rem;
-                        margin-right: 1rem;
-                    }
-
-                    input {
-                        @include fontRaleway(1rem, 400, $grey-100);
-                        background: none;
-                        width: 100%;
-                    }
-
-                    textarea {
-                        @include fontRaleway(1rem, 400, $grey-100);
-                        background: none;
-                        resize: none;
-                        
-                        width: 100%;
-                        height: 1.2rem;
-                    }
+                .contact-icon  {
+                    font-size: 1.2rem;
+                    color: $grey-100;
                 }
 
+                h4, a {
+                    @include fontRaleway(0.9rem, 200, $grey-200);
+                    margin-left: 1.5rem;
+                    letter-spacing: 1px;
+
+                    &:hover {
+                        color: $gold-dark;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+
+    }
+    
+    #contact-form {
+        // @include border();
+        width: 100%;
+        margin-top: 2rem;
+
+        // .form-title {
+        //     // @include border();
+        //     @include font-properties(1rem, 500, $grey-200);
+        //     text-transform: uppercase;
+        //     text-align: center;
+        //     margin-bottom: 1rem;
+        // }
+
+        form {
+            @include flex(column, center, center);
+            width: 90%;
+            margin: 0 auto;
+
+            .form-group {
+                @include flex(row, flex-start, center);
+                width: 100%;
+                height: 1.5rem;
+
+                border-bottom: 1px solid #CCCCCC46;
+                margin-bottom: 2rem;
+
+
+                .form-icon {
+                    margin-right: 1rem;
+                    font-size: 0.8rem;
+                    color: $grey-100;
+                }
+
+                input {
+                    @include fontRaleway(1rem, 400, $grey-100);
+                    background: none;
+                    width: 100%;
+                }
+
+                textarea {
+                    @include fontRaleway(1rem, 400, $grey-100);
+                    background: none;
+                    resize: none;
+                    
+                    width: 100%;
+                    height: 1.2rem;
+                }
+                
                 input:focus,
                 textarea:focus,
                 select:focus {
                     outline: none;
                 }
-
             }
 
-            .form-button {
+            .btn {
                 appearance: none;
                 color: $grey-200;
                 background: transparent;
-                border: 1px solid $grey-200;
+                border: 2px solid $grey-200;
     
-                &:hover,
-                &active {
+                &:hover {
                     color: $grey-600;
                     background: #FFF;
+                    border: 2px solid #FFF;
                 }
             }
         }
+
     }
 }
 

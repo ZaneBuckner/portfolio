@@ -5,11 +5,12 @@
 > Personal Landing Page / Website.
 
 #### IMAGES & ICONS
-[Ornate Frame SVG Component](https://www.123rf.com/photo_99615753_stock-vector-decorative-corners-swirls-ornate-frame-page-decoration-wedding-design-filigree-dividers-vector-illus.html)<br>
-[Site Logo Blended Image](https://www.behance.net/gallery/60064327/20-Seamless-Brushed-Metal-Background-Textures-DOWNLOAD)<br>
-Site logo and animated wave SVG designed and exported using [Figma](https://www.figma.com/)<br>
-[Multi-Layered Wave SVG](https://app.haikei.app/)<br>
+[SVG Image](https://www.123rf.com/photo_99615753_stock-vector-decorative-corners-swirls-ornate-frame-page-decoration-wedding-design-filigree-dividers-vector-illus.html) - Ornate Frame Component<br>
+[Blended Image](https://www.behance.net/gallery/60064327/20-Seamless-Brushed-Metal-Background-Textures-DOWNLOAD) - Site Logo (Texture)<br>
+[SVG Image](https://app.haikei.app/) - Multi-Layered Waves (Randomly Generated)<br>
+[Blended Image](https://www.toptal.com/designers/subtlepatterns/rocky-wall/) - Hero Section (Background Texture)<br>
 
 #### UTILITY SITES
-[Favicon Generator](https://realfavicongenerator.net/)<br>
-[Vivus Instant - SVG Animation](https://maxwellito.github.io/vivus-instant/)<br>
+[Figma](https://www.figma.com/) - Site Logo; Animated Waves; SVG Alterations<br>
+[Favicon Generator](https://realfavicongenerator.net/) - Site Favicon Assets<br>
+[Vivus Instant](https://maxwellito.github.io/vivus-instant/) - SVG Animations<br>
