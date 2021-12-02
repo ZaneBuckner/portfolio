@@ -13,8 +13,22 @@ $grey-500: #333333;
 $grey-600: #222222;
 $grey-700: #111111;
 
-$gold-light: #DAB55D;
-$gold-dark:  #B69037;
+$gold-100: #EFE3BD;
+$gold-200: #E7D59E;
+$gold-300: #DFC780;
+$gold-400: #DAB55D;
+$gold-500: #C8A34A;
+$gold-600: #B69037;
+$gold-700: #AA8733;
+$gold-800: #A17F2F;
+$gold-900: #97782D;
+
+$gold-light:  #DAB55D;
+$gold-dark:   #B69037;
+$bronze-light:#DEAA74;
+$bronze-dark: #CD7F32;
+
+$bronze:     #DEAA74;
 
 @mixin border($color: magenta) {
     border: 0.1px solid $color;

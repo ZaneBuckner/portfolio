@@ -4,10 +4,10 @@
 
 > Personal Landing Page / Website.
 
-#### IMAGES & ICONS
-[SVG Image](https://www.123rf.com/photo_99615753_stock-vector-decorative-corners-swirls-ornate-frame-page-decoration-wedding-design-filigree-dividers-vector-illus.html) - Ornate Frame Component<br>
-[Blended Image](https://www.behance.net/gallery/60064327/20-Seamless-Brushed-Metal-Background-Textures-DOWNLOAD) - Site Logo (Texture)<br>
+#### IMAGES / ICONS / BACKGROUND PATTERNS
+[SVG Image](https://stock.adobe.com/images/id/340190715?as_campaign=Freepik&as_content=api&as_audience=idp&tduid=1f873e13bf364be98828b44724e23979&as_channel=affiliate&as_campclass=redirect&as_source=arvato) - Ornate Frame Component<br>
 [SVG Image](https://app.haikei.app/) - Multi-Layered Waves (Randomly Generated)<br>
+[Blended Image](https://www.behance.net/gallery/60064327/20-Seamless-Brushed-Metal-Background-Textures-DOWNLOAD) - Site Logo (Texture)<br>
 [Blended Image](https://www.toptal.com/designers/subtlepatterns/rocky-wall/) - Hero Section (Background Texture)<br>
 
 #### UTILITY SITES

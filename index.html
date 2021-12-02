@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="html">
+<html lang="en-us">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,6 +17,7 @@
         
         <!-- Fonts | Icons | Style Sheets -->
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-rqn26AG5Pj86AF4SO72RK5fyefcQ/x32DNQfChxWvbXIyXFePlEktwD18fEz+kQU" crossorigin="anonymous">
         <link rel="stylesheet" href="./styles/main.css">
@@ -61,12 +62,15 @@
         <main>
             <section id="about">
                 <div class="container">
-                    <h3 class="title">My Journey</h3>
-                    <p class="body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, libero beatae voluptas distinctio, praesentium rerum ipsam molestias voluptatum, provident magnam iure exercitationem debitis! Quaerat quas voluptates animi repellendus architecto quae corporis dolorem eveniet doloremque eligendi cumque ratione nesciunt quos temporibus, provident reprehenderit magni repudiandae. Unde praesentium consequatur illum dolor perferendis.</p>
-                    <img class="ornate-frame" src="./assets/images/ornate-frame.svg" style="top:0; left:0; transform:rotate(270deg)">
-                    <img class="ornate-frame" src="./assets/images/ornate-frame.svg" style="top:0; right:0">
-                    <img class="ornate-frame" src="./assets/images/ornate-frame.svg" style="bottom:0; left:0; transform:rotate(180deg)">
-                    <img class="ornate-frame" src="./assets/images/ornate-frame.svg" style="bottom:0; right:0; transform:rotate(90deg)">
+                    <div class="text-box gradient-border">
+                        <h3 class="title">My Journey</h3>
+                        <p class="body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, libero beatae voluptas distinctio, praesentium rerum ipsam molestias voluptatum, provident magnam iure exercitationem debitis! Quaerat quas voluptates animi repellendus architecto quae corporis dolorem eveniet doloremque eligendi cumque ratione nesciunt quos temporibus, provident reprehenderit magni repudiandae. Unde praesentium consequatur illum dolor perferendis.</p>
+
+                        <img class="ornate-motif" src="./assets/images/ornate-motif-corner.svg" style="top:0; left:0; transform:rotate(270deg)">
+                        <img class="ornate-motif" src="./assets/images/ornate-motif-corner.svg" style="top:0; right:0">
+                        <img class="ornate-motif" src="./assets/images/ornate-motif-corner.svg" style="bottom:0; left:0; transform:rotate(180deg)">
+                        <img class="ornate-motif" src="./assets/images/ornate-motif-corner.svg" style="bottom:0; right:0; transform:rotate(90deg)">
+                    </div>
                 </div>
                 <img class="static-wave" src="./assets/images/backgrounds/wave-static-about.svg">
             </section>
@@ -93,16 +97,14 @@
                         </div>
                     </article>
                 </div>
-
                 <img class="static-wave" src="./assets/images/backgrounds/wave-static-projects.svg">
             </section>
 
             <section id="skills">
                 <div class="container">
-                    <div class="hexagon-wrapper">
-                        <div class="hexagon"></div>
-                        <div class="hexagon"></div>
-                        <div class="hexagon"></div>
+                    <div class="wrapper">
+                        <!-- <i class="skills-icon fab fa-figma" title="Figma"></i> -->
+                        <!-- <img skills-icon src="./assets/icons/skills/js.svg"> -->
                     </div>
                     <!-- <div class="skillset">
                         <h3>Experience</h3>
@@ -136,22 +138,28 @@
                 <div class="container">
                     <img class="logo-animated" src="./assets/animations/logoLight-4s-4sFade-1sDelay.svg">
                     <div class="info-wrapper">
+
                         <div class="info-group">
-                            <div><i class="contact-icon far fa-fw fa-map-marker-alt"></i></div>
-                            <h4>Baton Rouge, Louisiana</h4>
+                            <i class="contact-icon footer-link fas fa-envelope fa-fw"></i>
+                            <h4 class="email-address footer-link text">bucknerzane@gmail.com</h4>
+                            <div class="popup"><i class="jiggle fas fa-clipboard fa-fw"></i></div>
                         </div>
                         <div class="info-group">
-                            <div><i class="contact-icon fas fa-fw fa-envelope"></i></div>
-                            <h4>bucknerzane@gmail.com</h4>
+                            <i class="contact-icon fas fa-file-user fa-fw"></i>
+                            <a href="./assets/documents/resume.pdf" target="_blank">Résumé</a>
+                            <div class="popup"><i class="fas fa-arrow-to-bottom fa-fw"></i></div>
                         </div>
                         <div class="info-group">
-                            <div><i class="contact-icon fab fa-fw fa-github"></i></div>
-                            <a title="GitHub" href="https://github.com/ZaneBuckner" target="_blank">GitHub Profile</a>
+                            <i class="contact-icon footer-link fab fa-github fa-fw"></i>
+                            <a class="text" title="GitHub" href="https://github.com/ZaneBuckner" target="_blank">GitHub Profile</a>
+                            <div class="popup"><i class="fas fa-link fa-fw"></i></div>
                         </div>
                         <div class="info-group">
-                            <div><i class="contact-icon fab fa-fw fa-linkedin-in"></i></div>
+                            <i class="contact-icon footer-link fab fa-linkedin-in fa-fw"></i>
                             <a title="LinkedIn" href="https://www.linkedin.com/in/ZaneBuckner" target="_blank">LinkedIn Profile</a>
+                            <div class="popup"><i class="fas fa-link fa-fw"></i></div>
                         </div>
+                        
                     </div>
                 </div>
             </section>
@@ -160,19 +168,19 @@
                 <div class="container">
                     <form autocomplete="off">
                         <div class="form-group">
-                            <i class="form-icon fas fa-fw fa-user"></i>
+                            <i class="form-icon fas fa-user fa-fw"></i>
                             <input type="text" name="name" placeholder="Name">
                         </div>
                         <div class="form-group">
-                            <i class="form-icon fas fa-fw fa-building"></i>
+                            <i class="form-icon fas fa-building fa-fw"></i>
                             <input type="text" name="company" placeholder="Company">
                         </div>
                         <div class="form-group">
-                            <i class="form-icon fas fa-fw fa-envelope"></i>
+                            <i class="form-icon fas fa-envelope fa-fw"></i>
                             <input type="text" name="email" placeholder="Email">
                         </div>
                         <div class="form-group">
-                            <i class="form-icon fas fa-fw fa-comment-dots"></i>
+                            <i class="form-icon fas fa-comment-dots fa-fw"></i>
                             <textarea type="text" name="comment" placeholder="Comment" contenteditable="true"></textarea>
                         </div>
 

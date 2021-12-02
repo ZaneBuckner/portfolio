@@ -4,12 +4,11 @@
 
 header {
     position: relative;
-    @include flex(column, center, flex-start);
-    // height: 100vh;
     overflow: hidden;
 
-    background: url(../assets/images/backgrounds/rockywall.png) center / contain repeat $grey-200;
-    background-blend-mode: overlay;
+    background: url(../assets/images/backgrounds/rockywall.png) center / contain repeat #000;
+    background-blend-mode: screen;
+    
 
     #navbar {
         @include absolute(0, 0, null, 0);
@@ -48,13 +47,12 @@ header {
     }
 
     #hero {
-        // @include border();
         @include flex(column, center, center);
         padding-top: 7rem;
         padding-bottom: 7rem;
         
         .title {
-            @include font-properties(1.5rem, 200, #6A6A6A);
+            @include font-properties(1.5rem, 200, $grey-600);
             letter-spacing: 2px;
             text-transform: uppercase;
         }
@@ -91,35 +89,59 @@ main {
 
     #about {
         position: relative;
-        padding: 3rem 0 8rem 0;
+        padding: 3rem 0 10rem 0;
         background: $grey-600;
 
-        .title {
-            @include absolute(-0.6rem, 0, null, 0);
-            width: 8rem;
-            margin: 0 auto;
-            background: $grey-600;
+        .text-box {
+            @include flex(column, center, center);
+            position: relative;
+            width: 100%;
 
-            @include font-properties(0.9rem, 300, $grey-200);
-            text-align: center;
-            text-transform: uppercase;
+            .title {
+                @include absolute(0, null, null, null);
+                width: 9rem;
+                background: $grey-600;
+                transform: translateY(-50%);
+    
+                @include font-properties(0.9rem, 300, $grey-200);
+                text-align: center;
+                text-transform: uppercase;
+
+                box-shadow: 1rem 0rem 1.5rem 1rem #222222, -1rem 0rem 1.5rem 1rem #222222;
+            }
+
+
+            .body {
+                padding: 2rem;
+
+                @include font-properties(0.7rem, 300, $grey-200);
+                text-align: justify;
+                line-height: 2;
+            }
+
         }
 
-        .body {
-            padding: 1.5rem;
-            border: 1px solid $gold-light;
-            border-radius: 5px;
+        .gradient-border {
+            border-style: solid;
+            border-width: 2px;
+            border-image: linear-gradient(45deg, $gold-600 0%, $gold-700 12%, $gold-400 38%, $gold-200 60%, $gold-400 83%, $gold-200 100%) 1;
 
-            @include font-properties(0.7rem, 300, $grey-200);
-            text-align: justify;
-            line-height: 2;
+            &::after {
+                @include absolute(null, null, -1px, null);
+                content: '';
+                width: 3rem;
+                height: 3rem;
+                background: url('../assets/images/ornate-motif-bottom.svg') center / cover no-repeat;
+                transform: translateY(50%);
+            }
         }
 
-        .ornate-frame {
+        .ornate-motif {
             position: absolute;
-            height: 2rem;
-            margin: 0.2rem;
-            opacity: 70%;
+            width: 3.5rem;
+            height: auto;
+            
+            margin: 0.1rem;
         }
     }
 
@@ -141,7 +163,6 @@ main {
 
                 span {
                     color: $grey-300;
-                    // color: #9E9E9E;
                 }
             }
 
@@ -187,8 +208,6 @@ main {
             position: relative;
             margin: 2.5rem auto;
             padding: 0.5rem;
-            // border: 1px solid $gold-dark;
-            // border-radius: 1px;
 
             h3 {
                 @include absolute(-1.4rem, null, null, null);
@@ -230,23 +249,36 @@ footer {
             margin: 2rem auto 0 auto;
 
             .info-group {
+                position: relative;
                 @include flex(row, space-between, center);
-                width: 80%;
+                width: 90%;
 
                 .contact-icon  {
                     font-size: 1.2rem;
-                    color: $grey-100;
+                    color: $grey-200;
+                    cursor: pointer;
                 }
 
                 h4, a {
                     @include fontRaleway(0.9rem, 200, $grey-200);
                     margin-left: 1.5rem;
                     letter-spacing: 1px;
+                    cursor: pointer;
 
                     &:hover {
-                        color: $gold-dark;
-                        font-weight: 300;
+                        color: $gold-400;
                     }
+                }
+
+                .popup {
+                    visibility: hidden;
+                    @include absolute(null, null, -0.5rem, 1rem);
+                
+                    i {
+                        font-size: 0.8rem;
+                        color: $gold-400;
+                    }
+                
                 }
             }
         }
@@ -254,17 +286,8 @@ footer {
     }
     
     #contact-form {
-        // @include border();
         width: 100%;
         margin-top: 2rem;
-
-        // .form-title {
-        //     // @include border();
-        //     @include font-properties(1rem, 500, $grey-200);
-        //     text-transform: uppercase;
-        //     text-align: center;
-        //     margin-bottom: 1rem;
-        // }
 
         form {
             @include flex(column, center, center);
@@ -343,7 +366,7 @@ footer {
     }
 }
 
-@media (min-width: 900px) {
+@media screen and (min-width: 1200px) {
     main {
         #about {
             padding-bottom: 10rem;
@@ -359,7 +382,7 @@ footer {
     }
 }
 
-@media (min-width: 1300px) {
+@media screen and (min-width: 1400px) {
     main {
         #about {
             padding-bottom: 12rem;
@@ -375,95 +398,18 @@ footer {
     }
 }
 
-@media (min-width: 1600px) {
+@media screen and (min-width: 1600px) {
     main {
         #about {
-            padding-bottom: 15rem;
+            padding-bottom: 14rem;
         }
 
         #projects {
-            padding-bottom: 15rem;
+            padding-bottom: 14rem;
         }
 
         #skills {
-            padding-bottom: 15rem;
+            padding-bottom: 14rem;
         }
     }
 }
-
-
-
-
-
-
-
-
-
-/* ========== FLUID TYPOGRAPHY ==========
-    RANGE   TARGET    VW (px)   HTML-FONT (px)
-    MIN     MOBILE    >= 320    16
-    MEDIAN  TABLET    ~= 780    23
-    MAX     DESKTOP+  <= 1100   28
-
-    https://www.madebymike.com.au/writing/fluid-type-calc-examples/
-    minFont + (maxFont - minFont) * [(100vw - minVPWidth) / (maxVPWidth - minVPWidth)]
-   ====================================== */
-// @media screen and (min-width: 320px) {
-//     html {
-//         font-size: calc(16px + 12 * ((100vw - 320px) / 780));
-//     }
-// }
-
-// @media screen and (min-width: 1100px) {
-//     html {
-//         font-size: 28px;
-//     }
-// }
-
-// @media (min-width: 900px) {
-//     main {
-//         #about {
-//             padding-bottom: 10rem;
-//         }
-
-//         #projects {
-//             padding-bottom: 10rem;
-//         }
-
-//         #skills {
-//             padding-bottom: 10rem;
-//         }
-//     }
-// }
-
-// @media (min-width: 1300px) {
-//     main {
-//         #about {
-//             padding-bottom: 12rem;
-//         }
-
-//         #projects {
-//             padding-bottom: 12rem;
-//         }
-
-//         #skills {
-//             padding-bottom: 12rem;
-//         }
-//     }
-// }
-
-// @media (min-width: 1600px) {
-//     main {
-//         #about {
-//             padding-bottom: 15rem;
-//         }
-
-//         #projects {
-//             padding-bottom: 15rem;
-//         }
-
-//         #skills {
-//             padding-bottom: 15rem;
-//         }
-//     }
-// }

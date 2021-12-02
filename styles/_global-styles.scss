@@ -52,24 +52,43 @@ a {
     }
 }
 
-.btn-light {
-    border: 2px solid $grey-100;
-}
-
-.btn-dark {
-    border: 2px solid $grey-600;
-    background: #FFF;
-}
-
-// .button {
-//     margin: 1.5rem 1rem;
-//     border-radius: 5px;
-    
-//     padding: 0.4rem 0.8rem;
-// }
-
 .static-wave {
     position: absolute;
     bottom: -10px;
     width: 100%;
+}
+
+.click-response {
+    animation: clickResponse 800ms cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+@keyframes clickResponse {
+    0%, 100% {
+        font-size: 0.8rem;
+    }
+
+    // START => 200ms | NO ROTATION
+    0%, 25% {
+        transform: rotate(0deg);
+    }
+    
+    // 200ms => 600ms | ICON SCALE +
+    25%, 75% {
+        font-size: 1.1rem;
+    }
+
+    //// 200ms => 300ms | ROTATION ⟲
+    25%, 40% {
+        transform: rotate(45deg);
+    }
+
+    //// 300ms => 500ms | ROTATION ⟳
+    40%, 60% {
+        transform: rotate(-45deg);
+    }
+
+    // 600ms => END | NO ROTATION
+    75%, 100% {
+        transform: rotate(0deg);
+    }
 }

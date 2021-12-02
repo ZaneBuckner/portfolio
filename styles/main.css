@@ -188,39 +188,72 @@ a {
           transform: scale(1.15);
 }
 
-.btn-light {
-  border: 2px solid #EEEEEE;
-}
-
-.btn-dark {
-  border: 2px solid #222222;
-  background: #FFF;
-}
-
 .static-wave {
   position: absolute;
   bottom: -10px;
   width: 100%;
 }
 
+.click-response {
+  -webkit-animation: clickResponse 800ms cubic-bezier(0.22, 1, 0.36, 1) infinite;
+          animation: clickResponse 800ms cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+@-webkit-keyframes clickResponse {
+  0%, 100% {
+    font-size: 0.8rem;
+  }
+  0%, 25% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25%, 75% {
+    font-size: 1.1rem;
+  }
+  25%, 40% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  40%, 60% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  75%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes clickResponse {
+  0%, 100% {
+    font-size: 0.8rem;
+  }
+  0%, 25% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25%, 75% {
+    font-size: 1.1rem;
+  }
+  25%, 40% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  40%, 60% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  75%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
 header {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   overflow: hidden;
-  background: url(../assets/images/backgrounds/rockywall.png) center/contain repeat #CCCCCC;
-  background-blend-mode: overlay;
+  background: url(../assets/images/backgrounds/rockywall.png) center/contain repeat #000;
+  background-blend-mode: screen;
 }
 
 header #navbar {
@@ -300,7 +333,7 @@ header #hero {
 header #hero .title {
   font-size: 1.5rem;
   font-weight: 200;
-  color: #6A6A6A;
+  color: #222222;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -337,29 +370,46 @@ main {
 
 main #about {
   position: relative;
-  padding: 3rem 0 8rem 0;
+  padding: 3rem 0 10rem 0;
   background: #222222;
 }
 
-main #about .title {
+main #about .text-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+main #about .text-box .title {
   position: absolute;
-  top: -0.6rem;
-  right: 0;
-  left: 0;
-  width: 8rem;
-  margin: 0 auto;
+  top: 0;
+  width: 9rem;
   background: #222222;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   font-size: 0.9rem;
   font-weight: 300;
   color: #CCCCCC;
   text-align: center;
   text-transform: uppercase;
+  -webkit-box-shadow: 1rem 0rem 1.5rem 1rem #222222, -1rem 0rem 1.5rem 1rem #222222;
+          box-shadow: 1rem 0rem 1.5rem 1rem #222222, -1rem 0rem 1.5rem 1rem #222222;
 }
 
-main #about .body {
-  padding: 1.5rem;
-  border: 1px solid #DAB55D;
-  border-radius: 5px;
+main #about .text-box .body {
+  padding: 2rem;
   font-size: 0.7rem;
   font-weight: 300;
   color: #CCCCCC;
@@ -367,11 +417,29 @@ main #about .body {
   line-height: 2;
 }
 
-main #about .ornate-frame {
+main #about .gradient-border {
+  border-style: solid;
+  border-width: 2px;
+  -o-border-image: linear-gradient(45deg, #B69037 0%, #AA8733 12%, #DAB55D 38%, #E7D59E 60%, #DAB55D 83%, #E7D59E 100%) 1;
+     border-image: linear-gradient(45deg, #B69037 0%, #AA8733 12%, #DAB55D 38%, #E7D59E 60%, #DAB55D 83%, #E7D59E 100%) 1;
+}
+
+main #about .gradient-border::after {
   position: absolute;
-  height: 2rem;
-  margin: 0.2rem;
-  opacity: 70%;
+  bottom: -1px;
+  content: '';
+  width: 3rem;
+  height: 3rem;
+  background: url("../assets/images/ornate-motif-bottom.svg") center/cover no-repeat;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+main #about .ornate-motif {
+  position: absolute;
+  width: 3.5rem;
+  height: auto;
+  margin: 0.1rem;
 }
 
 main #projects {
@@ -526,6 +594,7 @@ footer #contact-info .info-wrapper {
 }
 
 footer #contact-info .info-wrapper .info-group {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -539,12 +608,13 @@ footer #contact-info .info-wrapper .info-group {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 80%;
+  width: 90%;
 }
 
 footer #contact-info .info-wrapper .info-group .contact-icon {
   font-size: 1.2rem;
-  color: #EEEEEE;
+  color: #CCCCCC;
+  cursor: pointer;
 }
 
 footer #contact-info .info-wrapper .info-group h4, footer #contact-info .info-wrapper .info-group a {
@@ -554,11 +624,23 @@ footer #contact-info .info-wrapper .info-group h4, footer #contact-info .info-wr
   color: #CCCCCC;
   margin-left: 1.5rem;
   letter-spacing: 1px;
+  cursor: pointer;
 }
 
 footer #contact-info .info-wrapper .info-group h4:hover, footer #contact-info .info-wrapper .info-group a:hover {
-  color: #B69037;
-  font-weight: 300;
+  color: #DAB55D;
+}
+
+footer #contact-info .info-wrapper .info-group .popup {
+  visibility: hidden;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 1rem;
+}
+
+footer #contact-info .info-wrapper .info-group .popup i {
+  font-size: 0.8rem;
+  color: #DAB55D;
 }
 
 footer #contact-form {
@@ -663,7 +745,7 @@ footer #contact-form form .btn:hover {
   }
 }
 
-@media (min-width: 900px) {
+@media screen and (min-width: 1200px) {
   main #about {
     padding-bottom: 10rem;
   }
@@ -675,7 +757,7 @@ footer #contact-form form .btn:hover {
   }
 }
 
-@media (min-width: 1300px) {
+@media screen and (min-width: 1400px) {
   main #about {
     padding-bottom: 12rem;
   }
@@ -687,25 +769,15 @@ footer #contact-form form .btn:hover {
   }
 }
 
-@media (min-width: 1600px) {
+@media screen and (min-width: 1600px) {
   main #about {
-    padding-bottom: 15rem;
+    padding-bottom: 14rem;
   }
   main #projects {
-    padding-bottom: 15rem;
+    padding-bottom: 14rem;
   }
   main #skills {
-    padding-bottom: 15rem;
+    padding-bottom: 14rem;
   }
 }
-
-/* ========== FLUID TYPOGRAPHY ==========
-    RANGE   TARGET    VW (px)   HTML-FONT (px)
-    MIN     MOBILE    >= 320    16
-    MEDIAN  TABLET    ~= 780    23
-    MAX     DESKTOP+  <= 1100   28
-
-    https://www.madebymike.com.au/writing/fluid-type-calc-examples/
-    minFont + (maxFont - minFont) * [(100vw - minVPWidth) / (maxVPWidth - minVPWidth)]
-   ====================================== */
 /*# sourceMappingURL=main.css.map */

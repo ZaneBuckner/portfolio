@@ -43,3 +43,45 @@ function setHeroPadding() {
     // heroSection.style.paddingTop = `${availableSpace / 2}px`;
     // heroSection.style.paddingBottom = `${availableSpace / 2}px`;
 };
+
+
+
+
+const contactInfo = document.getElementById('contact-info');
+const contactInfoGroups = document.querySelectorAll('.info-group');
+
+contactInfoGroups.forEach(group => {
+    group.addEventListener('mouseover', (e) => {
+        const popupIcon = group.querySelector('.popup');
+        popupIcon.style.visibility = 'visible';
+    });
+    group.addEventListener('mouseout', (e) => {
+        const popupIcon = group.querySelector('.popup');
+        popupIcon.style.visibility = 'hidden';
+    });
+});
+
+
+contactInfo.addEventListener('click', (e) => {
+    const emailAddress = document.querySelector('.email-address');
+    const resume = document.querySelector('.resume');
+
+    if (e.target === emailAddress) { copyEmailAddress() };
+    if (e.target === resume) { downloadResume() };
+});
+
+
+function copyEmailAddress() {
+    const emailAddressText = document.querySelector('.email-address').textContent;
+    const onClickAnimation = document.querySelector('.jiggle');
+    
+    navigator.clipboard.writeText(emailAddressText);
+
+    onClickAnimation.classList.add('click-response');
+    setTimeout(() => { onClickAnimation.classList.remove('click-response') }, 800);
+};
+
+
+function downloadResume() {
+
+};
