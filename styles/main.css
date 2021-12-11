@@ -400,8 +400,6 @@ main #about .text-box .title {
   color: #CCCCCC;
   text-align: center;
   text-transform: uppercase;
-  -webkit-box-shadow: 1rem 0rem 1.5rem 1rem #222222, -1rem 0rem 1.5rem 1rem #222222;
-          box-shadow: 1rem 0rem 1.5rem 1rem #222222, -1rem 0rem 1.5rem 1rem #222222;
 }
 
 main #about .text-box .body {
