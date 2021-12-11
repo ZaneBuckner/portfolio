@@ -188,7 +188,7 @@ a {
           transform: scale(1.15);
 }
 
-.static-wave {
+.wave-static {
   position: absolute;
   bottom: -10px;
   width: 100%;
@@ -252,7 +252,7 @@ a {
 header {
   position: relative;
   overflow: hidden;
-  background: url(../assets/images/backgrounds/rockywall.png) center/contain repeat #000;
+  background: url(/assets/images/backgrounds/hero-rockywall.png) center/contain repeat #000;
   background-blend-mode: screen;
 }
 
@@ -294,7 +294,8 @@ header #navbar nav .nav-link {
 }
 
 header #navbar nav .nav-link .nav-icon {
-  height: 1.8rem;
+  font-size: 1.8rem;
+  color: #DAB55D;
   opacity: 40%;
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out;
@@ -430,7 +431,7 @@ main #about .gradient-border::after {
   content: '';
   width: 3rem;
   height: 3rem;
-  background: url("../assets/images/ornate-motif-bottom.svg") center/cover no-repeat;
+  background: url(/assets/images/about-frame-motif-bottom.svg) center/cover no-repeat;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
 }

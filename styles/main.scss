@@ -6,7 +6,7 @@ header {
     position: relative;
     overflow: hidden;
 
-    background: url(../assets/images/backgrounds/rockywall.png) center / contain repeat #000;
+    background: url(/assets/images/backgrounds/hero-rockywall.png) center / contain repeat #000;
     background-blend-mode: screen;
     
 
@@ -31,7 +31,8 @@ header {
                 margin-left: 0.5rem;
 
                 .nav-icon {
-                    height: 1.8rem;
+                    font-size: 1.8rem;
+                    color: $gold-400;
                     opacity: 40%;
                     transition: transform 0.2s ease-in-out;
 
@@ -131,7 +132,7 @@ main {
                 content: '';
                 width: 3rem;
                 height: 3rem;
-                background: url('../assets/images/ornate-motif-bottom.svg') center / cover no-repeat;
+                background: url(/assets/images/about-frame-motif-bottom.svg) center / cover no-repeat;
                 transform: translateY(50%);
             }
         }
