@@ -54,17 +54,14 @@ header {
         
         .title {
             @include font-properties(1.5rem, 200, $grey-600);
-            letter-spacing: 2px;
+            letter-spacing: 8px;
             text-transform: uppercase;
         }
 
         .subtitle {
-            @include font-properties(1.4rem, 200, $grey-500);
-
-            span {
-                @include font-properties(0.8rem, 300, $grey-500);
-                letter-spacing: 1px;
-            }
+            @include font-properties(1rem, 200, $grey-500);
+            letter-spacing: 3px;
+            text-transform: uppercase;
         }
 
         div {
@@ -198,32 +195,84 @@ main {
         }
     }
 
-    #skills {
+    #technologies {
         position: relative;
         padding: 2rem 0 8rem 0;
-        padding: 10rem 0;
         background: $grey-600;
 
-        .skillset {
-            @include flex(row, space-around, center);
+        .tech-group {
+            @include flex(row, center, center);
             position: relative;
-            margin: 2.5rem auto;
-            padding: 0.5rem;
+            width: 100%;
+            height: 8rem;
+            margin: 4rem 0;
 
-            h3 {
-                @include absolute(-1.4rem, null, null, null);
+            border: 3px solid $grey-500;
+            border-radius: 5px;
 
-                font-size: 0.8rem;
-                font-weight: 300;
+            .title {
+                @include absolute(0, 0, null, 0);
+                width: 9rem;
+                background: $grey-600;
+                transform: translateY(-50%);
+                margin: auto;
+                
+                @include font-properties(1rem, 300, $grey-100);
                 text-transform: uppercase;
-                color: $grey1;
                 text-align: center;
             }
 
-            img {
-                width: auto;
-                height: 2rem;
+            .subtitle {
+                @include absolute(0.7rem, 0, null, 0);
+                width: 100%;
+                height: auto;
+                margin: auto;
+
+                @include font-properties(0.5rem, 100, $grey-100);
+                text-transform: uppercase;
+                text-align: center;
+                letter-spacing: 1px;
             }
+            
+            .tech-wrapper {
+                @include flex(row, space-between, center);
+                width: 100%;
+                height: 5rem;
+                margin: 1rem;
+    
+                .tech-item {
+                    @include flex(column, space-around, center);
+                    width: 100%;
+                    height: 80%;
+    
+                    .icon {
+                        width: auto;
+                        height: 2.5rem;
+                        margin-bottom: 0.8rem;
+                    }
+    
+                    .mod {
+                        width: auto;
+                        height: 1.5rem;
+                    }
+    
+                    .text {
+                        @include flex(row, center, center);
+                        width: 100%;
+                        height: 1rem;
+                        
+                        @include font-properties(0.5rem, 200, $grey-100);
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+
+        .mod-margin {
+            margin-top: 2rem;
         }
     }
 }
@@ -378,7 +427,7 @@ footer {
             padding-bottom: 10rem;
         }
 
-        #skills {
+        #technologies {
             padding-bottom: 10rem;
         }
     }
@@ -394,7 +443,7 @@ footer {
             padding-bottom: 12rem;
         }
 
-        #skills {
+        #technologies {
             padding-bottom: 12rem;
         }
     }
@@ -410,7 +459,7 @@ footer {
             padding-bottom: 14rem;
         }
 
-        #skills {
+        #technologies {
             padding-bottom: 14rem;
         }
     }

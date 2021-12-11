@@ -146,7 +146,7 @@ body {
   font-family: 'Raleway', serif;
 }
 
-h1, h2, h3, h4, p {
+h1, h2, h3, h4, h5, p {
   margin: 0;
 }
 
@@ -335,21 +335,16 @@ header #hero .title {
   font-size: 1.5rem;
   font-weight: 200;
   color: #222222;
-  letter-spacing: 2px;
+  letter-spacing: 8px;
   text-transform: uppercase;
 }
 
 header #hero .subtitle {
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 200;
   color: #333333;
-}
-
-header #hero .subtitle span {
-  font-size: 0.8rem;
-  font-weight: 300;
-  color: #333333;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 header #hero div .btn {
@@ -523,14 +518,13 @@ main #projects .project div .btn:hover {
   color: #222222;
 }
 
-main #skills {
+main #technologies {
   position: relative;
   padding: 2rem 0 8rem 0;
-  padding: 10rem 0;
   background: #222222;
 }
 
-main #skills .skillset {
+main #technologies .tech-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -538,29 +532,126 @@ main #skills .skillset {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 100%;
+  height: 8rem;
+  margin: 4rem 0;
+  border: 3px solid #333333;
+  border-radius: 5px;
+}
+
+main #technologies .tech-group .title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 9rem;
+  background: #222222;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin: auto;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #EEEEEE;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+main #technologies .tech-group .subtitle {
+  position: absolute;
+  top: 0.7rem;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  font-size: 0.5rem;
+  font-weight: 100;
+  color: #EEEEEE;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+main #technologies .tech-group .tech-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 5rem;
+  margin: 1rem;
+}
+
+main #technologies .tech-group .tech-wrapper .tech-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
-  margin: 2.5rem auto;
-  padding: 0.5rem;
+  width: 100%;
+  height: 80%;
 }
 
-main #skills .skillset h3 {
-  position: absolute;
-  top: -1.4rem;
-  font-size: 0.8rem;
-  font-weight: 300;
+main #technologies .tech-group .tech-wrapper .tech-item .icon {
+  width: auto;
+  height: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+
+main #technologies .tech-group .tech-wrapper .tech-item .mod {
+  width: auto;
+  height: 1.5rem;
+}
+
+main #technologies .tech-group .tech-wrapper .tech-item .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 1rem;
+  font-size: 0.5rem;
+  font-weight: 200;
+  color: #EEEEEE;
   text-transform: uppercase;
-  color: #ECECECB3;
+  letter-spacing: 1px;
   text-align: center;
 }
 
-main #skills .skillset img {
-  width: auto;
-  height: 2rem;
+main #technologies .mod-margin {
+  margin-top: 2rem;
 }
 
 footer {
@@ -753,7 +844,7 @@ footer #contact-form form .btn:hover {
   main #projects {
     padding-bottom: 10rem;
   }
-  main #skills {
+  main #technologies {
     padding-bottom: 10rem;
   }
 }
@@ -765,7 +856,7 @@ footer #contact-form form .btn:hover {
   main #projects {
     padding-bottom: 12rem;
   }
-  main #skills {
+  main #technologies {
     padding-bottom: 12rem;
   }
 }
@@ -777,7 +868,7 @@ footer #contact-form form .btn:hover {
   main #projects {
     padding-bottom: 14rem;
   }
-  main #skills {
+  main #technologies {
     padding-bottom: 14rem;
   }
 }
