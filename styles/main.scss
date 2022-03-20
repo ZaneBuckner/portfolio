@@ -1,464 +1,459 @@
-@import "./wave-animations";
-@import "./variables";
-@import "./global-styles";
+@import './wave-animations';
+@import './variables';
+@import './global-styles';
 
 header {
-    position: relative;
-    overflow: hidden;
+	position: relative;
+	overflow: hidden;
 
-    background: url(/assets/images/backgrounds/hero-rockywall.png) center / contain repeat #000;
-    background-blend-mode: screen;
-    
+	background: url(/assets/images/backgrounds/hero-rockywall.png) center / contain repeat #000;
+	background-blend-mode: screen;
 
-    #navbar {
-        @include absolute(0, 0, null, 0);
-        z-index: 1;
-        
-        @include flex(row, center, baseline);
-        width: 90%;
-        max-width: 1100px;
-        margin: 0 auto;
-        padding-top: 0.8rem;
+	#navbar {
+		@include absolute(0, 0, null, 0);
+		z-index: 1;
 
-        #logo {
-            height: 2rem;
-        }
+		@include flex(row, center, baseline);
+		width: 90%;
+		max-width: 1100px;
+		margin: 0 auto;
+		padding-top: 0.8rem;
 
-        nav {
-            margin-left: auto;
+		#logo {
+			height: 2rem;
+		}
 
-            .nav-link {
-                margin-left: 0.5rem;
+		nav {
+			margin-left: auto;
 
-                .nav-icon {
-                    font-size: 1.8rem;
-                    color: $gold-400;
-                    opacity: 40%;
-                    transition: transform 0.2s ease-in-out;
+			.nav-link {
+				margin-left: 0.5rem;
 
-                    &:hover,
-                    &:active {
-                        opacity: 100%;
-                        transform: scale(1.2);
-                        user-select: none;
-                    }
-                }
-            }
-        }
-    }
+				.nav-icon {
+					font-size: 1.8rem;
+					color: $gold-400;
+					opacity: 40%;
+					transition: transform 0.2s ease-in-out;
 
-    #hero {
-        @include flex(column, center, center);
-        padding-top: 7rem;
-        padding-bottom: 7rem;
-        
-        .title {
-            @include font-properties(1.5rem, 200, $grey-600);
-            letter-spacing: 8px;
-            text-transform: uppercase;
-        }
+					&:hover,
+					&:active {
+						opacity: 100%;
+						transform: scale(1.2);
+						user-select: none;
+					}
+				}
+			}
+		}
+	}
 
-        .subtitle {
-            @include font-properties(1rem, 200, $grey-500);
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
+	#hero {
+		@include flex(column, center, center);
+		padding-top: 7rem;
+		padding-bottom: 7rem;
 
-        div {
-            .btn {
-                margin: 1rem 1rem;
-                border: 2px solid $grey-600;
-                background: transparent;
+		.title {
+			@include font-properties(1.5rem, 200, $grey-600);
+			letter-spacing: 8px;
+			text-transform: uppercase;
+		}
 
-                &:hover {
-                    border: 2px solid $grey-600;
-                    background: $grey-600;
-                    color: #FFF;
-                }
-            }
-        }
-    }
+		.subtitle {
+			@include font-properties(1rem, 200, $grey-500);
+			letter-spacing: 3px;
+			text-transform: uppercase;
+		}
+
+		div {
+			.btn {
+				margin: 1rem 1rem;
+				border: 2px solid $grey-600;
+				background: transparent;
+
+				&:hover {
+					border: 2px solid $grey-600;
+					background: $grey-600;
+					color: #fff;
+				}
+			}
+		}
+	}
 }
-
 
 main {
-    width: 100%;
-    overflow: hidden;
+	width: 100%;
+	overflow: hidden;
 
-    #about {
-        position: relative;
-        padding: 3rem 0 10rem 0;
-        background: $grey-600;
+	#about {
+		position: relative;
+		padding: 3rem 0 10rem 0;
+		background: $grey-600;
 
-        .text-box {
-            @include flex(column, center, center);
-            position: relative;
-            width: 100%;
+		.text-box {
+			@include flex(column, center, center);
+			position: relative;
+			width: 100%;
 
-            .title {
-                @include absolute(0, null, null, null);
-                width: 9rem;
-                background: $grey-600;
-                transform: translateY(-50%);
-    
-                @include font-properties(0.9rem, 300, $grey-200);
-                text-align: center;
-                text-transform: uppercase;
-            }
+			.title {
+				@include absolute(0, null, null, null);
+				width: 9rem;
+				background: $grey-600;
+				transform: translateY(-50%);
 
+				@include font-properties(0.9rem, 300, $grey-200);
+				text-align: center;
+				text-transform: uppercase;
+			}
 
-            .body {
-                padding: 2rem;
+			.body {
+				padding: 2rem;
 
-                @include font-properties(0.7rem, 300, $grey-200);
-                text-align: justify;
-                line-height: 2;
-            }
+				@include font-properties(0.7rem, 300, $grey-200);
+				text-align: justify;
+				line-height: 2;
+			}
+		}
 
-        }
+		.gradient-border {
+			border-style: solid;
+			border-width: 2px;
+			border-image: linear-gradient(
+					45deg,
+					$gold-600 0%,
+					$gold-700 12%,
+					$gold-400 38%,
+					$gold-200 60%,
+					$gold-400 83%,
+					$gold-200 100%
+				)
+				1;
 
-        .gradient-border {
-            border-style: solid;
-            border-width: 2px;
-            border-image: linear-gradient(45deg, $gold-600 0%, $gold-700 12%, $gold-400 38%, $gold-200 60%, $gold-400 83%, $gold-200 100%) 1;
+			&::after {
+				@include absolute(null, null, -1px, null);
+				content: '';
+				width: 3rem;
+				height: 3rem;
+				background: url(/assets/images/about-frame-motif-bottom.svg) center / cover no-repeat;
+				transform: translateY(50%);
+			}
+		}
 
-            &::after {
-                @include absolute(null, null, -1px, null);
-                content: '';
-                width: 3rem;
-                height: 3rem;
-                background: url(/assets/images/about-frame-motif-bottom.svg) center / cover no-repeat;
-                transform: translateY(50%);
-            }
-        }
+		.ornate-motif {
+			position: absolute;
+			width: 3.5rem;
+			height: auto;
 
-        .ornate-motif {
-            position: absolute;
-            width: 3.5rem;
-            height: auto;
-            
-            margin: 0.1rem;
-        }
-    }
+			margin: 0.1rem;
+		}
+	}
 
-    #projects {
-        position: relative;
-        padding: 3rem 0 8rem 0;
-        background-color: $grey-500;
-        
-        .project {
-            @include flex(column, center, center);
-            
-            &:nth-child(2) {
-                margin-top: 3rem;
-            }
+	#projects {
+		position: relative;
+		padding: 3rem 0 8rem 0;
+		background-color: $grey-500;
 
-            .title {
-                @include fontRaleway(1.5rem, 300, $grey-100);
-                margin-right: 2.4rem;
+		.container {
+			display: grid;
+			grid-template-rows: repeat(3, auto);
+			grid-row-gap: 4rem;
+		}
 
-                span {
-                    color: $grey-300;
-                }
-            }
+		.project {
+			@include flex(column, center, center);
 
-            .showcase {
-                width: 14rem;
-                height: auto;
-            }
+			.title {
+				@include fontRaleway(1.5rem, 300, $grey-100);
+				margin-right: 2.4rem;
 
-            .description {
-                margin-top: 1rem;
+				span {
+					color: $grey-300;
+				}
+			}
 
-                @include font-properties(0.8rem, 300, #C5C5C5);
-                text-align: justify;
-            }
+			.showcase {
+				width: 14rem;
+				height: auto;
+			}
 
-            div {
-                @include flex(row, center, center);
+			.description {
+				margin-top: 1rem;
+				max-width: 27rem;
 
-                .btn {
-                    margin: 1rem 1rem;
-                    border: 2px solid $grey-200;
-                    background: transparent;
-                    color: $grey-200;
-    
-                    &:hover {
-                        border: 2px solid #FFF;
-                        background: #FFF;
-                        color: $grey-600;
-                    }
-                }
-            }
-        }
-    }
+				@include font-properties(0.8rem, 300, #c5c5c5);
+				text-align: justify;
+			}
 
-    #technologies {
-        position: relative;
-        padding: 2rem 0 8rem 0;
-        background: $grey-600;
+			div {
+				@include flex(row, center, center);
 
-        .tech-group {
-            @include flex(row, center, center);
-            position: relative;
-            width: 100%;
-            height: 8rem;
-            margin: 4rem 0;
+				.btn {
+					margin: 1rem 1rem;
+					border: 2px solid $grey-200;
+					background: transparent;
+					color: $grey-200;
 
-            border: 3px solid $grey-500;
-            border-radius: 5px;
+					&:hover {
+						border: 2px solid #fff;
+						background: #fff;
+						color: $grey-600;
+					}
+				}
+			}
+		}
+	}
 
-            .title {
-                @include absolute(0, 0, null, 0);
-                width: 9rem;
-                background: $grey-600;
-                transform: translateY(-50%);
-                margin: auto;
-                
-                @include font-properties(1rem, 300, $grey-100);
-                text-transform: uppercase;
-                text-align: center;
-            }
+	#technologies {
+		position: relative;
+		padding: 2rem 0 8rem 0;
+		background: $grey-600;
 
-            .subtitle {
-                @include absolute(0.7rem, 0, null, 0);
-                width: 100%;
-                height: auto;
-                margin: auto;
+		.tech-group {
+			@include flex(row, center, center);
+			position: relative;
+			width: 100%;
+			height: 8rem;
+			margin: 4rem 0;
 
-                @include font-properties(0.5rem, 100, $grey-100);
-                text-transform: uppercase;
-                text-align: center;
-                letter-spacing: 1px;
-            }
-            
-            .tech-wrapper {
-                @include flex(row, space-between, center);
-                width: 100%;
-                height: 5rem;
-                margin: 1rem;
-    
-                .tech-item {
-                    @include flex(column, space-around, center);
-                    width: 100%;
-                    height: 80%;
-    
-                    .icon {
-                        width: auto;
-                        height: 2.5rem;
-                        margin-bottom: 0.8rem;
-                    }
-    
-                    .mod {
-                        width: auto;
-                        height: 1.5rem;
-                    }
-    
-                    .text {
-                        @include flex(row, center, center);
-                        width: 100%;
-                        height: 1rem;
-                        
-                        @include font-properties(0.5rem, 200, $grey-100);
-                        text-transform: uppercase;
-                        letter-spacing: 1px;
-                        text-align: center;
-                    }
-                }
-            }
-        }
+			border: 3px solid $grey-500;
+			border-radius: 5px;
 
+			.title {
+				@include absolute(0, 0, null, 0);
+				width: 9rem;
+				background: $grey-600;
+				transform: translateY(-50%);
+				margin: auto;
 
-        .mod-margin {
-            margin-top: 2rem;
-        }
-    }
+				@include font-properties(1rem, 300, $grey-100);
+				text-transform: uppercase;
+				text-align: center;
+			}
+
+			.subtitle {
+				@include absolute(0.7rem, 0, null, 0);
+				width: 100%;
+				height: auto;
+				margin: auto;
+
+				@include font-properties(0.5rem, 100, $grey-100);
+				text-transform: uppercase;
+				text-align: center;
+				letter-spacing: 1px;
+			}
+
+			.tech-wrapper {
+				@include flex(row, space-between, center);
+				width: 100%;
+				height: 5rem;
+				margin: 1rem;
+
+				.tech-item {
+					@include flex(column, space-around, center);
+					width: 100%;
+					height: 80%;
+
+					.icon {
+						width: auto;
+						height: 2.5rem;
+						margin-bottom: 0.8rem;
+					}
+
+					.mod {
+						width: auto;
+						height: 1.5rem;
+					}
+
+					.text {
+						@include flex(row, center, center);
+						width: 100%;
+						height: 1rem;
+
+						@include font-properties(0.5rem, 200, $grey-100);
+						text-transform: uppercase;
+						letter-spacing: 1px;
+						text-align: center;
+					}
+				}
+			}
+		}
+
+		.mod-margin {
+			margin-top: 2rem;
+		}
+	}
 }
-
 
 footer {
-    width: 100%;
-    background: $grey-500;
-    padding: 2rem 0;
+	width: 100%;
+	background: $grey-500;
+	padding: 2rem 0;
 
-    #contact-info {
-        
-        .logo-animated {
-            display: block;
-            width: 7rem;
-            height: auto;
-            margin: 0 auto;
-        }
+	#contact-info {
+		.logo-animated {
+			display: block;
+			width: 7rem;
+			height: auto;
+			margin: 0 auto;
+		}
 
-        .info-wrapper {
-            @include flex(column, space-around, center);
-            width: 100%;
-            height: 10rem;
-            margin: 2rem auto 0 auto;
+		.info-wrapper {
+			@include flex(column, space-around, center);
+			width: 100%;
+			height: 10rem;
+			margin: 2rem auto 0 auto;
 
-            .info-group {
-                position: relative;
-                @include flex(row, space-between, center);
-                width: 90%;
+			.info-group {
+				position: relative;
+				@include flex(row, space-between, center);
+				width: 90%;
 
-                .contact-icon  {
-                    font-size: 1.2rem;
-                    color: $grey-200;
-                    cursor: pointer;
-                }
+				.contact-icon {
+					font-size: 1.2rem;
+					color: $grey-200;
+					cursor: pointer;
+				}
 
-                h4, a {
-                    @include fontRaleway(0.9rem, 200, $grey-200);
-                    margin-left: 1.5rem;
-                    letter-spacing: 1px;
-                    cursor: pointer;
+				h4,
+				a {
+					@include fontRaleway(0.9rem, 200, $grey-200);
+					margin-left: 1.5rem;
+					letter-spacing: 1px;
+					cursor: pointer;
 
-                    &:hover {
-                        color: $gold-400
-                    
-                    }
-                }
+					&:hover {
+						color: $gold-400;
+					}
+				}
 
-                .popup {
-                    visibility: hidden;
-                    @include absolute(null, null, -0.5rem, 1rem);
-                
-                    i {
-                        font-size: 0.8rem;
-                        color: $gold-400;
-                    }
-                
-                }
-            }
-        }
+				.popup {
+					visibility: hidden;
+					@include absolute(null, null, -0.5rem, 1rem);
 
-    }
-    
-    #contact-form {
-        width: 100%;
-        margin-top: 2rem;
+					i {
+						font-size: 0.8rem;
+						color: $gold-400;
+					}
+				}
+			}
+		}
+	}
 
-        form {
-            @include flex(column, center, center);
-            width: 90%;
-            margin: 0 auto;
+	#contact-form {
+		width: 100%;
+		margin-top: 2rem;
 
-            .form-group {
-                @include flex(row, flex-start, center);
-                width: 100%;
-                height: 1.5rem;
+		form {
+			@include flex(column, center, center);
+			width: 90%;
+			margin: 0 auto;
 
-                border-bottom: 1px solid #CCCCCC46;
-                margin-bottom: 2rem;
+			.form-group {
+				@include flex(row, flex-start, center);
+				width: 100%;
+				height: 1.5rem;
 
+				border-bottom: 1px solid #cccccc46;
+				margin-bottom: 2rem;
 
-                .form-icon {
-                    margin-right: 1rem;
-                    font-size: 0.8rem;
-                    color: $grey-100;
-                }
+				.form-icon {
+					margin-right: 1rem;
+					font-size: 0.8rem;
+					color: $grey-100;
+				}
 
-                input {
-                    @include fontRaleway(1rem, 400, $grey-100);
-                    background: none;
-                    width: 100%;
-                }
+				input {
+					@include fontRaleway(1rem, 400, $grey-100);
+					background: none;
+					width: 100%;
+				}
 
-                textarea {
-                    @include fontRaleway(1rem, 400, $grey-100);
-                    background: none;
-                    resize: none;
-                    
-                    width: 100%;
-                    height: 1.2rem;
-                }
-                
-                input:focus,
-                textarea:focus,
-                select:focus {
-                    outline: none;
-                }
-            }
+				textarea {
+					@include fontRaleway(1rem, 400, $grey-100);
+					background: none;
+					resize: none;
 
-            .btn {
-                appearance: none;
-                color: $grey-200;
-                background: transparent;
-                border: 2px solid $grey-200;
-    
-                &:hover {
-                    color: $grey-600;
-                    background: #FFF;
-                    border: 2px solid #FFF;
-                }
-            }
-        }
+					width: 100%;
+					height: 1.2rem;
+				}
 
-    }
+				input:focus,
+				textarea:focus,
+				select:focus {
+					outline: none;
+				}
+			}
+
+			.btn {
+				appearance: none;
+				color: $grey-200;
+				background: transparent;
+				border: 2px solid $grey-200;
+
+				&:hover {
+					color: $grey-600;
+					background: #fff;
+					border: 2px solid #fff;
+				}
+			}
+		}
+	}
 }
 
-
-
-
-
-
-
 @media screen and (min-width: 320px) {
-    html {
-        font-size: calc(16px + 12 * ((100vw - 320px) / 780));
-    }
+	html {
+		font-size: calc(16px + 12 * ((100vw - 320px) / 780));
+	}
 }
 
 @media screen and (min-width: 1100px) {
-    html {
-        font-size: 28px;
-    }
+	html {
+		font-size: 28px;
+	}
 }
 
 @media screen and (min-width: 1200px) {
-    main {
-        #about {
-            padding-bottom: 10rem;
-        }
+	main {
+		#about {
+			padding-bottom: 10rem;
+		}
 
-        #projects {
-            padding-bottom: 10rem;
-        }
+		#projects {
+			padding-bottom: 10rem;
+		}
 
-        #technologies {
-            padding-bottom: 10rem;
-        }
-    }
+		#technologies {
+			padding-bottom: 10rem;
+		}
+	}
 }
 
 @media screen and (min-width: 1400px) {
-    main {
-        #about {
-            padding-bottom: 12rem;
-        }
+	main {
+		#about {
+			padding-bottom: 12rem;
+		}
 
-        #projects {
-            padding-bottom: 12rem;
-        }
+		#projects {
+			padding-bottom: 12rem;
+		}
 
-        #technologies {
-            padding-bottom: 12rem;
-        }
-    }
+		#technologies {
+			padding-bottom: 12rem;
+		}
+	}
 }
 
 @media screen and (min-width: 1600px) {
-    main {
-        #about {
-            padding-bottom: 14rem;
-        }
+	main {
+		#about {
+			padding-bottom: 14rem;
+		}
 
-        #projects {
-            padding-bottom: 14rem;
-        }
+		#projects {
+			padding-bottom: 14rem;
+		}
 
-        #technologies {
-            padding-bottom: 14rem;
-        }
-    }
+		#technologies {
+			padding-bottom: 14rem;
+		}
+	}
 }

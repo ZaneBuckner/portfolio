@@ -356,7 +356,7 @@ header #hero div .btn {
 header #hero div .btn:hover {
   border: 2px solid #222222;
   background: #222222;
-  color: #FFF;
+  color: #fff;
 }
 
 main {
@@ -442,6 +442,14 @@ main #projects {
   background-color: #333333;
 }
 
+main #projects .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (auto)[3];
+      grid-template-rows: repeat(3, auto);
+  grid-row-gap: 4rem;
+}
+
 main #projects .project {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -456,10 +464,6 @@ main #projects .project {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-main #projects .project:nth-child(2) {
-  margin-top: 3rem;
 }
 
 main #projects .project .title {
@@ -481,9 +485,10 @@ main #projects .project .showcase {
 
 main #projects .project .description {
   margin-top: 1rem;
+  max-width: 27rem;
   font-size: 0.8rem;
   font-weight: 300;
-  color: #C5C5C5;
+  color: #c5c5c5;
   text-align: justify;
 }
 
@@ -511,8 +516,8 @@ main #projects .project div .btn {
 }
 
 main #projects .project div .btn:hover {
-  border: 2px solid #FFF;
-  background: #FFF;
+  border: 2px solid #fff;
+  background: #fff;
   color: #222222;
 }
 
@@ -707,7 +712,8 @@ footer #contact-info .info-wrapper .info-group .contact-icon {
   cursor: pointer;
 }
 
-footer #contact-info .info-wrapper .info-group h4, footer #contact-info .info-wrapper .info-group a {
+footer #contact-info .info-wrapper .info-group h4,
+footer #contact-info .info-wrapper .info-group a {
   font-family: 'Raleway', serif;
   font-size: 0.9rem;
   font-weight: 200;
@@ -717,7 +723,8 @@ footer #contact-info .info-wrapper .info-group h4, footer #contact-info .info-wr
   cursor: pointer;
 }
 
-footer #contact-info .info-wrapper .info-group h4:hover, footer #contact-info .info-wrapper .info-group a:hover {
+footer #contact-info .info-wrapper .info-group h4:hover,
+footer #contact-info .info-wrapper .info-group a:hover {
   color: #DAB55D;
 }
 
@@ -772,7 +779,7 @@ footer #contact-form form .form-group {
           align-items: center;
   width: 100%;
   height: 1.5rem;
-  border-bottom: 1px solid #CCCCCC46;
+  border-bottom: 1px solid #cccccc46;
   margin-bottom: 2rem;
 }
 
@@ -819,8 +826,8 @@ footer #contact-form form .btn {
 
 footer #contact-form form .btn:hover {
   color: #222222;
-  background: #FFF;
-  border: 2px solid #FFF;
+  background: #fff;
+  border: 2px solid #fff;
 }
 
 @media screen and (min-width: 320px) {
